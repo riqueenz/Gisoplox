@@ -1,0 +1,816 @@
+25/06/16,02:52,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:52,"1-2 POL X60X52-10P","60.2","51.6","2.3","1.7","5","0","0","10","1.15","0","10","137 gramas","2 kg","1 metro","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+25/06/16,02:49,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:49,"1-2 POL X60X57-10P","60.2","56.7","2.3","3.2","5","0","0","10","1.15","0","10","169 gramas","2 kg","1 metro","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+25/06/16,02:45,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:45,"1-2 POL X61X57-10P","60.7","56.7","10.5","6.8","5","0","0","10","1.25","0","10","176 gramas","2 kg","1 metro","1.16.0624","0","triangulo com pontas cortadas","Plasma"
+25/06/16,02:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:38,"5-8 POL X100X50-10P","100.2","50.2","5","0","0","10","1.15","0","10","314 gramas","4 kg","1 metro","1.16.0624","0","triangulo retangulo","Oxicorte"
+25/06/16,02:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:38,"5-8 POL X100X50-10P","100.2","50.2","5","0","0","10","1.15","0","10","314 gramas","4 kg","1 metro","1.16.0624","0","triangulo retangulo","Oxicorte"
+25/06/16,02:38,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:38,"12 mm X D202-10P","201.6","","5","0","0","10","1.15","0","10","4 kg","31 kg","6 metros","1.16.0624","0",circulo,"Oxicorte"
+25/06/16,02:37,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:37,"1-2 POL X D201-10P","200.5","","5","0","0","10","1.25","0","10","4 kg","32 kg","6 metros","1.16.0624","0",circulo,"Plasma"
+25/06/16,02:37,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:37,"1-2 POL X D201-10P","200.5","","5","0","0","10","1.15","0","10","4 kg","32 kg","6 metros","1.16.0624","0",circulo,"Oxicorte"
+25/06/16,02:34,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:34,"1-2 POL X D201-10P","200.5","","5","0","0","10","1.15","0","10","4 kg","32 kg","6 metros","1.16.0624","0",circulo,"Oxicorte"
+25/06/16,02:34,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:34,"3-4 POL XD200XD131-10P","200.2","130.6","5","0","0","10","1.4","0","10","3 kg","28 kg","10 metros","1.16.0624","0",anel,"Plasma"
+25/06/16,02:33,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:33,"3-4 POL XD200XD131-10P","200.2","130.6","5","0","0","10","1.15","0","10","3 kg","28 kg","10 metros","1.16.0624","0",anel,"Oxicorte"
+25/06/16,02:33,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:33,"3-4 POL X200X191XD192-10P","200","191","192","5","0","0","10","1.15","0","10","2 kg","14 kg","12 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:33,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:33,"3-4 POL X200X191XD190-10P","200","191","190","5","0","0","10","1.15","0","10","2 kg","15 kg","12 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:32,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:32,"3-4 POL X201X191XD191-10P","200.5","190.8","190.9","5","0","0","10","1.15","0","10","2 kg","15 kg","12 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:32,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:32,"3-4 POL X201X191XD191-10P","200.5","190.8","190.7","5","0","0","10","1.15","0","10","2 kg","15 kg","12 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:32,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:32,"3-4 POL X201X191XD190-10P","200.5","190.8","189.6","5","0","0","10","1.15","0","10","2 kg","16 kg","12 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:32,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:32,"3-4 POL X201X191XD90-10P","200.5","190.8","89.9","5","0","0","10","1.15","0","10","5 kg","48 kg","9 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:08,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:08,"1 POL X200X201XD140-3P","200.4","201.1","140.2","5","0","0","3","1.3","0","3","5 kg","15 kg","3 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:08,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:08,"1 POL X200X201XD140-3P","200.4","201.1","140.2","5","0","0","3","1.3","0","3","5 kg","15 kg","3 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:08,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:08,"1 POL X200X201XD140-3P","200.4","201.1","140.2","5","0","0","3","1.3","0","3","5 kg","15 kg","3 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,02:08,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,02:08,"1 POL X200X201XD140-3P","200.4","201.1","140.2","5","0","0","3","1.3","0","3","5 kg","15 kg","3 metros","1.16.0624","0","retangulo com furo","Oxicorte"
+25/06/16,01:02,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,01:02,"3-4 POL X D200-20P","200.4","","5","0","0","20","1.15","0","20","5 kg","95 kg","12 metros","1.16.0624","0",circulo,"Oxicorte"
+25/06/16,01:01,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,01:01,"3-4 POL XD200XD91-10P","200.3","90.8","5","0","0","10","1.15","0","10","4 kg","38 kg","9 metros","1.16.0624","0",anel,"Oxicorte"
+25/06/16,01:01,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,01:01,"5-8 POL X103X214-20P","102.6","214.3","5","0","0","20","1.15","0","20","3 kg","55 kg","8 metros","1.16.0624","0","retangulo","Oxicorte"
+25/06/16,00:39,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,00:39,"3-4 POL X81X121-10P","81.4","120.7","2.7","1.8","5","0","0","10","1.15","0","10","2 kg","12 kg","2 metros","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+25/06/16,00:35,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,00:35,"3-4 POL X81X121-10P","81.4","120.7","2.7","1.8","5","0","0","10","1.15","0","10","2 kg","12 kg","2 metros","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+25/06/16,00:27,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,00:27,"3-4 POL X201X116-10P","200.8","116.2","3.4","4.5","5","0","0","10","1.15","0","10","2 kg","11 kg","3 metros","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+25/06/16,00:26,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,00:26,"3-4 POL X59X61-10P","59.3","60.7","2.6","3.8","5","0","0","10","1.4","0","10","291 gramas","3 kg","1 metro","1.16.0624","0","triangulo com pontas cortadas","Plasma"
+25/06/16,00:26,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,00:26,"3-4 POL X59X61-10P","59.3","60.7","2.6","3.8","5","0","0","10","1.15","0","10","291 gramas","3 kg","1 metro","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+25/06/16,00:21,nomePadrao,txd,tyd,chfX,chfY,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/06/16,00:21,"5-8 POL X43X51-10P","43.2","50.7","3.4","2.8","5","0","0","10","1.15","0","10","169 gramas","2 kg","1 metro","1.16.0624","0","triangulo com pontas cortadas","Oxicorte"
+22/04/16,08:41,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+22/04/16,08:41,"1-4 POL XD120XD26-92P","120","26","5","575","3000","100","1.2","8","92","538 gramas","50 kg","44 metros","1.16.0203","0",anel,"Plasma"
+20/04/16,15:39,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+20/04/16,15:39,"1-8 POL XD80XD45-1P","80","45","5","0","0","1","1.0","0","1","86 gramas","86 gramas","414 mm","1.16.0203","0",anel,"Plasma"
+20/04/16,11:10,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+20/04/16,11:10,"7-8 POL X285X395-3P","285","395","5","0","0","3","1.3","0","3","20 kg","59 kg","3 metros","1.16.0203","0","retangulo","Oxicorte"
+20/04/16,10:42,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+20/04/16,10:42,"2-1-2 POL X132X157-1P","132","157","5","0","0","1","1.75","0","1","11 kg","11 kg","602 mm","1.16.0203","0","retangulo","Oxicorte"
+20/04/16,07:53,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+20/04/16,07:53,"1-8 POL X131X361-6P","131","361","5","0","0","6","1.0","0","6","2 kg","8 kg","4 metros","1.16.0203","0","retangulo","Plasma"
+19/04/16,14:41,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,14:41,"3-4 POL X201X291-1P","201","291","5","0","0","1","1.4","0","1","9 kg","9 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+19/04/16,11:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:15,"4 POL X147X147-1P","147","147","5","0","0","1","1.9","0","1","18 kg","18 kg","613 mm","1.16.0203","0","retangulo","Oxicorte"
+19/04/16,11:14,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:14,"2 POL X D152-2P","152","","5","0","0","2","1.6","0","2","8 kg","15 kg","1 metro","1.16.0203","0",circulo,"Oxicorte"
+19/04/16,11:13,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:13,"1-3-4 POL X D156-2P","156","","5","0","0","2","1.6","0","2","7 kg","14 kg","1 metro","1.16.0203","0",circulo,"Oxicorte"
+19/04/16,11:11,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:11,"2 POL X D160-2P","160","","5","0","0","2","1.6","0","2","9 kg","17 kg","1 metro","1.16.0203","0",circulo,"Oxicorte"
+19/04/16,11:10,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:10,"3-1-2 POL XD395XD138-1P","395","138","5","0","0","1","1.9","0","1","76 kg","76 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+19/04/16,11:10,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:10,"3-1-2 POL XD395XD138-1P","395","138","5","0","0","1","1.9","0","1","76 kg","76 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+19/04/16,11:08,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:08,"4 POL XD320XD128-1P","320","128","5","0","0","1","1.9","0","1","54 kg","54 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+19/04/16,11:06,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:06,"2 POL XD230XD118-1P","230","118","5","0","0","1","1.6","0","1","13 kg","13 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+19/04/16,11:03,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:03,"3 POL X D281-1P","281","","5","0","0","1","1.75","0","1","38 kg","38 kg","907 mm","1.16.0203","0",circulo,"Oxicorte"
+19/04/16,11:02,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,11:02,"3 POL XD393XD254-1P","393","254","5","0","0","1","1.75","0","1","43 kg","43 kg","2 metros","1.16.0203","0",anel,"Oxicorte"
+19/04/16,10:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+19/04/16,10:34,"MKP30C 2mmX54X54-24P","54","54","5","590","590","24","0.8","0","24","46 gramas","2 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+19/04/16,09:35,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,09:35,"1-4 POL X60X60-24P","60","60","5","880","300","24","1.2","0","24","180 gramas","5 kg","4 metros","1.16.0203","0","retangulo","Plasma"
+19/04/16,09:35,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,09:35,"1-4 POL X60X60-56P","60","60","5","880","300","244","1.2","188","56","180 gramas","11 kg","8 metros","1.16.0203","0","retangulo","Plasma"
+19/04/16,09:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,09:34,"1-4 POL X60X60-28P","60","60","5","880","160","244","1.2","216","28","180 gramas","6 kg","4 metros","1.16.0203","0","retangulo","Plasma"
+19/04/16,09:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,09:34,"1-4 POL X60X60-28P","60","60","5","880","130","244","1.2","216","28","180 gramas","6 kg","4 metros","1.16.0203","0","retangulo","Plasma"
+19/04/16,08:42,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,08:42,"5-8 POL XD151XD74-2P","151","74","5","0","0","2","1.4","0","2","2 kg","4 kg","1 metro","1.16.0203","0",anel,"Plasma"
+19/04/16,08:41,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,08:41,"3-4 POL XD156XD74-2P","156","74","5","0","0","2","1.4","0","2","3 kg","5 kg","1 metro","1.16.0203","0",anel,"Plasma"
+19/04/16,08:25,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+19/04/16,08:25,"5-8 POL X175X250-1P","175","250","5","0","0","1","1.4","0","1","6 kg","6 kg","871 mm","1.16.0203","0","retangulo","Plasma"
+18/04/16,16:28,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+18/04/16,16:28,"3-4 POL XD291XD229-2P","291","229","5","0","0","2","1.15","0","2","4 kg","8 kg","3 metros","1.16.0203","0",anel,"Oxicorte"
+18/04/16,16:26,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+18/04/16,16:26,"1-4 POL X100X300-20P","100","300","5","0","0","20","1.2","0","20","2 kg","30 kg","10 metros","1.16.0203","0","retangulo","Plasma"
+18/04/16,08:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+18/04/16,08:15,"MKP 5-8X124X200-6P","124","200","5","0","0","6","1.4","0","6","4 kg","19 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+18/04/16,08:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+18/04/16,08:13,"MKP 1-4X60X60-24P","60","60","5","0","0","24","1.2","0","24","180 gramas","5 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+18/04/16,08:02,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+18/04/16,08:02,"MKP30CALP 2mmX54X54-24P","54","54","5","0","0","24","0.8","0","24","46 gramas","2 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+15/04/16,09:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+15/04/16,09:13,"3-4 POL X53X313-8P","53","313","5","0","0","8","1.4","0","8","3 kg","20 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+15/04/16,08:57,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+15/04/16,08:57,"1-1-2 POL X D116-3P","116","","5","0","0","3","1.5","0","3","4 kg","10 kg","1 metro","1.16.0203","0",circulo,"Oxicorte"
+15/04/16,08:56,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+15/04/16,08:56,"3-4 POL X96X216-2P","96","216","5","0","0","2","1.4","0","2","4 kg","7 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+14/04/16,16:14,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+14/04/16,16:14,"3-16 POL X52X500-4P","52","500","5","0","0","4","1.0","0","4","974 gramas","4 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+14/04/16,16:14,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+14/04/16,16:14,"3-16 POL X52X790-2P","52","790","5","0","0","2","1.0","0","2","2 kg","4 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+13/04/16,10:39,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+13/04/16,10:39,"H 2mmX54X54-12P","54","54","5","0","0","12","0.8","0","12","46 gramas","551 gramas","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+12/04/16,14:31,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+12/04/16,14:31,"4 POL XD381XD207-1P","381","207","5","0","0","1","1.9","0","1","65 kg","65 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+12/04/16,10:29,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+12/04/16,10:29,"3 POL X203X403-1P","203","403","5","0","0","1","1.75","0","1","49 kg","49 kg","1 metro","1.16.0203","0","retangulo","Oxicorte"
+12/04/16,08:20,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+12/04/16,08:20,"1-2 POL X250X300-1P","250","300","5","0","0","1","1.25","0","1","8 kg","8 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/04/16,15:35,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,15:35,"1 POL XD410XD75-1P","410","75","5","0","0","1","1.3","0","1","26 kg","26 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+11/04/16,15:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,15:23,"3-8 POL X30X30-20P","30","30","5","160","260","20","1.2","0","20","68 gramas","2 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:56,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:56,"1-4 POL X90X250-1P","90","250","5","0","0","1","1.2","0","1","2 kg","2 kg","699 mm","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:55,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:55,"3-8 POL X25X1500-6P","25","1500","5","0","0","6","1.2","0","6","3 kg","17 kg","10 metros","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:38,"3-8 POL X20X1500-1P","20","1500","5","0","0","1","1.2","0","1","3 kg","3 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:15,"1-4 POL X45X60-4P","45","60","5","0","0","4","1.2","0","4","135 gramas","540 gramas","709 mm","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:13,"3-8 POL X30X127-4P","30","127","5","0","0","4","1.2","0","4","286 gramas","2 kg","924 mm","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:12,"4 POL X120X240-4P","120","240","5","0","0","4","2.1","0","4","23 kg","92 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:11,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:11,"1-4 POL X60X65-8P","60","65","5","0","0","8","1.2","0","8","195 gramas","2 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:10,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:10,"1-4 POL X45X60-4P","45","60","5","0","0","4","1.2","0","4","135 gramas","540 gramas","709 mm","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:08,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:08,"3-8 POL X25X173-4P","25","173","5","0","0","4","1.2","0","4","324 gramas","2 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/04/16,08:04,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/04/16,08:04,"3-16 POL X54X54-12P","54","54","5","0","0","12","1.0","0","12","110 gramas","2 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+08/04/16,10:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/04/16,10:15,"SIN 1-2X165X351-1P","165","351","5","0","0","1","1.25","0","1","6 kg","6 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+08/04/16,10:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/04/16,10:13,"3-4 POL X900X2490-1P","900","2490","5","0","0","1","1.4","0","1","336 kg","336 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+08/04/16,10:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/04/16,10:12,"1-2 POL X830X2082-1P","830","2082","5","0","0","1","1.25","0","1","173 kg","173 kg","5 metros","1.16.0203","0","retangulo","Plasma"
+08/04/16,10:11,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/04/16,10:11,"1-2 POL X165X351-1P","165","351","5","0","0","1","1.25","0","1","6 kg","6 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+08/04/16,07:42,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/04/16,07:42,"1 POL X200X200XD95-1P","200","200","95","5","0","0","1","1.3","0","1","7 kg","7 kg","1 metro","1.16.0203","0","retangulo com furo","Oxicorte"
+07/04/16,16:46,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,16:46,"1-4 POL X55X80-7P","55","80","5","0","0","7","1.2","0","7","220 gramas","2 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+07/04/16,15:37,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,15:37,"1-3-4 POL XD291XD129-2P","291","129","5","0","0","2","1.6","0","2","19 kg","38 kg","2 metros","1.16.0203","0",anel,"Oxicorte"
+07/04/16,15:36,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,15:36,"1-1-4 POL XD161XD104-1P","161","104","5","0","0","1","1.5","0","1","3 kg","3 kg","858 mm","1.16.0203","0",anel,"Oxicorte"
+07/04/16,15:35,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,15:35,"1-1-4 POL XD161XD79-1P","161","79","5","0","0","1","1.5","0","1","4 kg","4 kg","779 mm","1.16.0203","0",anel,"Oxicorte"
+07/04/16,10:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,10:24,"2X152X650-2P","152","650","5","0","0","2","0.8","0","2","2 kg","4 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+07/04/16,10:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,10:23,"2X152X810-2P","152","810","5","0","0","2","0.8","0","2","2 kg","4 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+07/04/16,09:45,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,09:45,"1-4 POL X210X372-2P","210","372","5","0","0","2","1.2","0","2","4 kg","8 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+07/04/16,08:36,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,08:36,"5-16 POL X220X300-2P","220","300","5","0","0","2","1.2","0","2","5 kg","9 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+07/04/16,08:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/04/16,08:34,"5-16 POL X150X3000-1P","150","3000","5","0","0","1","1.2","0","1","29 kg","29 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+06/04/16,16:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,16:34,"3-16 POL X20X90-1P","20","90","5","0","0","1","1.0","0","1","68 gramas","68 gramas","238 mm","1.16.0203","0","retangulo","Plasma"
+06/04/16,16:32,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,16:32,"3-16 POL X80X80-2P","80","80","5","0","0","2","1.0","0","2","240 gramas","480 gramas","587 mm","1.16.0203","0","retangulo","Plasma"
+06/04/16,16:31,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,16:31,"3-16 POL XD75XD30-1P","75","30","5","0","0","1","1.0","0","1","139 gramas","139 gramas","351 mm","1.16.0203","0",anel,"Plasma"
+06/04/16,16:30,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,16:30,"14 POL XD60XD30-1P","60","30","5","0","0","1","2.1","0","1","6 kg","6 kg","306 mm","1.16.0203","0",anel,"Plasma"
+06/04/16,16:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+06/04/16,16:24,"MRK 2mmX152X650-1P","152","650","5","0","0","1","0.8","0","1","2 kg","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+06/04/16,16:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+06/04/16,16:22,"MRK200 2mmX152X810-1P","152","810","5","0","0","1","0.8","0","1","2 kg","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+06/04/16,16:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,16:13,"1-4 POL X210X372-1P","210","372","5","0","0","1","1.2","0","1","4 kg","4 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+06/04/16,14:28,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,14:28,"3-16 POL X D70-6P","70","","5","0","0","6","1.0","0","6","145 gramas","865 gramas","1 metro","1.16.0203","0",circulo,"Plasma"
+06/04/16,14:27,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,14:27,"1 POL X D71-6P","71","","5","0","0","6","1.3","0","6","791 gramas","5 kg","1 metro","1.16.0203","0",circulo,"Oxicorte"
+06/04/16,11:25,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,11:25,"7-8 POL X312X355-2P","312","355","5","0","0","2","1.3","0","2","20 kg","39 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+06/04/16,11:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,11:24,"7-8 POL X210X312-1P","210","312","5","0","0","1","1.3","0","1","12 kg","12 kg","1 metro","1.16.0203","0","retangulo","Oxicorte"
+06/04/16,11:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,11:23,"1-1-4 POL X285X312-1P","285","312","5","0","0","1","1.5","0","1","23 kg","23 kg","1 metro","1.16.0203","0","retangulo","Oxicorte"
+06/04/16,11:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,11:22,"3 POL X287X314-1P","287","314","5","0","0","1","1.75","0","1","54 kg","54 kg","1 metro","1.16.0203","0","retangulo","Oxicorte"
+06/04/16,09:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,09:12,"1-1-2 POL X313X285-2P","313","285","5","0","0","2","1.5","0","2","27 kg","54 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+06/04/16,08:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,08:23,"1-1-4 POL X257X226-1P","257","226","5","0","0","1","1.5","0","1","15 kg","15 kg","988 mm","1.16.0203","0","retangulo","Oxicorte"
+06/04/16,08:21,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+06/04/16,08:21,"3-1-2 POL X117X467-1P","117","467","5","0","0","1","1.9","0","1","39 kg","39 kg","1 metro","1.16.0203","0","retangulo","Oxicorte"
+05/04/16,14:49,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+05/04/16,14:49,"3-4 POL X50X120-2P","50","120","5","0","0","2","1.15","0","2","899 gramas","2 kg","588 mm","1.16.0203","0","retangulo","Oxicorte"
+05/04/16,14:49,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+05/04/16,14:49,"3-4 POL X120X265-1P","120","265","5","0","0","1","1.15","0","1","5 kg","5 kg","789 mm","1.16.0203","0","retangulo","Oxicorte"
+05/04/16,13:50,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+05/04/16,13:50,"2 POL X1050X1200XD269-1P","1050","1200","269","5","0","0","1","1.6","0","1","481 kg","481 kg","5 metros","1.16.0203","0","retangulo com furo","Oxicorte"
+05/04/16,10:46,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+05/04/16,10:46,"3-4 POL XD184XD59-1P","184","59","5","0","0","1","1.15","0","1","4 kg","4 kg","788 mm","1.16.0203","0",anel,"Oxicorte"
+05/04/16,08:58,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+05/04/16,08:58,"3-16 POL X650X1150-2P","650","1150","5","3000","1200","2","1.0","0","2","28 kg","56 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+05/04/16,08:54,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+05/04/16,08:54,"3-16 POL X650X1150-2P","650","1150","5","1200","3000","2","1.0","0","2","28 kg","56 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+04/04/16,15:36,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/04/16,15:36,"SINOSMET 5-16X403X1150-2P","403","1150","3","0","0","2","1.2","0","2","29 kg","58 kg","5 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+01/04/16,17:30,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,17:30,"3-4 POL X D61-10P","61","","5","0","0","10","1.4","0","10","438 gramas","5 kg","2 metros","1.16.0203","0",circulo,"Plasma"
+01/04/16,13:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,13:15,"1 POL X310X370-2P","310","370","5","0","0","2","1.3","0","2","23 kg","46 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+01/04/16,13:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,13:12,"1 POL X380X330-2P","380","330","5","0","0","2","1.3","0","2","26 kg","51 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+01/04/16,13:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,13:12,"1 POL X380X330-2P","380","330","5","0","0","2","1.3","0","2","26 kg","51 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+01/04/16,13:10,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,13:10,"1-2 POL XD140XD69-1P","140","69","5","0","0","1","1.25","0","1","2 kg","2 kg","679 mm","1.16.0203","0",anel,"Plasma"
+01/04/16,13:09,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,13:09,"3-4 POL XD260XD89-1P","260","89","5","0","0","1","1.4","0","1","8 kg","8 kg","1 metro","1.16.0203","0",anel,"Plasma"
+01/04/16,11:29,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,11:29,"1-4 POL X64X94-50P","64","94","5","820","3000","50","1.2","0","50","301 gramas","16 kg","9 metros","1.16.0203","0","retangulo","Plasma"
+01/04/16,11:11,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,11:11,"3-8 POL X83X133-30P","83","133","5","0","0","30","1.2","0","30","827 gramas","25 kg","9 metros","1.16.0203","0","retangulo","Plasma"
+01/04/16,08:54,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,08:54,"1-1-2 POL X D166-1P","166","","5","0","0","1","1.5","0","1","7 kg","7 kg","543 mm","1.16.0203","0",circulo,"Oxicorte"
+01/04/16,07:59,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/04/16,07:59,"1 POL XD201XD89-2P","201","89","5","0","0","2","1.3","0","2","6 kg","11 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+31/03/16,16:07,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,16:07,"5-8 POL X1100X140-1P","1100","140","5","0","0","1","1.4","0","1","20 kg","20 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+31/03/16,16:06,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,16:06,"5-8 POL X1800X300-1P","1800","300","5","0","0","1","1.4","0","1","68 kg","68 kg","4 metros","1.16.0203","0","retangulo","Plasma"
+31/03/16,16:05,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,16:05,"5-8 POL X2400X300-1P","2400","300","5","0","0","1","1.4","0","1","90 kg","90 kg","5 metros","1.16.0203","0","retangulo","Plasma"
+31/03/16,13:49,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,13:49,"1-4 POL X40X40-2P","40","40","5","0","0","2","1.2","0","2","40 gramas","80 gramas","246 mm","1.16.0203","0","triangulo retangulo","Plasma"
+31/03/16,13:49,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,13:49,"1-4 POL X40X40-2P","40","40","5","0","0","2","1.2","0","2","40 gramas","80 gramas","246 mm","1.16.0203","0","triangulo retangulo","Plasma"
+31/03/16,13:48,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,13:48,"1-4 POL X42X372-1P","42","372","5","0","0","1","1.2","0","1","780 gramas","780 gramas","847 mm","1.16.0203","0","retangulo","Plasma"
+31/03/16,13:46,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+31/03/16,13:46,"1-4 POL X210X372-1P","210","372","5","0","0","1","1.2","0","1","4 kg","4 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+30/03/16,17:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+30/03/16,17:22,"H 1-2X170X310-1P","170","310","5","0","0","1","1.25","0","1","6 kg","6 kg","980 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+30/03/16,16:30,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+30/03/16,16:30,"1-1-2 POL X D62-10P","62","","5","0","0","10","1.5","0","10","905 gramas","10 kg","2 metros","1.16.0203","0",circulo,"Oxicorte"
+30/03/16,16:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+30/03/16,16:18,"1-2 POL X76X180-4P","76","180","5","0","0","4","1.25","0","4","2 kg","6 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+30/03/16,16:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+30/03/16,16:18,"1-2 POL X76X180-4P","76","180","5","0","0","4","1.25","0","4","2 kg","6 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+30/03/16,16:08,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+30/03/16,16:08,"H 1-2X76X750-2P","76","750","5","0","0","2","1.25","0","2","6 kg","12 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+29/03/16,15:41,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/03/16,15:41,"3-4 POL XD141XD89-8P","141","89","5","0","0","8","1.15","0","8","2 kg","12 kg","5 metros","1.16.0203","0",anel,"Oxicorte"
+28/03/16,09:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+28/03/16,09:43,"2-1-2 POL X893X1003-1P","893","1003","5","0","0","1","1.75","0","1","448 kg","448 kg","3 metros","1.16.0203","0","retangulo","Oxicorte"
+28/03/16,08:13,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+28/03/16,08:13,"2 POL X340X340XD98-1P","340","340","98","5","0","0","1","1.6","0","1","44 kg","44 kg","1 metro","1.16.0203","0","retangulo com furo","Oxicorte"
+28/03/16,08:11,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+28/03/16,08:11,"1-1-4 POL X D165-1P","165","","5","0","0","1","1.5","0","1","6 kg","6 kg","540 mm","1.16.0203","0",circulo,"Oxicorte"
+28/03/16,08:11,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+28/03/16,08:11,"1-1-4 POL X D165-1P","165","","5","0","0","1","1.5","0","1","6 kg","6 kg","540 mm","1.16.0203","0",circulo,"Oxicorte"
+28/03/16,08:10,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+28/03/16,08:10,"2-1-2 POL XD157XD88-1P","157","88","5","0","0","1","1.75","0","1","7 kg","7 kg","796 mm","1.16.0203","0",anel,"Oxicorte"
+28/03/16,08:08,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+28/03/16,08:08,"1 POL XD250XD150-1P","250","150","5","0","0","1","1.3","0","1","7 kg","7 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+24/03/16,11:19,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+24/03/16,11:19,"1-3-4 POL XD620XD350-1P","620","350","5","0","0","1","1.6","0","1","72 kg","72 kg","3 metros","1.16.0203","0",anel,"Oxicorte"
+23/03/16,14:33,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:33,"1 POL X48X76-2P","48","76","5","0","0","2","1.3","0","2","729 gramas","2 kg","450 mm","1.16.0203","0","retangulo","Oxicorte"
+23/03/16,14:32,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:32,"1-2 POL X74X80-2P","74","80","5","0","0","2","1.25","0","2","591 gramas","2 kg","566 mm","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:31,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:31,"3-4 POL X100X900-1P","100","900","5","0","0","1","1.4","0","1","14 kg","14 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:30,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:30,"3-4 POL X100X300-1P","100","300","5","0","0","1","1.4","0","1","5 kg","5 kg","821 mm","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:30,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:30,"1-2 POL X225X270-1P","225","270","5","0","0","1","1.25","0","1","7 kg","7 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:29,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:29,"1-2 POL X35X1250-2P","35","1250","5","0","0","2","1.25","0","2","5 kg","9 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:28,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:28,"1-2 POL X138X215-2P","138","215","5","0","0","2","1.25","0","2","3 kg","6 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:27,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:27,"1-8 POL X250X3000-1P","250","3000","5","0","0","1","1.0","0","1","19 kg","19 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:25,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:25,"1-2 POL X50X1250-2P","50","1250","5","0","0","2","1.25","0","2","7 kg","13 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+23/03/16,14:24,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:24,"2-1-2 POL XD167XD98-1P","167","98","5","0","0","1","1.75","0","1","8 kg","8 kg","859 mm","1.16.0203","0",anel,"Oxicorte"
+23/03/16,14:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:23,"1 POL X100X325-1P","100","325","5","0","0","1","1.3","0","1","7 kg","7 kg","870 mm","1.16.0203","0","retangulo","Oxicorte"
+23/03/16,14:22,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+23/03/16,14:22,"2-1-2 POL XD157XD88-1P","157","88","5","0","0","1","1.75","0","1","7 kg","7 kg","796 mm","1.16.0203","0",anel,"Oxicorte"
+22/03/16,14:32,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+22/03/16,14:32,"3-16 POL XD200XD170-1P","200","170","5","0","0","1","1.0","0","1","327 gramas","327 gramas","1 metro","1.16.0203","0",anel,"Plasma"
+22/03/16,14:32,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+22/03/16,14:32,"3-16 POL XD200XD170-1P","200","170","5","0","0","1","1.0","0","1","327 gramas","327 gramas","1 metro","1.16.0203","0",anel,"Plasma"
+22/03/16,14:04,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+22/03/16,14:04,"5 POL X D150-1P","150","","5","0","0","1","2.0","0","1","18 kg","18 kg","497 mm","1.16.0203","0",circulo,"Oxicorte"
+22/03/16,13:27,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+22/03/16,13:27,"5-8 POL XD175XD76-1P","175","76","5","0","0","1","1.4","0","1","3 kg","3 kg","811 mm","1.16.0203","0",anel,"Plasma"
+21/03/16,11:31,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:31,"CANA 5-16X44X113-12P","44","113","5","0","0","12","1.2","0","12","311 gramas","4 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:22,"CANA 3-16X78X180-12P","78","180","5","0","0","12","1.0","0","12","526 gramas","7 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:22,"CANA 3-16X85X180-12P","85","180","5","0","0","12","1.0","0","12","573 gramas","7 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:20,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:20,"CANA 5-16X45X60-12P","45","60","5","0","0","12","1.2","0","12","169 gramas","3 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:19,"CANA 5-16X80X80-12P","80","80","5","0","0","12","1.2","0","12","400 gramas","5 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:19,"CANA 5-16X20X44-48P","20","44","5","0","0","48","1.2","0","48","55 gramas","3 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:17,"CANA 5-16X44X126-12P","44","126","5","0","0","12","1.2","0","12","346 gramas","5 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:17,"CANA 5-16X44X109-12P","44","109","5","0","0","12","1.2","0","12","300 gramas","4 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:16,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:16,"CANA 5-16X44X131-12P","44","131","5","0","0","12","1.2","0","12","360 gramas","5 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,11:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,11:15,"CANA 5-16X113X44-12P","113","44","5","0","0","12","1.2","0","12","311 gramas","4 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+21/03/16,08:48,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+21/03/16,08:48,"RK 1045 5-16X133X145-4P","133","145","5","0","0","4","1.2","0","4","2 kg","5 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+18/03/16,09:38,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+18/03/16,09:38,"1 POL XD250XD150-1P","250","150","5","0","0","1","1.3","0","1","7 kg","7 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+17/03/16,15:53,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+17/03/16,15:53,"1-3-4 POL XD740XD630-1P","740","630","5","0","0","1","1.6","0","1","42 kg","42 kg","4 metros","1.16.0203","0",anel,"Oxicorte"
+17/03/16,15:52,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+17/03/16,15:52,"1-1-4 POL XD800XD630-1P","800","630","5","0","0","1","1.5","0","1","48 kg","48 kg","4 metros","1.16.0203","0",anel,"Oxicorte"
+16/03/16,17:03,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/03/16,17:03,"RACHADOR 2X340X340XD100-1P","340","340","100","5","0","0","1","1.6","0","1","44 kg","44 kg","1 metro","1.16.0203","False","retangulo com furo","Oxicorte","Terminal"
+16/03/16,17:01,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/03/16,17:01,"RACHADOR 1-1-4X D167-1P","167","","5","0","0","1","1.5","0","1","6 kg","6 kg","547 mm","1.16.0203","False",circulo,"Oxicorte","Terminal"
+16/03/16,08:00,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+16/03/16,08:00,"3-4 POL XD220XD45-1P","220","45","5","0","0","1","1.4","0","1","6 kg","6 kg","855 mm","1.16.0203","0",anel,"Plasma"
+15/03/16,17:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+15/03/16,17:43,"5-8 POL X80X130-2P","80","130","5","0","0","2","1.4","0","2","2 kg","3 kg","741 mm","1.16.0203","0","retangulo","Plasma"
+15/03/16,15:01,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+15/03/16,15:01,"VINIFER 1X295X555-8P","295","555","5","0","0","8","1.3","0","8","33 kg","262 kg","9 metros","1.16.0203","False","retangulo","Oxicorte","Terminal"
+15/03/16,14:09,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+15/03/16,14:09,"K 3-16X78X54-14P","78","54","5","0","0","14","1.0","0","14","158 gramas","3 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+15/03/16,11:24,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+15/03/16,11:24,"5-8 POL XD170XD70-1P","170","70","5","0","0","1","1.4","0","1","3 kg","3 kg","776 mm","1.16.0203","0",anel,"Plasma"
+15/03/16,11:23,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+15/03/16,11:23,"5-8 POL XD310XD100-1P","310","100","5","0","0","1","1.4","0","1","9 kg","9 kg","1 metro","1.16.0203","0",anel,"Plasma"
+14/03/16,17:41,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+14/03/16,17:41,"MAX 1-4X240X240-1P","240","240","5","0","0","1","1.2","0","1","3 kg","3 kg","979 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+14/03/16,13:24,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+14/03/16,13:24,"RK 1X D122-1P","122","","5","0","0","1","1.3","0","1","3 kg","3 kg","404 mm","1.16.0203","False",circulo,"Oxicorte","Terminal"
+11/03/16,17:46,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,17:46,"1045 3-8X183X418-1P","183","418","5","0","0","1","1.2","0","1","6 kg","6 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,17:35,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,17:35,"1045 5-16X180X310-3P","180","310","5","0","0","3","1.2","0","3","4 kg","11 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,17:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,17:34,"1045 5-16X180X310-2P","180","310","5","0","0","2","1.2","0","2","4 kg","7 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,17:33,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,17:33,"1045 3-8X153X163-2P","153","163","5","0","0","2","1.2","0","2","2 kg","4 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,17:32,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,17:32,"1045 5-16X130X135-4P","130","135","5","0","0","4","1.2","0","4","2 kg","5 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,17:30,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,17:30,"1045 3,8X183X418-1P","183","418","5","0","0","1","1.9","0","1","59 kg","59 kg","1 metro","1.16.0203","False","retangulo","Oxicorte","Terminal"
+11/03/16,16:45,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:45,"CHAPA BASE 1-8X230X1500-1P","230","1500","5","0","0","1","1.0","0","1","9 kg","9 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,16:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:43,"RK 2mmX10X250-1P","10","250","5","0","0","1","0.8","0","1","40 gramas","40 gramas","536 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,16:42,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:42,"SUP VALVULA 1-4X90X200-1P","90","200","5","0","0","1","1.2","0","1","899 gramas","899 gramas","599 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,16:40,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:40,"RK 1-8X225X276-2P","225","276","5","0","0","2","1.0","0","2","2 kg","4 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,16:39,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:39,"RK 1-8X150X230-2P","150","230","5","0","0","2","1.0","0","2","861 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,16:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:38,"TANQUE HIDRA 1-8X530X565-1P","530","565","5","0","0","1","1.0","0","1","8 kg","8 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+11/03/16,16:32,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:32,"1-4 POL X150X180-2P","150","180","5","0","0","2","1.2","0","2","2 kg","3 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/03/16,16:28,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/03/16,16:28,"RK500DNUTRI 2-1-2X D122-1P","122","","5","0","0","1","1.75","0","1","6 kg","6 kg","407 mm","1.16.0203","False",circulo,"Oxicorte","Terminal"
+11/03/16,16:12,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:12,"2-1-2 POL X D120-1P","120","","5","0","0","1","1.75","0","1","6 kg","6 kg","401 mm","1.16.0203","0",circulo,"Oxicorte"
+11/03/16,16:09,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:09,"1-4 POL X80X140-4P","80","140","5","0","0","4","1.2","0","4","560 gramas","3 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/03/16,16:08,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:08,"3-4 POL X103X190-2P","103","190","5","0","0","2","1.4","0","2","3 kg","6 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/03/16,16:06,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:06,"3-4 POL X100X192-4P","100","192","5","0","0","4","1.4","0","4","3 kg","12 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+11/03/16,16:05,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:05,"1-4 POL X103X230-1P","103","230","5","0","0","1","1.2","0","1","2 kg","2 kg","685 mm","1.16.0203","0","retangulo","Plasma"
+11/03/16,16:01,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:01,"2 POL XD215XD50-1P","215","50","5","0","0","1","1.6","0","1","14 kg","14 kg","858 mm","1.16.0203","0",anel,"Oxicorte"
+11/03/16,16:00,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,16:00,"2 POL XD215XD50-1P","215","50","5","0","0","1","1.6","0","1","14 kg","14 kg","858 mm","1.16.0203","0",anel,"Oxicorte"
+11/03/16,15:59,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,15:59,"1-1-4 POL X D310-1P","310","","5","0","0","1","1.5","0","1","19 kg","19 kg","996 mm","1.16.0203","0",circulo,"Oxicorte"
+11/03/16,15:57,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,15:57,"1 POL X D120-1P","120","","5","0","0","1","1.8","0","1","3 kg","3 kg","398 mm","1.16.0203","0",circulo,"Plasma"
+11/03/16,15:54,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,15:54,"1-1-4 POL X205X245XD100-1P","205","245","100","5","0","0","1","1.9","0","1","11 kg","11 kg","1 metro","1.16.0203","0","retangulo com furo","Plasma"
+11/03/16,14:53,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,14:53,"1-2 POL XD333XD280-1P","333","280","5","0","0","1","1.25","0","1","3 kg","3 kg","1 metro","1.16.0203","0",anel,"Plasma"
+11/03/16,13:50,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,13:50,"3,8 POL X53X83-60P","53","83","5","350","955","60","2.1","0","60","4 kg","201 kg","9 metros","1.16.0203","0","retangulo","Plasma"
+11/03/16,13:49,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,13:49,"3,8 POL X53X83-60P","53","83","5","350","955","82","2.1","22","60","4 kg","201 kg","9 metros","1.16.0203","0","retangulo","Plasma"
+11/03/16,09:13,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,09:13,"5-16 POL XD204XD134-4P","204","134","5","0","0","4","1.2","0","4","2 kg","5 kg","4 metros","1.16.0203","0",anel,"Plasma"
+11/03/16,09:12,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,09:12,"1-2 POL XD333XD184-1P","333","184","5","0","0","1","1.25","0","1","7 kg","7 kg","1 metro","1.16.0203","0",anel,"Plasma"
+11/03/16,08:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+11/03/16,08:24,"3-8 POL X340X1020-1P","340","1020","5","0","0","1","1.2","0","1","26 kg","26 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,17:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,17:19,"4 POL X133X233-1P","133","233","5","0","0","1","1.9","0","1","25 kg","25 kg","757 mm","1.16.0203","0","retangulo","Oxicorte"
+10/03/16,14:58,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,14:58,"4 POL X131X208-4P","131","208","5","378","500","4","1.9","0","4","22 kg","88 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+10/03/16,08:58,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:58,"5-16 POL X21X45-30P","21","45","5","0","0","30","1.2","0","30","59 gramas","2 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:44,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:44,"5-16 POL X45X132-6P","45","132","5","0","0","6","1.2","0","6","371 gramas","3 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:43,"5-16 POL X45X114-6P","45","114","5","0","0","6","1.2","0","6","321 gramas","2 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:31,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:31,"3-16 POL X86X181-14P","86","181","5","0","0","14","1.0","0","14","583 gramas","9 kg","5 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:29,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:29,"3-16 POL X79X181-14P","79","181","5","0","0","14","1.0","0","14","536 gramas","8 kg","5 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:29,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:29,"3-16 POL X79X181-14P","79","181","5","0","0","14","1.0","0","14","536 gramas","8 kg","5 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:28,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:28,"5-16 POL X61X46-14P","61","46","5","0","0","14","1.2","0","14","176 gramas","3 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:26,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:26,"5-16 POL X81X81-14P","81","81","5","0","0","14","1.2","0","14","410 gramas","6 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:25,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:25,"5-16 POL X21X20-30P","21","20","5","0","0","30","1.2","0","30","27 gramas","787 gramas","2 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:24,"5-16 POL X45X127-10P","45","127","5","0","0","10","1.2","0","10","357 gramas","4 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+10/03/16,08:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/03/16,08:23,"5-16 POL X45X110-10P","45","110","5","0","0","10","1.2","0","10","309 gramas","4 kg","2 metros","1.16.0203","0","retangulo","Plasma"
+09/03/16,17:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/03/16,17:38,"3-8 POL X94X164-16P","94","164","5","0","0","16","1.2","0","16","2 kg","19 kg","5 metros","1.16.0203","0","retangulo","Plasma"
+09/03/16,17:35,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/03/16,17:35,"1-2 POL X31X118-20P","31","118","5","0","0","20","1.25","0","20","366 gramas","8 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+09/03/16,17:31,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/03/16,17:31,"3-8 POL X82X132-20P","82","132","5","0","0","20","1.2","0","20","811 gramas","17 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+09/03/16,16:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/03/16,16:13,"1-8 POL X96X105-6P","96","105","5","0","0","6","1.0","0","6","252 gramas","2 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+09/03/16,15:09,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/03/16,15:09,"1-2 POL X186X361-18P","186","361","5","0","0","18","1.25","0","18","7 kg","121 kg","13 metros","1.16.0203","0","retangulo","Plasma"
+08/03/16,14:32,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/03/16,14:32,"3-4 POL X140X308-2P","140","308","5","0","0","2","1.4","0","2","4 kg","7 kg","1 metro","1.16.0203","0","triangulo retangulo","Plasma"
+08/03/16,14:30,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/03/16,14:30,"3-4 POL X140X108-2P","140","108","5","0","0","2","1.4","0","2","2 kg","3 kg","705 mm","1.16.0203","0","triangulo retangulo","Plasma"
+07/03/16,11:30,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/03/16,11:30,"3-8 POL X400X600-2P","400","600","5","0","0","2","1.2","0","2","18 kg","36 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+07/03/16,09:50,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/03/16,09:50,"2-1-2 POL XD816XD99-2P","816","99","5","0","0","2","1.75","0","2","258 kg","515 kg","5 metros","1.16.0203","0",anel,"Oxicorte"
+07/03/16,09:50,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+07/03/16,09:50,"1-3-4 POL XD576XD149-2P","576","149","5","0","0","2","1.6","0","2","85 kg","170 kg","4 metros","1.16.0203","0",anel,"Oxicorte"
+07/03/16,09:46,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:46,"VIN 7-8X230X615-1P","230","615","5","0","0","1","1.3","0","1","25 kg","25 kg","1 metro","1.16.0203","False","retangulo","Oxicorte","Terminal"
+07/03/16,09:20,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:20,"CAN 3-16X78X180-6P","78","180","5","0","0","6","1.0","0","6","526 gramas","4 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:19,"CAN 3-16X85X180-6P","85","180","5","0","0","6","1.0","0","6","573 gramas","4 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:18,"CAN 5-16X45X60-6P","45","60","5","0","0","6","1.2","0","6","169 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:18,"CAN 5-16X80X80-6P","80","80","5","0","0","6","1.2","0","6","400 gramas","3 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:17,"CAN 5-16X20X44-12P","20","44","5","0","0","12","1.2","0","12","55 gramas","659 gramas","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:16,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:16,"CAN 5-16X44X126-4P","44","126","5","0","0","4","1.2","0","4","346 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:16,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:16,"CAN 5-16X44X109-4P","44","109","5","0","0","4","1.2","0","4","300 gramas","2 kg","946 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:15,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:15,"CAN 5-16X44X131-2P","44","131","5","0","0","2","1.2","0","2","360 gramas","720 gramas","598 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+07/03/16,09:14,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+07/03/16,09:14,"CANA 5-16X44X113-2P","44","113","5","0","0","2","1.2","0","2","311 gramas","621 gramas","544 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,15:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,15:24,"SINO 3-8X240X400-8P","240","400","5","1200","3000","8","1.2","0","8","8 kg","58 kg","6 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,14:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,14:38,"SINO 3-8X240X3000-4P","240","3000","5","1210","3010","6","1.2","2","4","54 kg","216 kg","16 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,14:33,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,14:33,"SINO 3-8X45X240-282P","45","240","5","1210","3010","282","1.2","0","282","809 gramas","229 kg","86 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,14:31,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,14:31,"SINO 3-8X45X240-252P","45","240","5","3000","1000","252","1.2","0","252","809 gramas","204 kg","77 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,14:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,14:23,"SINO 3-8X45X240-186P","45","240","5","2970","960","264","1.2","78","186","809 gramas","151 kg","58 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,14:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,14:19,"SINO 3-8X45X240-186P","45","240","5","2970","960","264","1.2","78","186","809 gramas","151 kg","58 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,11:27,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,11:27,"H 3-8X D80-1P","80","","5","0","0","1","1.2","0","1","377 gramas","377 gramas","268 mm","1.16.0203","False",circulo,"Plasma","Terminal"
+04/03/16,11:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,11:17,"PK40 2mmX158X202-2P","158","202","5","0","0","2","0.8","0","2","502 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,11:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,11:13,"PK40 2mmX160X424-1P","160","424","5","0","0","1","0.8","0","1","2 kg","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,11:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,11:12,"TAM 1-8X996X1120-1P","996","1120","5","0","0","1","1.0","0","1","28 kg","28 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:54,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:54,"PK40 1-4X100X500-1P","100","500","5","0","0","1","1.2","0","1","3 kg","3 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:53,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:53,"PK40 2mmX158X202-1P","158","202","5","0","0","1","0.8","0","1","502 gramas","502 gramas","736 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:51,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:51,"PK40 2mmX158X202-1P","158","202","5","0","0","1","0.8","0","1","502 gramas","502 gramas","736 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:50,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:50,"PK40 2mmX93X424-1P","93","424","5","0","0","1","0.8","0","1","620 gramas","620 gramas","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:47,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:47,"PK40 2mmX160X424-1P","160","424","5","0","0","1","0.8","0","1","2 kg","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:46,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:46,"PK40 2mmX100X160-2P","100","160","5","0","0","2","0.8","0","2","252 gramas","504 gramas","904 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:43,"COMA BIMA 2mmX376X420-1P","376","420","5","0","0","1","0.8","0","1","3 kg","3 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:42,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:42,"PK40 1-8X315X326-3P","315","326","5","0","0","3","1.0","0","3","3 kg","8 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:41,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:41,"PK40 1-8X320X400-2P","320","400","5","0","0","2","1.0","0","2","4 kg","7 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+04/03/16,10:40,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+04/03/16,10:40,"TANQUE 1-8X996X1120-1P","996","1120","5","0","0","1","1.0","0","1","28 kg","28 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+03/03/16,17:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/03/16,17:24,"PK40 5-16X1012X1100-1P","1012","1100","5","0","0","1","1.2","0","1","70 kg","70 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+03/03/16,17:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/03/16,17:22,"PK40 1-2X70X150-4P","70","150","5","0","0","4","1.25","0","4","2 kg","5 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+03/03/16,17:21,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/03/16,17:21,"PK40 3-8X340X1022-1P","340","1022","5","0","0","1","1.2","0","1","27 kg","27 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+03/03/16,17:20,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/03/16,17:20,"PK40 3-8X1010X2100-2P","1010","2100","5","0","0","2","1.2","0","2","159 kg","318 kg","10 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+03/03/16,17:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/03/16,17:17,"PK40 3-4X340X1020-1P","340","1020","5","0","0","1","1.15","0","1","52 kg","52 kg","2 metros","1.16.0203","False","retangulo","Oxicorte","Terminal"
+03/03/16,17:16,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/03/16,17:16,"PK40ESP 3-4X140X308-2P","140","308","5","0","0","2","1.4","0","2","7 kg","13 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+03/03/16,17:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/03/16,17:13,"3-8 POL X60X120-4P","60","120","5","0","0","4","1.2","0","4","540 gramas","3 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+03/03/16,17:11,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/03/16,17:11,"1-8 POL X52X152-4P","52","152","5","0","0","4","1.0","0","4","198 gramas","789 gramas","1 metro","1.16.0203","0","retangulo","Plasma"
+03/03/16,17:09,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/03/16,17:09,"3-16 POL X55X80-42P","55","80","5","0","0","42","1.0","0","42","165 gramas","7 kg","8 metros","1.16.0203","0","retangulo","Plasma"
+03/03/16,17:06,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/03/16,17:06,"3-16 POL X190X950-14P","190","950","5","1205","3000","14","1.0","0","14","7 kg","95 kg","20 metros","1.16.0203","0","retangulo","Plasma"
+03/03/16,16:48,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/03/16,16:48,"3-8 POL X60X120-4P","60","120","5","0","0","4","1.2","0","4","540 gramas","3 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+02/03/16,15:55,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/03/16,15:55,"3-8 POL X45X240-18P","45","240","5","170","1515","300","1.2","282","18","809 gramas","15 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+02/03/16,15:55,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/03/16,15:55,"3-8 POL X45X240-18P","45","240","5","170","1515","300","1.2","282","18","809 gramas","15 kg","6 metros","1.16.0203","0","retangulo","Plasma"
+02/03/16,15:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/03/16,15:43,"3-8 POL X45X240-300P","45","240","5","1515","3000","300","1.2","0","300","809 gramas","243 kg","91 metros","1.16.0203","0","retangulo","Plasma"
+02/03/16,15:33,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/03/16,15:33,"3-8 POL X240X400-42P","240","400","5","1515","3000","42","1.2","0","42","8 kg","302 kg","31 metros","1.16.0203","0","retangulo","Plasma"
+02/03/16,09:54,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/03/16,09:54,"3-8 POL X130X150-1P","130","150","5","0","0","1","1.2","0","1","2 kg","2 kg","579 mm","1.16.0203","0","retangulo","Plasma"
+02/03/16,07:46,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/03/16,07:46,"2 POL X320X320XD70-1P","320","320","70","5","0","0","1","1.6","0","1","40 kg","40 kg","1 metro","1.16.0203","0","retangulo com furo","Oxicorte"
+01/03/16,16:12,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/03/16,16:12,"1-2 POL X200X300-2P","200","300","5","0","0","2","1.25","0","2","6 kg","12 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+01/03/16,16:06,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/03/16,16:06,"3-8 POL X180X300-4P","180","300","5","0","0","4","1.2","0","4","3 kg","9 kg","2 metros","1.16.0203","0","triangulo retangulo","Plasma"
+01/03/16,16:02,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/03/16,16:02,"3-8 POL X180X300-4P","180","300","5","0","0","4","1.2","0","4","3 kg","9 kg","2 metros","1.16.0203","0","triangulo retangulo","Plasma"
+01/03/16,10:18,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+01/03/16,10:18,"1-4 POL X390X400XD280-1P","390","400","280","5","0","0","1","1.2","0","1","5 kg","5 kg","2 metros","1.16.0203","0","retangulo com furo","Plasma"
+29/02/16,14:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,14:23,"1-4 POL X1200X700-1P","1200","700","5","0","0","1","1.2","0","1","42 kg","42 kg","3 metros","1.16.0203","0","retangulo","Plasma"
+29/02/16,14:06,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,14:06,"5 POL X132X162-1P","132","162","5","0","0","1","2.0","0","1","22 kg","22 kg","614 mm","1.16.0203","0","retangulo","Oxicorte"
+29/02/16,14:05,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,14:05,"3-16 POL X390X400XD28-1P","390","400","28","5","0","0","1","1.0","0","1","6 kg","6 kg","1 metro","1.16.0203","0","retangulo com furo","Plasma"
+29/02/16,11:08,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,11:08,"3 POL X70X70-1P","70","70","5","0","0","1","1.75","0","1","3 kg","3 kg","304 mm","1.16.0203","0","retangulo","Oxicorte"
+29/02/16,11:08,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,11:08,"2 POL X320X320XD80-1P","320","320","80","5","0","0","1","1.6","0","1","39 kg","39 kg","1 metro","1.16.0203","0","retangulo com furo","Oxicorte"
+29/02/16,09:41,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,09:41,"2 POL X D160-1P","160","","5","0","0","1","1.6","0","1","9 kg","9 kg","525 mm","1.16.0203","0",circulo,"Oxicorte"
+29/02/16,09:38,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,09:38,"5-8 POL XD160XD90-1P","160","90","5","0","0","1","1.15","0","1","2 kg","2 kg","809 mm","1.16.0203","0",anel,"Oxicorte"
+29/02/16,09:35,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/02/16,09:35,"2-1-2 POL XD180XD75-1P","180","75","5","0","0","1","1.75","0","1","11 kg","11 kg","828 mm","1.16.0203","0",anel,"Oxicorte"
+29/02/16,09:31,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+29/02/16,09:31,"PK40ESP 1X315X410XD265-1P","315","410","265","5","0","0","1","1.3","0","1","15 kg","15 kg","2 metros","1.16.0203","False","retangulo com furo","Oxicorte","Terminal"
+26/02/16,13:06,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,13:06,"2 POL X D152-1P","152","","5","0","0","1","1.6","0","1","8 kg","8 kg","500 mm","1.16.0203","0",circulo,"Oxicorte"
+26/02/16,11:26,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,11:26,"1-1-2 POL X D196-1P","196","","5","0","0","1","1.5","0","1","10 kg","10 kg","638 mm","1.16.0203","0",circulo,"Oxicorte"
+26/02/16,11:16,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,11:16,"1 POL XD276XD174-1P","276","174","5","0","0","1","1.3","0","1","8 kg","8 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+26/02/16,11:11,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,11:11,"1 POL XD226XD177-20P","226","177","5","2500","6000","20","1.3","0","20","4 kg","62 kg","25 metros","1.16.0203","0",anel,"Oxicorte"
+26/02/16,10:06,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,10:06,"1-1-2 POL X D75-10P","75","","5","0","0","10","1.5","0","10","2 kg","14 kg","2 metros","1.16.0203","0",circulo,"Oxicorte"
+26/02/16,10:05,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,10:05,"1-3-4 POL X D75-10P","75","","5","0","0","10","1.6","0","10","2 kg","16 kg","2 metros","1.16.0203","0",circulo,"Oxicorte"
+26/02/16,08:18,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/02/16,08:18,"3 POL XD270XD86-2P","270","86","5","0","0","2","1.75","0","2","31 kg","62 kg","2 metros","1.16.0203","0",anel,"Oxicorte"
+25/02/16,16:14,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/02/16,16:14,"3-4 POL X70X305-2P","70","305","5","0","0","2","1.4","0","2","4 kg","7 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+25/02/16,16:13,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/02/16,16:13,"3-4 POL X105X300-18P","105","300","5","0","0","18","1.4","0","18","5 kg","85 kg","9 metros","1.16.0203","0","retangulo","Plasma"
+25/02/16,07:54,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/02/16,07:54,"1-2 POL XD135XD70-1P","135","70","5","0","0","1","1.25","0","1","2 kg","2 kg","666 mm","1.16.0203","0",anel,"Plasma"
+25/02/16,07:53,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/02/16,07:53,"1-2 POL XD165XD70-1P","165","70","5","0","0","1","1.25","0","1","2 kg","2 kg","760 mm","1.16.0203","0",anel,"Plasma"
+24/02/16,15:15,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+24/02/16,15:15,"H 1X D257-1P","257","","5","0","0","1","1.8","0","1","11 kg","11 kg","828 mm","1.16.0203","False",circulo,"Plasma","Terminal"
+24/02/16,14:30,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+24/02/16,14:30,"MAQ 3-8X200X500-25P","200","500","5","0","0","25","1.2","0","25","8 kg","188 kg","21 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+23/02/16,07:39,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+23/02/16,07:39,"H 2X D162-1P","162","","5","0","0","1","1.6","0","1","9 kg","9 kg","532 mm","1.16.0203","False",circulo,"Oxicorte","Terminal"
+22/02/16,15:20,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,15:20,"MET 3-16X320X330-2P","320","330","5","0","0","2","1.0","0","2","4 kg","8 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+22/02/16,15:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,15:19,"MET 3-16X320X350-4P","320","350","5","0","0","4","1.0","0","4","5 kg","17 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+22/02/16,15:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,15:18,"MET 3-16X300X330-2P","300","330","5","0","0","2","1.0","0","2","4 kg","8 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+22/02/16,15:16,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,15:16,"MAT 3-16X300X350-4P","300","350","5","0","0","4","1.0","0","4","4 kg","16 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+22/02/16,14:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,14:43,"SSAL 3-4X245X255-2P","245","255","5","0","0","2","1.15","0","2","10 kg","19 kg","1 metro","1.16.0203","False","retangulo","Oxicorte","Terminal"
+22/02/16,14:41,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,14:41,"ROMA 3-8X80X132-30P","80","132","5","0","0","30","1.2","0","30","791 gramas","24 kg","9 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+22/02/16,07:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+22/02/16,07:34,"H 4-1-2X112X147-1P","112","147","5","0","0","1","1.9","0","1","15 kg","15 kg","543 mm","1.16.0203","False","retangulo","Oxicorte","Terminal"
+18/02/16,11:00,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+18/02/16,11:00,"SSAL 3-4X230X245-2P","230","245","5","0","0","2","1.4","0","2","9 kg","17 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+18/02/16,10:21,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+18/02/16,10:21,"H 4X80X248-2P","80","248","5","0","0","2","1.9","0","2","16 kg","32 kg","1 metro","1.16.0203","False","retangulo","Oxicorte","Terminal"
+17/02/16,07:43,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+17/02/16,07:43,"SINOS 5-16X800X378-2P","800","378","5","0","0","2","1.2","0","2","19 kg","38 kg","4 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+17/02/16,07:42,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+17/02/16,07:42,"H 1,4X240X390-1P","240","390","5","0","0","1","2.0","0","1","27 kg","27 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+17/02/16,07:40,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+17/02/16,07:40,"CAD 5-16X46X126-4P","46","126","5","0","0","4","1.2","0","4","362 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,17:25,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,17:25,"CAD 3-16X180X78-4P","180","78","5","0","0","4","1.0","0","4","526 gramas","3 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,17:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,17:24,"CAD 3-16X180X80-4P","180","80","5","0","0","4","1.0","0","4","540 gramas","3 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,17:23,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,17:23,"CAD 5-16X80X80-4P","80","80","5","0","0","4","1.2","0","4","400 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,17:21,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,17:21,"CAD 5-16X45X60-4P","45","60","5","0","0","4","1.2","0","4","169 gramas","674 gramas","709 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,17:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,17:18,"CAD 5,16X46X109-4P","46","109","5","0","0","4","2.1","0","4","6 kg","21 kg","980 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,17:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,17:17,"CAD 5,16X20X46-4P","20","46","5","0","0","4","2.1","0","4","948 gramas","4 kg","457 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+16/02/16,16:10,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+16/02/16,16:10,"VINIFER 1X295X555-6P","295","555","5","0","0","6","1.3","0","6","33 kg","197 kg","7 metros","1.16.0203","False","retangulo","Oxicorte","Terminal"
+12/02/16,10:32,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+12/02/16,10:32,"H 3-1-2X D143-1P","143","","5","0","0","1","1.9","0","1","12 kg","12 kg","474 mm","1.16.0203","False",circulo,"Oxicorte","Terminal"
+11/02/16,07:42,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+11/02/16,07:42,"SSAL 1-3-4X190X325-2P","190","325","5","0","0","2","1.6","0","2","22 kg","44 kg","1 metro","1.16.0203","False","retangulo","Oxicorte","Terminal"
+10/02/16,09:52,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/02/16,09:52,"3-8 POL X180X360-2P","180","360","5","0","0","2","1.2","0","2","5 kg","10 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+10/02/16,07:36,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+10/02/16,07:36,"3-16 POL XD180XD70-2P","180","70","5","0","0","2","1.0","0","2","809 gramas","2 kg","1 metro","1.16.0203","0",anel,"Plasma"
+09/02/16,14:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/02/16,14:34,"1-4 POL X50X95-2P","50","95","5","0","0","2","1.2","0","2","238 gramas","475 gramas","514 mm","1.16.0203","0","retangulo","Plasma"
+09/02/16,14:33,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+09/02/16,14:33,"1-4 POL X100X110-2P","100","110","5","0","0","2","1.2","0","2","550 gramas","2 kg","759 mm","1.16.0203","0","retangulo","Plasma"
+08/02/16,17:28,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:28,"1-1-4 POL X355X655-1P","355","655","5","0","0","1","1.5","0","1","59 kg","59 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+08/02/16,17:27,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:27,"5-8 POL X163X203-2P","163","203","5","0","0","2","1.4","0","2","5 kg","9 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+08/02/16,17:26,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:26,"5-8 POL X203X218-2P","203","218","5","0","0","2","1.4","0","2","6 kg","12 kg","1 metro","1.16.0203","0","retangulo","Plasma"
+08/02/16,17:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:24,"5-8 POL X153X218-4P","153","218","5","0","0","4","1.15","0","4","5 kg","17 kg","2 metros","1.16.0203","0","retangulo","Oxicorte"
+08/02/16,17:22,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:22,"2 POL X D260-1P","260","","5","0","0","1","1.6","0","1","22 kg","22 kg","840 mm","1.16.0203","0",circulo,"Oxicorte"
+08/02/16,17:22,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:22,"2 POL X240X240XD60-1P","240","240","60","5","0","0","1","1.6","0","1","22 kg","22 kg","1 metro","1.16.0203","0","retangulo com furo","Oxicorte"
+08/02/16,17:20,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,17:20,"2 POL XD160XD45-1P","160","45","5","0","0","1","1.6","0","1","8 kg","8 kg","670 mm","1.16.0203","0",anel,"Oxicorte"
+08/02/16,17:18,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,17:18,"PKM30 1-1-4X D170-1P","170","","5","0","0","1","1.5","0","1","6 kg","6 kg","556 mm","1.16.0203","False",circulo,"Oxicorte","Terminal"
+08/02/16,16:17,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,16:17,"1 POL XD220XD145-1P","220","145","5","0","0","1","1.3","0","1","5 kg","5 kg","1 metro","1.16.0203","0",anel,"Oxicorte"
+08/02/16,15:52,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,15:52,"PKM30 1X265X265XD200-1P","265","265","200","5","0","0","1","1.3","0","1","8 kg","8 kg","1 metro","1.16.0203","False","retangulo com furo","Oxicorte","Terminal"
+08/02/16,14:57,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,14:57,"PKM30 3-4X203X218-2P","203","218","2","0","0","2","1.4","0","2","7 kg","14 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+08/02/16,14:55,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,14:55,"PKM30 3-4X205X865-4P","205","865","5","0","0","4","1.4","0","4","27 kg","107 kg","6 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+08/02/16,11:27,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,11:27,"H 3mmX77X455-2P","77","455","5","0","0","2","0.8","0","2","827 gramas","2 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+08/02/16,11:27,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,11:27,"H 3mmX77X1210-2P","77","1210","5","0","0","2","0.8","0","2","3 kg","5 kg","3 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+08/02/16,11:14,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,11:14,"H 3mmX344X496-2P","344","496","5","0","0","2","0.8","0","2","5 kg","9 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+08/02/16,11:10,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,11:10,"H 3mmX350X500-2P","350","500","5","0","0","2","0.8","0","2","5 kg","9 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+08/02/16,10:52,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,10:52,"H 3-8X50X50-6P","50","50","5","0","0","6","1.2","0","6","94 gramas","562 gramas","783 mm","1.16.0203","False","triangulo retangulo","Plasma","Terminal"
+08/02/16,08:27,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+08/02/16,08:27,"3-8 POL X240X240-4P","240","240","5","0","0","4","1.2","0","4","3 kg","9 kg","2 metros","1.16.0203","0","triangulo retangulo","Plasma"
+08/02/16,08:25,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+08/02/16,08:25,"H 7-8X130X250-4P","130","250","5","0","0","4","1.3","0","4","6 kg","23 kg","2 metros","1.16.0203","False","retangulo","Oxicorte","Terminal"
+06/02/16,10:09,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+06/02/16,10:09,"PRENSA 7-8X105X100-8P","105","100","3","0","0","8","1.55","0","8","2 kg","15 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+06/02/16,09:58,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+06/02/16,09:58,"PRENSA 7-8X105X100-8P","105","100","5","0","0","8","1.55","0","8","2 kg","15 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+06/02/16,09:57,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+06/02/16,09:57,"PRENSA 7-8X100X345-3P","100","345","5","0","0","3","1.55","0","3","7 kg","19 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,17:33,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,17:33,"H 1-1-2X100X250-1P","100","250","5","0","0","1","1.5","0","1","8 kg","8 kg","722 mm","1.16.0203","False","retangulo","Oxicorte","Terminal"
+05/02/16,15:16,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,15:16,"ACN 5-8X230X380-1P","230","380","5","0","0","1","1.4","0","1","11 kg","11 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,14:48,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,14:48,"H 3-8X115X130-1P","115","130","5","0","0","1","1.2","0","1","2 kg","2 kg","509 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,14:38,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,14:38,"CADA 5-8X39X222-4P","39","222","5","0","0","4","1.4","0","4","2 kg","5 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,14:35,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,14:35,"CANAD 5-8X39X222-4P","39","222","5","0","0","4","1.4","0","4","2 kg","5 kg","1 metro","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,13:34,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,13:34,"CAND 1X52X105-16P","52","105","5","0","0","16","1.3","0","16","2 kg","18 kg","3 metros","1.16.0203","False","retangulo","Oxicorte","Terminal"
+05/02/16,13:26,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,13:26,"CAN 5-16X365X45-1P","365","45","5","0","0","1","1.2","0","1","2 kg","2 kg","839 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,13:24,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,13:24,"CANADA 5-16X365X39-1P","365","39","5","0","0","1","1.2","0","1","889 gramas","889 gramas","827 mm","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,13:22,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,13:22,"CAN 5,8X222X39-4P","222","39","5","0","0","4","2.1","0","4","11 kg","41 kg","2 metros","1.16.0203","False","retangulo","Plasma","Terminal"
+05/02/16,13:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+05/02/16,13:19,"VINIFER 1,2X470X470-1P","470","470","5","0","0","1","1.5","0","1","53 kg","53 kg","1 metro","1.16.0203","False","retangulo","Oxicorte","Terminal"
+03/02/16,14:17,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/02/16,14:17,"4 POL X144X144-1P","144","144","5","0","0","1","1.9","0","1","17 kg","17 kg","601 mm","1.16.0203","0","retangulo","Oxicorte"
+03/02/16,13:41,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,13:41,"TESTE-O 1X D100-3P","100","","5","0","0","3","1.3","0","3","2 kg","5 kg","1 metro","1.16.0203","False",circulo,"Oxicorte","Terminal"
+03/02/16,13:41,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,13:41,"TESTE-O 1XD100XD50-3P","100","50","5","0","0","3","1.3","0","3","2 kg","4 kg","1 metro","1.16.0203","False",anel,"Oxicorte","Terminal"
+03/02/16,13:35,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,13:35,"HENRIQUE-P 1X D100-3P","100","","5","0","0","3","1.8","0","3","2 kg","5 kg","1 metro","1.16.0203","False",circulo,"Plasma","Terminal"
+03/02/16,13:34,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,13:34,"HENRIQUE-P 1XD100XD50-3P","100","50","5","0","0","3","1.8","0","3","2 kg","4 kg","1 metro","1.16.0203","False",anel,"Plasma","Terminal"
+03/02/16,13:34,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,13:34,"HENRIQUE 1X D100-3P","100","","5","0","0","3","1.3","0","3","2 kg","5 kg","1 metro","1.16.0203","False",circulo,"Oxicorte","Terminal"
+03/02/16,13:33,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,13:33,"HENRIQUE 1XD100XD50-3P","100","50","5","0","0","3","1.3","0","3","2 kg","4 kg","1 metro","1.16.0203","False",anel,"Oxicorte","Terminal"
+03/02/16,13:25,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/02/16,13:25,"1 POL X D100-50P","100","","5","1200","1200","50","1.8","0","50","2 kg","79 kg","16 metros","1.16.0203","0",circulo,"Plasma"
+03/02/16,13:25,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/02/16,13:25,"1 POL X D100-50P","100","","5","1200","1200","50","1.3","0","50","2 kg","79 kg","16 metros","1.16.0203","0",circulo,"Oxicorte"
+03/02/16,13:25,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/02/16,13:25,"1 POL XD205XD120-25P","205","120","5","1200","1200","50","1.8","25","25","5 kg","109 kg","26 metros","1.16.0203","0",anel,"Plasma"
+03/02/16,13:24,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/02/16,13:24,"1 POL XD200XD120-25P","200","120","5","1200","1200","50","1.3","25","25","5 kg","101 kg","25 metros","1.16.0203","0",anel,"Oxicorte"
+03/02/16,11:21,nomePadrao,txd,tyd,DiamFuro,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,11:21,"H 1X111X222XD33-1P","111","222","33","3","0","0","1","1.8","0","1","5 kg","5 kg","790 mm","1.16.0202","False","retangulo com furo","Plasma","Terminal"
+03/02/16,11:19,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,11:19,"TESTE 1X100X100-1P","100","100","5","0","0","1","1.3","0","1","2 kg","2 kg","420 mm","1.16.0202","False","retangulo","Oxicorte","Terminal"
+03/02/16,11:18,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,11:18,"TESTE 1X100X100-1P","100","100","5","0","0","1","1.3","0","1","2 kg","2 kg","420 mm","1.16.0202","False","retangulo","Oxicorte","Terminal"
+03/02/16,11:17,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo,Terminal
+03/02/16,11:17,"HIDRA 1 1-2X D200-2P","200","","5","0","0","2","2.1","0","2","35 kg","69 kg","1 metro","1.16.0202","False",circulo,"Plasma","Terminal"
+03/02/16,10:18,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+03/02/16,10:18,"1 POL X D192-1P","192","","5","0","0","1","1.3","0","1","6 kg","6 kg","623 mm","1.16.0202","0",circulo,"Oxicorte"
+02/02/16,15:00,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/02/16,15:00,"1 POL X600X600-1P","600","600","5","0","0","1","1.3","0","1","72 kg","72 kg","2 metros","1.16.0126","0","retangulo","Oxicorte"
+02/02/16,11:09,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+02/02/16,11:09,"1 POL X100X100-1P","100","100","5","0","0","1","1.3","0","1","999 gramas","999 gramas","360 mm","1.16.0126","0",triangulo retangulo,"Oxicorte"
+29/01/16,09:41,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/01/16,09:41,"2 POL X610X610-2P","610","610","5","0","0","2","1.6","0","2","149 kg","298 kg","4 metros","1.16.0126","0","retangulo","Oxicorte"
+29/01/16,09:39,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+29/01/16,09:39,"2 1-2 POL X610X610-1P","610","610","5","0","0","1","1.75","0","1","186 kg","186 kg","2 metros","1.16.0126","0","retangulo","Oxicorte"
+26/01/16,10:04,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/01/16,10:04,3X284X393-2P,284,393,3,1200,3000,2,0.6,0,2,3 kg,6 kg,2 metros,1.16.0125,0,retangulo,Oxicorte
+26/01/16,10:01,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/01/16,10:01,3X247X288-4P,247,288,3,1200,3000,4,0.6,0,4,2 kg,7 kg,3 metros,1.16.0125,0,retangulo,Oxicorte
+26/01/16,09:59,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/01/16,09:59,3X782X800-2P,782,800,3,1200,3000,2,0.6,0,2,15 kg,30 kg,5 metros,1.16.0125,0,retangulo,Oxicorte
+26/01/16,09:56,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/01/16,09:56,2X295X1611-4P,295,1611,3,1200,3000,4,0.6,0,4,8 kg,30 kg,10 metros,1.16.0125,0,retangulo,Oxicorte
+26/01/16,09:46,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/01/16,09:46,14,2X1053X579-4P,1053,579,3,1200,3000,4,1.15,0,4,69 kg,273 kg,9 metros,1.16.0125,0,retangulo,Oxicorte
+26/01/16,09:45,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+26/01/16,09:45,14,2 POL X1053X579-4P,1053,579,3,1200,3000,4,2.25,0,4,1729 kg,6914 kg,9 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,16:03,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,16:03,1,4 POL X284X393-2P,284,393,2,1200,3000,2,1.5,0,2,32 kg,63 kg,2 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,16:02,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,16:02,1,4 POL X247X288-4P,247,288,2,1200,3000,4,1.5,0,4,20 kg,80 kg,3 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,16:01,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,16:01,1,4 POL X247X288-4P,247,288,2,1200,3000,4,1.5,0,4,20 kg,80 kg,3 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,15:59,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,15:59,1,4 POL X782X800-2P,782,800,2,1200,3000,2,1.5,0,2,175 kg,350 kg,5 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,15:56,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,15:56,1,4 POL X295X1611-4P,295,1611,2,1200,3000,4,1.5,0,4,133 kg,532 kg,10 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,15:52,nomePadrao,txd,tyd,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,15:52,1,4 POL X579X1053-4P,579,1053,2,1200,3000,4,1.5,0,4,171 kg,682 kg,9 metros,1.16.0125,0,retangulo,Oxicorte
+25/01/16,14:53,nomePadrao,diam1,,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,14:53,2 POL X D222-2P,222,,5,0,0,2,1.6,0,2,16 kg,31 kg,1 metro,1.16.0125,0,circulo,Oxicorte
+25/01/16,08:58,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,08:58,3 POL XD208XD68-2P,208,68,5,0,0,2,1.75,0,2,19 kg,37 kg,1 metro,1.16.0122,0,anel,Oxicorte
+25/01/16,08:54,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,08:54,3 POL XD208XD68-2P,208,68,5,0,0,2,1.75,0,2,19 kg,37 kg,1 metro,1.16.0122,0,anel,Oxicorte
+25/01/16,08:07,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,08:07,3 POL XD205XD70-2P,205,70,5,0,0,2,1.75,0,2,18 kg,35 kg,1 metro,1.16.0122,0,anel,Oxicorte
+25/01/16,08:03,nomePadrao,diam1,diam2,entrada,chapaX,chapaY,pecas,Kerf,pecasFaltantes,pecasGeradas,SpesoUnitario,SpesoTotal,SdistCorte,versao,erros,formato,processo
+25/01/16,08:03,3 POL XD205XD70-1P,205,70,5,0,0,1,1.75,0,1,18 kg,18 kg,890 mm,1.16.0122,0,anel,Oxicorte
