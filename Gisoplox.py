@@ -14,7 +14,7 @@ import wx.grid as gridlib
 
 sistemaOperacional=platform.system()
 #print sistemaOperacional
-AbrirIntro="Sim"
+AbrirIntro="Nao"
 versao= "Versão " + Auxiliares.versao()
     
 ###################################################### I - Frame Home Gisoplox ###############################################################################
@@ -56,7 +56,7 @@ class Gisoplox(wx.Frame):
 
         #Menu opções/Parâmetros de corte
         SubMenuKerf = wx.Menu()
-        menu.AppendMenu(wx.ID_ANY, '&Parâmetros de corte', SubMenuKerf)
+        menu.Append(wx.ID_ANY, '&Parâmetros de corte', SubMenuKerf)
         m_kerf = SubMenuKerf.Append(wx.ID_ANY, "&Oxicorte\tCtrl-O", "Parâmetros de corte para oxicorte")
         m_kerfPlasma = SubMenuKerf.Append(wx.ID_ANY, "&Plasma\tCtrl-P", "Parâmetros de corte para corte a plasma")
         self.Bind(wx.EVT_MENU, self.AbrirKerf, m_kerf)
@@ -74,7 +74,7 @@ class Gisoplox(wx.Frame):
 
         #Sub-menu Ferramentas/retângulos
         SubMenuRetangulos = wx.Menu()
-        menu.AppendMenu(wx.ID_ANY, 'R&etângulos', SubMenuRetangulos)
+        menu.Append(wx.ID_ANY, 'R&etângulos', SubMenuRetangulos)
         #Ferramentas/retângulos/retângulo
         m_rectange = SubMenuRetangulos.Append(wx.ID_ANY, "&Retângulo\tCtrl-R", "Abrir a ferramenta de gerar retângulos")
         self.Bind(wx.EVT_MENU, self.AbrirRectange, m_rectange)
@@ -87,7 +87,7 @@ class Gisoplox(wx.Frame):
 
         #Sub-menu Ferramentas/circulos
         SubMenuCirculos = wx.Menu()
-        menu.AppendMenu(wx.ID_ANY, 'C&írculos', SubMenuCirculos)
+        menu.Append(wx.ID_ANY, 'C&írculos', SubMenuCirculos)
         #Ferramentas/circulos/anel
         m_circle = SubMenuCirculos.Append(wx.ID_ANY, "&Anel\tCtrl-A", "Abrir a ferramenta de gerar anéis")
         self.Bind(wx.EVT_MENU, self.AbrirCircle, m_circle)
@@ -97,7 +97,7 @@ class Gisoplox(wx.Frame):
 
         #Sub-menu Ferramentas/triangulos
         SubMenuTriangulos = wx.Menu()
-        menu.AppendMenu(wx.ID_ANY, 'T&riângulos', SubMenuTriangulos)
+        menu.Append(wx.ID_ANY, 'T&riângulos', SubMenuTriangulos)
         m_triangulo = SubMenuTriangulos.Append(wx.ID_ANY, "&T&riângulo retângulo\tCtrl-T", "Abrir a ferramenta de gerar triângulos retângulos")
         self.Bind(wx.EVT_MENU, self.AbrirTriangulo, m_triangulo)
         m_trianguloPontasCortadas = SubMenuTriangulos.Append(wx.ID_ANY, "&T&riângulo com pontas cortadas", "Abrir a ferramenta de gerar triângulos com pontas cortadas")
