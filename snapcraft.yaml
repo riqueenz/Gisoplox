@@ -19,7 +19,7 @@ parts:
     plugin: dump
     source: .
     organize:
-      '*': usr/lib/python3.6
+      '*': usr/lib/python3.6/
   gisoplox:
     plugin: python
     python-version: python3
