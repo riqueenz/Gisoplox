@@ -4,7 +4,7 @@ from datetime import date
 import time
 
 def versao():
-    return "1.16.1223"
+    return "0.16.1223"
 
 def Parametros():
     arquivoDeConfig = "Dados/config.ini"
