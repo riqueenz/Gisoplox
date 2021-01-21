@@ -1,0 +1,38 @@
+name: gisoplox
+version: '0.16.1223'
+summary: 'Simple CAM software for cutting machines'
+description: |
+  CAM software to generate G code for plasma and oxyfuel cutting machines
+  that take advantage of already cutted edges.
+
+grade: stable # devel # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+base: core18
+
+apps:
+    gisoplox:
+        command: python3 $SNAP/main.py
+        plugs: [home, gsettings, network]
+
+parts:
+  copy-stuff:
+    plugin: dump
+    source: .
+  gisoplox:
+    plugin: python
+    python-version: python3
+    source: .
+    stage-packages:
+        - libssl-dev
+        - libjpeg-dev
+        - libtiff-dev
+        - libsdl1.2-dev
+        - libnotify-dev
+        - freeglut3
+        - ibus-gtk3
+        - libwebkitgtk-3.0-0
+        - zlib1g
+        - libsm6
+        - libpulse0
+        - libslang2
+        - libsdl1.2debian
