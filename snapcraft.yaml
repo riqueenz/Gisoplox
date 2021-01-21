@@ -11,13 +11,15 @@ base: core18
 
 apps:
     gisoplox:
-        command: python3 $SNAP/main.py
+        command: python3 $SNAP/usr/lib/python3.6/Gisoplox-terminal.py
         plugs: [home, gsettings, network]
 
 parts:
   copy-stuff:
     plugin: dump
     source: .
+    organize:
+      '*': usr/lib/python3.6
   gisoplox:
     plugin: python
     python-version: python3
