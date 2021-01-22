@@ -10,9 +10,13 @@ confinement: strict # use 'strict' once you have the right plugs and slots
 base: core18
 
 apps:
-    gisoplox:
+    gisoplox-cli:
         command: python3 $SNAP/usr/lib/python3.6/Gisoplox-terminal.py
-        plugs: [home, gsettings, network]
+        plugs: [home, gsettings]
+    gisoplox:
+        command: python3 $SNAP/usr/lib/python3.6/Gisoplox.py
+        extensions: [gnome-3-28]
+        plugs: [home, gsettings]
 
 parts:
   copy-stuff:
@@ -38,3 +42,8 @@ parts:
         - libpulse0
         - libslang2
         - libsdl1.2debian
+    python-packages:
+        - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.4-cp36-cp36m-linux_x86_64.whl
+        - wxasync
+    requirements:
+        - /root/project/requirements.txt
