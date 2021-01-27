@@ -125,14 +125,12 @@ class Gisoplox(wx.Frame):
 
     def OnPaint(self, evt):
         self.dc = wx.PaintDC(self)
-        self.dc.BeginDrawing()
         self.dc.SetPen(wx.Pen("grey",style=wx.TRANSPARENT))
         #self.dc.SetBrush(wx.Brush((102,255,102), wx.SOLID))
         self.dc.SetBrush(wx.Brush("gray", wx.SOLID))
         self.dc.DrawRectangle(25,25,100, 150)
         self.dc.DrawCircle(250,100,75)
         self.dc.DrawPolygon(((25, 225), (25, 375), (125, 375)))
-        self.dc.EndDrawing()
         del self.dc
 
     def OnClick(self, event):
