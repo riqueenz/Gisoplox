@@ -22,6 +22,6 @@ def create():
     settings_file_text += "default save folder Windows" + "\n"
     settings_file_text += "" + "\n" + "\n"
     #print(settings_file_text);
-    settings_file = open("settings.ini", "w")
+    settings_file = open(".gisoplox/settings.ini", "w")
     settings_file.write(settings_file_text)
     settings_file.close()
