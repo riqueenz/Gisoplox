@@ -1306,125 +1306,7 @@ class Configurar(wx.Frame):
 ###################################################### CONFIG F ##########################################################################################
 
 ###################################################### KERF I ##########################################################################################
-arquivoDeKerf = "Dados/oxicorte.gisoplox"
-kerf = open(arquivoDeKerf)
-
-#Bloco 1
-espMin1 = "0"
-espMax1 = kerf.readline()
-kerf1 = kerf.readline()
-vel1 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 2
-espMin2 = kerf.readline()
-espMax2 = kerf.readline()
-kerf2 = kerf.readline()
-vel2 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 3
-espMin3 = kerf.readline()
-espMax3 = kerf.readline()
-kerf3 = kerf.readline()
-vel3 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 4
-espMin4 = kerf.readline()
-espMax4 = kerf.readline()
-kerf4 = kerf.readline()
-vel4 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 5
-espMin5 = kerf.readline()
-espMax5 = kerf.readline()
-kerf5 = kerf.readline()
-vel5 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 6
-espMin6 = kerf.readline()
-espMax6 = kerf.readline()
-kerf6 = kerf.readline()
-vel6 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 7
-espMin7 = kerf.readline()
-espMax7 = kerf.readline()
-kerf7 = kerf.readline()
-vel7 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 8
-espMin8 = kerf.readline()
-espMax8 = kerf.readline()
-kerf8 = kerf.readline()
-vel8 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 9
-espMin9 = kerf.readline()
-espMax9 = kerf.readline()
-kerf9 = kerf.readline()
-vel9 = kerf.readline()
-pular = kerf.readline()
-
-#Bloco 10
-espMin10 = kerf.readline()
-espMax10 = kerf.readline()
-kerf10 = kerf.readline()
-vel10 = kerf.readline()
-pular = kerf.readline()
-
-#Retirando a quebra de linha das strings
-espMax1=espMax1.rstrip('\n')
-espMax2=espMax2.rstrip('\n')
-espMax3=espMax3.rstrip('\n')
-espMax4=espMax4.rstrip('\n')
-espMax5=espMax5.rstrip('\n')
-espMax6=espMax6.rstrip('\n')
-espMax7=espMax7.rstrip('\n')
-espMax8=espMax8.rstrip('\n')
-espMax9=espMax9.rstrip('\n')
-espMax10=espMax10.rstrip('\n')
-
-espMin1=espMin1.rstrip('\n')
-espMin2=espMin2.rstrip('\n')
-espMin3=espMin3.rstrip('\n')
-espMin4=espMin4.rstrip('\n')
-espMin5=espMin5.rstrip('\n')
-espMin6=espMin6.rstrip('\n')
-espMin7=espMin7.rstrip('\n')
-espMin8=espMin8.rstrip('\n')
-espMin9=espMin9.rstrip('\n')
-espMin10=espMin10.rstrip('\n')
-
-kerf1=kerf1.rstrip('\n')
-kerf2=kerf2.rstrip('\n')
-kerf3=kerf3.rstrip('\n')
-kerf4=kerf4.rstrip('\n')
-kerf5=kerf5.rstrip('\n')
-kerf6=kerf6.rstrip('\n')
-kerf7=kerf7.rstrip('\n')
-kerf8=kerf8.rstrip('\n')
-kerf9=kerf9.rstrip('\n')
-kerf10=kerf10.rstrip('\n')
-
-vel1=vel1.rstrip('\n')
-vel2=vel2.rstrip('\n')
-vel3=vel3.rstrip('\n')
-vel4=vel4.rstrip('\n')
-vel5=vel5.rstrip('\n')
-vel6=vel6.rstrip('\n')
-vel7=vel7.rstrip('\n')
-vel8=vel8.rstrip('\n')
-vel9=vel9.rstrip('\n')
-vel10=vel10.rstrip('\n')
-
-arquivoDeKerf = "Dados/oxicorte.gisoplox"
+arquivoDeKerf = ".gisoplox/oxyfuel_cutting_width.gisoplox"
 kerf = open(arquivoDeKerf)
 
 #Bloco 1
@@ -1945,7 +1827,7 @@ class Kerf(wx.Frame):
         espMin10 = self.campo_espMax10.GetValue()
 ###################################################### kerfPlasma F ##########################################################################################
 ###################################################### kerf PLASMA I ##########################################################################################
-arquivoDekerfPlasma = "Dados/plasma.gisoplox"
+arquivoDekerfPlasma = ".gisoplox/plasma_cutting_width.gisoplox"
 kerfPlasma = open(arquivoDekerfPlasma)
 
 #Bloco 1
