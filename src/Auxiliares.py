@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
+from settings import local_data_files
 import os
 from datetime import date
 import time
 
 def versao():
-    return "0.16.1223"
+    return "0.21.0129"
 
 def Parametros():
-    arquivoDeConfig = "Dados/config.ini"
-    configurar = open(arquivoDeConfig)
+    settings_file = ".gisoplox/settings.ini"
+    if os.path.exists(settings_file) == False:
+        local_data_files.create()
+    configurar = open(settings_file)
 
     pular = configurar.readline()
     icorte = configurar.readline()
