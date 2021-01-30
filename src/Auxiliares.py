@@ -181,7 +181,7 @@ def PassarMilimetro(fracao):
 
 def Kerf(espessura):
     esp=float(espessura)
-    arquivoKerf = "Dados/oxicorte.gisoplox"
+    arquivoKerf = str(os.getcwd()) + "/.gisoplox/oxyfuel_cutting_width.gisoplox"
     ler = open(arquivoKerf)
 
     espMin = 0
@@ -278,7 +278,7 @@ def Kerf(espessura):
 
 def KerfPlasma(espessura):
     esp=float(espessura)
-    arquivoKerf = "Dados/plasma.gisoplox"
+    arquivoKerf = str(os.getcwd()) + "/.gisoplox/plasma_cutting_width.gisoplox"
     ler = open(arquivoKerf)
 
     espMin = 0
@@ -383,14 +383,14 @@ def escreverPrograma(programa, salvar):
         escrever.close()
 
 def verificarHist():
-    arquivo=str(os.getcwd()) + "/Dados/hist.gisoplox"
+    arquivo=str(os.getcwd()) + "/.gisoplox/history.gisoplox"
     #Funçao que verifica se o arquivo hist existe
     #Se nao existir um novo e criado
     if os.path.isfile(arquivo)==False:
         escrever=open(arquivo, "w")    
         escrever.write("")
         escrever.close()
-    arquivo2=str(os.getcwd()) + "/Dados/histComp.csv"
+    arquivo2=str(os.getcwd()) + "/.gisoplox/history_sheet.csv"
     if os.path.isfile(arquivo2)==False:
         escrever2=open(arquivo2, "w")    
         escrever2.write("")
@@ -398,7 +398,7 @@ def verificarHist():
    
 def lerHistLinha(linha):
     verificarHist()
-    arquivo="Dados/hist.gisoplox"
+    arquivo=str(os.getcwd()) + "/.gisoplox/history.gisoplox"
     ler=open(arquivo)
     a=1
     while a<linha:
@@ -443,7 +443,7 @@ def lerHistLinha(linha):
 
 def escreverHist(Nome, PesoUn, PesoTotal, Dist, Versao):
     verificarHist()
-    arquivo="Dados/hist.gisoplox"
+    arquivo=str(os.getcwd()) + "/.gisoplox/history.gisoplox"
     ler=open(arquivo)
     texto=ler.read()
     ler.close()
@@ -460,7 +460,7 @@ def escreverHist(Nome, PesoUn, PesoTotal, Dist, Versao):
 
 def escreverCSV(texto):
     verificarHist()
-    arquivo="Dados/histComp.csv"
+    arquivo=str(os.getcwd()) + "/.gisoplox/history_sheet.csv"
     ler=open(arquivo)
     conteudo=ler.read()
     ler.close()
@@ -491,7 +491,7 @@ def converterDist(dist):
 
 def lerEstat(unidade):
     verificarEstat()
-    arquivo="Dados/estat.gisoplox"
+    arquivo=".gisoplox/metrics.gisoplox"
     ler=open(arquivo)
     def numData(dia, mes, ano):
         num=date(ano, mes, dia).toordinal()
@@ -569,7 +569,7 @@ def lerEstat(unidade):
 def adicionarEstat(dist, peso):
     verificarEstat()
     #Local do arquivo estat
-    arquivo="Dados/estat.gisoplox"
+    arquivo=".gisoplox/metrics.gisoplox"
 
     #Lendo valores das variaveis
     distTotal, pesoTotal, prgTotal, diaTotal, distZerado, pesoZerado, prgZerado, diaZerado = lerEstat(False)
@@ -615,7 +615,7 @@ def adicionarEstat(dist, peso):
 def zerarEstat():
     verificarEstat()
     #Local do arquivo estat
-    arquivo="Dados/estat.gisoplox"
+    arquivo=".gisoplox/metrics.gisoplox"
 
     #Lendo valores das variaveis
     distTotal, pesoTotal, prgTotal, diaTotal, distZerado, pesoZerado, prgZerado, diaZerado = lerEstat(False)
@@ -648,7 +648,7 @@ def zerarEstat():
 
 def criarEstat():
     #Local do arquivo estat
-    arquivo="Dados/estat.gisoplox"
+    arquivo=".gisoplox/metrics.gisoplox"
 
     #Escrevendo o texto das variaveis
     texto=""
@@ -668,7 +668,7 @@ def criarEstat():
     escrever.close()
 
 def verificarEstat():
-    arquivo=str(os.getcwd()) + "/Dados/estat.gisoplox"
+    arquivo=str(os.getcwd()) + ".gisoplox/metrics.gisoplox"
     #Funçao que verifica se o arquivo estat existe
     #Se nao existir um novo e criado
     if os.path.isfile(arquivo)==False:
