@@ -1269,7 +1269,7 @@ class Configurar(wx.Frame):
         texto = texto + "velocidade de avanco rapido(mm/min)" + '\n' + velocidadeAvancoRapido + '\n' + '\n'
         texto = texto + 'pasta salvar padrao "Linux"' + '\n' + pastaPadLinux + '\n' + '\n'
         texto = texto + 'pasta salvar padrao "Windows"' + '\n' + pastaPadWin
-        arquivoDeConfig = "Dados/config.ini"
+        arquivoDeConfig = str(os.getcwd()) + "/.gisoplox/settings.ini"
         escrever = open(arquivoDeConfig, "w")
         escrever.write(texto)
         escrever.close()
@@ -1314,70 +1314,70 @@ espMin1 = "0"
 espMax1 = kerf.readline()
 kerf1 = kerf.readline()
 vel1 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 2
 espMin2 = kerf.readline()
 espMax2 = kerf.readline()
 kerf2 = kerf.readline()
 vel2 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 3
 espMin3 = kerf.readline()
 espMax3 = kerf.readline()
 kerf3 = kerf.readline()
 vel3 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 4
 espMin4 = kerf.readline()
 espMax4 = kerf.readline()
 kerf4 = kerf.readline()
 vel4 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 5
 espMin5 = kerf.readline()
 espMax5 = kerf.readline()
 kerf5 = kerf.readline()
 vel5 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 6
 espMin6 = kerf.readline()
 espMax6 = kerf.readline()
 kerf6 = kerf.readline()
 vel6 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 7
 espMin7 = kerf.readline()
 espMax7 = kerf.readline()
 kerf7 = kerf.readline()
 vel7 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 8
 espMin8 = kerf.readline()
 espMax8 = kerf.readline()
 kerf8 = kerf.readline()
 vel8 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 9
 espMin9 = kerf.readline()
 espMax9 = kerf.readline()
 kerf9 = kerf.readline()
 vel9 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Bloco 10
 espMin10 = kerf.readline()
 espMax10 = kerf.readline()
 kerf10 = kerf.readline()
 vel10 = kerf.readline()
-pular = kerf.readline()
+kerf.readline()
 
 #Retirando a quebra de linha das strings
 espMax1=espMax1.rstrip('\n')
@@ -1827,7 +1827,7 @@ class Kerf(wx.Frame):
         espMin10 = self.campo_espMax10.GetValue()
 ###################################################### kerfPlasma F ##########################################################################################
 ###################################################### kerf PLASMA I ##########################################################################################
-arquivoDekerfPlasma = ".gisoplox/plasma_cutting_width.gisoplox"
+arquivoDekerfPlasma = str(os.getcwd()) + "/.gisoplox/plasma_cutting_width.gisoplox"
 kerfPlasma = open(arquivoDekerfPlasma)
 
 #Bloco 1
@@ -1835,306 +1835,70 @@ espMinPlasma1 = "0"
 espMaxPlasma1 = kerfPlasma.readline()
 kerfPlasma1 = kerfPlasma.readline()
 velPlasma1 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 2
 espMinPlasma2 = kerfPlasma.readline()
 espMaxPlasma2 = kerfPlasma.readline()
 kerfPlasma2 = kerfPlasma.readline()
 velPlasma2 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 3
 espMinPlasma3 = kerfPlasma.readline()
 espMaxPlasma3 = kerfPlasma.readline()
 kerfPlasma3 = kerfPlasma.readline()
 velPlasma3 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 4
 espMinPlasma4 = kerfPlasma.readline()
 espMaxPlasma4 = kerfPlasma.readline()
 kerfPlasma4 = kerfPlasma.readline()
 velPlasma4 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 5
 espMinPlasma5 = kerfPlasma.readline()
 espMaxPlasma5 = kerfPlasma.readline()
 kerfPlasma5 = kerfPlasma.readline()
 velPlasma5 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 6
 espMinPlasma6 = kerfPlasma.readline()
 espMaxPlasma6 = kerfPlasma.readline()
 kerfPlasma6 = kerfPlasma.readline()
 velPlasma6 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 7
 espMinPlasma7 = kerfPlasma.readline()
 espMaxPlasma7 = kerfPlasma.readline()
 kerfPlasma7 = kerfPlasma.readline()
 velPlasma7 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 8
 espMinPlasma8 = kerfPlasma.readline()
 espMaxPlasma8 = kerfPlasma.readline()
 kerfPlasma8 = kerfPlasma.readline()
 velPlasma8 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 9
 espMinPlasma9 = kerfPlasma.readline()
 espMaxPlasma9 = kerfPlasma.readline()
 kerfPlasma9 = kerfPlasma.readline()
 velPlasma9 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Bloco 10
 espMinPlasma10 = kerfPlasma.readline()
 espMaxPlasma10 = kerfPlasma.readline()
 kerfPlasma10 = kerfPlasma.readline()
 velPlasma10 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Retirando a quebra de linha das strings
-espMaxPlasma1=espMaxPlasma1.rstrip('\n')
-espMaxPlasma2=espMaxPlasma2.rstrip('\n')
-espMaxPlasma3=espMaxPlasma3.rstrip('\n')
-espMaxPlasma4=espMaxPlasma4.rstrip('\n')
-espMaxPlasma5=espMaxPlasma5.rstrip('\n')
-espMaxPlasma6=espMaxPlasma6.rstrip('\n')
-espMaxPlasma7=espMaxPlasma7.rstrip('\n')
-espMaxPlasma8=espMaxPlasma8.rstrip('\n')
-espMaxPlasma9=espMaxPlasma9.rstrip('\n')
-espMaxPlasma10=espMaxPlasma10.rstrip('\n')
-
-espMinPlasma1=espMinPlasma1.rstrip('\n')
-espMinPlasma2=espMinPlasma2.rstrip('\n')
-espMinPlasma3=espMinPlasma3.rstrip('\n')
-espMinPlasma4=espMinPlasma4.rstrip('\n')
-espMinPlasma5=espMinPlasma5.rstrip('\n')
-espMinPlasma6=espMinPlasma6.rstrip('\n')
-espMinPlasma7=espMinPlasma7.rstrip('\n')
-espMinPlasma8=espMinPlasma8.rstrip('\n')
-espMinPlasma9=espMinPlasma9.rstrip('\n')
-espMinPlasma10=espMinPlasma10.rstrip('\n')
-
-kerfPlasma1=kerfPlasma1.rstrip('\n')
-kerfPlasma2=kerfPlasma2.rstrip('\n')
-kerfPlasma3=kerfPlasma3.rstrip('\n')
-kerfPlasma4=kerfPlasma4.rstrip('\n')
-kerfPlasma5=kerfPlasma5.rstrip('\n')
-kerfPlasma6=kerfPlasma6.rstrip('\n')
-kerfPlasma7=kerfPlasma7.rstrip('\n')
-kerfPlasma8=kerfPlasma8.rstrip('\n')
-kerfPlasma9=kerfPlasma9.rstrip('\n')
-kerfPlasma10=kerfPlasma10.rstrip('\n')
-
-velPlasma1=velPlasma1.rstrip('\n')
-velPlasma2=velPlasma2.rstrip('\n')
-velPlasma3=velPlasma3.rstrip('\n')
-velPlasma4=velPlasma4.rstrip('\n')
-velPlasma5=velPlasma5.rstrip('\n')
-velPlasma6=velPlasma6.rstrip('\n')
-velPlasma7=velPlasma7.rstrip('\n')
-velPlasma8=velPlasma8.rstrip('\n')
-velPlasma9=velPlasma9.rstrip('\n')
-velPlasma10=velPlasma10.rstrip('\n')
-
-arquivoDekerfPlasmaPlasma = "Dados/plasma.gisoplox"
-kerfPlasma = open(arquivoDekerfPlasma)
-
-#Bloco 1
-espMinPlasma1 = "0"
-espMaxPlasma1 = kerfPlasma.readline()
-kerfPlasma1 = kerfPlasma.readline()
-velPlasma1 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 2
-espMinPlasma2 = kerfPlasma.readline()
-espMaxPlasma2 = kerfPlasma.readline()
-kerfPlasma2 = kerfPlasma.readline()
-velPlasma2 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 3
-espMinPlasma3 = kerfPlasma.readline()
-espMaxPlasma3 = kerfPlasma.readline()
-kerfPlasma3 = kerfPlasma.readline()
-velPlasma3 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 4
-espMinPlasma4 = kerfPlasma.readline()
-espMaxPlasma4 = kerfPlasma.readline()
-kerfPlasma4 = kerfPlasma.readline()
-velPlasma4 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 5
-espMinPlasma5 = kerfPlasma.readline()
-espMaxPlasma5 = kerfPlasma.readline()
-kerfPlasma5 = kerfPlasma.readline()
-velPlasma5 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 6
-espMinPlasma6 = kerfPlasma.readline()
-espMaxPlasma6 = kerfPlasma.readline()
-kerfPlasma6 = kerfPlasma.readline()
-velPlasma6 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 7
-espMinPlasma7 = kerfPlasma.readline()
-espMaxPlasma7 = kerfPlasma.readline()
-kerfPlasma7 = kerfPlasma.readline()
-velPlasma7 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 8
-espMinPlasma8 = kerfPlasma.readline()
-espMaxPlasma8 = kerfPlasma.readline()
-kerfPlasma8 = kerfPlasma.readline()
-velPlasma8 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 9
-espMinPlasma9 = kerfPlasma.readline()
-espMaxPlasma9 = kerfPlasma.readline()
-kerfPlasma9 = kerfPlasma.readline()
-velPlasma9 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 10
-espMinPlasma10 = kerfPlasma.readline()
-espMaxPlasma10 = kerfPlasma.readline()
-kerfPlasma10 = kerfPlasma.readline()
-velPlasma10 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Retirando a quebra de linha das strings
-espMaxPlasma1=espMaxPlasma1.rstrip('\n')
-espMaxPlasma2=espMaxPlasma2.rstrip('\n')
-espMaxPlasma3=espMaxPlasma3.rstrip('\n')
-espMaxPlasma4=espMaxPlasma4.rstrip('\n')
-espMaxPlasma5=espMaxPlasma5.rstrip('\n')
-espMaxPlasma6=espMaxPlasma6.rstrip('\n')
-espMaxPlasma7=espMaxPlasma7.rstrip('\n')
-espMaxPlasma8=espMaxPlasma8.rstrip('\n')
-espMaxPlasma9=espMaxPlasma9.rstrip('\n')
-espMaxPlasma10=espMaxPlasma10.rstrip('\n')
-
-espMinPlasma1=espMinPlasma1.rstrip('\n')
-espMinPlasma2=espMinPlasma2.rstrip('\n')
-espMinPlasma3=espMinPlasma3.rstrip('\n')
-espMinPlasma4=espMinPlasma4.rstrip('\n')
-espMinPlasma5=espMinPlasma5.rstrip('\n')
-espMinPlasma6=espMinPlasma6.rstrip('\n')
-espMinPlasma7=espMinPlasma7.rstrip('\n')
-espMinPlasma8=espMinPlasma8.rstrip('\n')
-espMinPlasma9=espMinPlasma9.rstrip('\n')
-espMinPlasma10=espMinPlasma10.rstrip('\n')
-
-kerfPlasma1=kerfPlasma1.rstrip('\n')
-kerfPlasma2=kerfPlasma2.rstrip('\n')
-kerfPlasma3=kerfPlasma3.rstrip('\n')
-kerfPlasma4=kerfPlasma4.rstrip('\n')
-kerfPlasma5=kerfPlasma5.rstrip('\n')
-kerfPlasma6=kerfPlasma6.rstrip('\n')
-kerfPlasma7=kerfPlasma7.rstrip('\n')
-kerfPlasma8=kerfPlasma8.rstrip('\n')
-kerfPlasma9=kerfPlasma9.rstrip('\n')
-kerfPlasma10=kerfPlasma10.rstrip('\n')
-
-velPlasma1=velPlasma1.rstrip('\n')
-velPlasma2=velPlasma2.rstrip('\n')
-velPlasma3=velPlasma3.rstrip('\n')
-velPlasma4=velPlasma4.rstrip('\n')
-velPlasma5=velPlasma5.rstrip('\n')
-velPlasma6=velPlasma6.rstrip('\n')
-velPlasma7=velPlasma7.rstrip('\n')
-velPlasma8=velPlasma8.rstrip('\n')
-velPlasma9=velPlasma9.rstrip('\n')
-velPlasma10=velPlasma10.rstrip('\n')
-
-arquivoDekerfPlasmaPlasmaPlasma = "Dados/plasma.gisoplox"
-kerfPlasma = open(arquivoDekerfPlasma)
-
-#Bloco 1
-espMinPlasma1 = "0"
-espMaxPlasma1 = kerfPlasma.readline()
-kerfPlasma1 = kerfPlasma.readline()
-velPlasma1 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 2
-espMinPlasma2 = kerfPlasma.readline()
-espMaxPlasma2 = kerfPlasma.readline()
-kerfPlasma2 = kerfPlasma.readline()
-velPlasma2 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 3
-espMinPlasma3 = kerfPlasma.readline()
-espMaxPlasma3 = kerfPlasma.readline()
-kerfPlasma3 = kerfPlasma.readline()
-velPlasma3 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 4
-espMinPlasma4 = kerfPlasma.readline()
-espMaxPlasma4 = kerfPlasma.readline()
-kerfPlasma4 = kerfPlasma.readline()
-velPlasma4 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 5
-espMinPlasma5 = kerfPlasma.readline()
-espMaxPlasma5 = kerfPlasma.readline()
-kerfPlasma5 = kerfPlasma.readline()
-velPlasma5 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 6
-espMinPlasma6 = kerfPlasma.readline()
-espMaxPlasma6 = kerfPlasma.readline()
-kerfPlasma6 = kerfPlasma.readline()
-velPlasma6 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 7
-espMinPlasma7 = kerfPlasma.readline()
-espMaxPlasma7 = kerfPlasma.readline()
-kerfPlasma7 = kerfPlasma.readline()
-velPlasma7 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 8
-espMinPlasma8 = kerfPlasma.readline()
-espMaxPlasma8 = kerfPlasma.readline()
-kerfPlasma8 = kerfPlasma.readline()
-velPlasma8 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 9
-espMinPlasma9 = kerfPlasma.readline()
-espMaxPlasma9 = kerfPlasma.readline()
-kerfPlasma9 = kerfPlasma.readline()
-velPlasma9 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
-
-#Bloco 10
-espMinPlasma10 = kerfPlasma.readline()
-espMaxPlasma10 = kerfPlasma.readline()
-kerfPlasma10 = kerfPlasma.readline()
-velPlasma10 = kerfPlasma.readline()
-pular = kerfPlasma.readline()
+kerfPlasma.readline()
 
 #Retirando a quebra de linha das strings
 espMaxPlasma1=espMaxPlasma1.rstrip('\n')

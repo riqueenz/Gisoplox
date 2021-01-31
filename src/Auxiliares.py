@@ -13,63 +13,63 @@ def Parametros():
         local_data_files.create()
     configurar = open(settings_file)
 
-    pular = configurar.readline()
+    configurar.readline()
     icorte = configurar.readline()
     icorte = icorte.rstrip('\n')
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     fcorte = configurar.readline()
     fcorte = fcorte.rstrip('\n')
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     extencao = configurar.readline()
     extencao = extencao.rstrip('\n')
     extencao = extencao.replace(".", "")
     extencao = "." + extencao
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     SmesaX = configurar.readline()
     SmesaX = SmesaX.rstrip('\n')
     mesaX = float(SmesaX)
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
     
     SmesaY = configurar.readline()
     SmesaY = SmesaY.rstrip('\n')
     mesaY = float(SmesaY)
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     numerar = configurar.readline()
     numerar = numerar.rstrip('\n')
     numerar = int(numerar)
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     colocarVelocidadeAvanco = configurar.readline()
     colocarVelocidadeAvanco = colocarVelocidadeAvanco.rstrip('\n')
     colocarVelocidadeAvanco = int(colocarVelocidadeAvanco)
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     colocarVelocidadeAvancoRapido = configurar.readline()
     colocarVelocidadeAvancoRapido = colocarVelocidadeAvancoRapido.rstrip('\n')
     colocarVelocidadeAvancoRapido = int(colocarVelocidadeAvancoRapido)
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     velocidadeAvancoRapido = configurar.readline()
     velocidadeAvancoRapido = velocidadeAvancoRapido.rstrip('\n')
     velocidadeAvancoRapido = float(velocidadeAvancoRapido)
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
     
     pastaPadLinux = configurar.readline()
-    pular = configurar.readline()
-    pular = configurar.readline()
+    configurar.readline()
+    configurar.readline()
 
     pastaPadWin = configurar.readline()
     pastaPadLinux = pastaPadLinux.rstrip('\n')
@@ -188,7 +188,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()
+    ler.readline()
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -197,7 +197,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()
+    ler.readline()
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -206,7 +206,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -215,7 +215,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -224,7 +224,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -233,7 +233,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -242,7 +242,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -251,7 +251,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -260,7 +260,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -269,7 +269,7 @@ def Kerf(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -285,7 +285,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()
+    ler.readline()
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -294,7 +294,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()
+    ler.readline()
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -303,7 +303,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -312,7 +312,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -321,7 +321,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -330,7 +330,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -339,7 +339,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -348,7 +348,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -357,7 +357,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
@@ -366,7 +366,7 @@ def KerfPlasma(espessura):
     espMax = ler.readline()[0:-1]
     larg = ler.readline()[0:-1]
     vel = ler.readline()[0:-1]
-    pular = ler.readline()  
+    ler.readline()  
     if esp > float(espMin) and esp <= float(espMax):
         kerf = float(larg) / 2.0
         return (kerf, vel)
