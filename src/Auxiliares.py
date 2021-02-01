@@ -74,10 +74,11 @@ def Parametros():
     pastaPadWin = configurar.readline()
     pastaPadLinux = pastaPadLinux.rstrip('\n')
     pastaPadWin = pastaPadWin.rstrip('\n')
+    configurar.close()
 
     return icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux
 
-    configurar.close()
+
 
 
 def NumerarLinhas(nomeDoArquivo):
@@ -402,7 +403,7 @@ def lerHistLinha(linha):
     ler=open(arquivo)
     a=1
     while a<linha:
-        pular=ler.readline()
+        ler.readline()
         a+=1
     texto=ler.readline().replace("\n","")
     #Nome
@@ -754,9 +755,9 @@ def pesoTrianguloPontasCortadas(esp, tx, ty, chanfroX, chanfroY, quantidade):
     tx=str(tx)
     ty=str(ty)
     chanfroX=str(chanfroX)
-    chanfroX=str(chanfroY)
+    chanfroY=str(chanfroY)
     tx=float(tx)+float(chanfroX)
-    tx=float(ty)+float(chanfroY)
+    ty=float(ty)+float(chanfroY)
     pesoUnitarioGrande, pesoTotalGrande = pesoTrianguloRetangulo(esp, tx, ty, quantidade)
     pesoUnitarioPequeno, pesoTotalPequeno = pesoTrianguloRetangulo(esp, chanfroX, chanfroY, quantidade)
     pesoUnitario=pesoUnitarioGrande-pesoUnitarioPequeno-pesoUnitarioPequeno
