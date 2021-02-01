@@ -2676,7 +2676,7 @@ class OrectangeFrame(wx.Frame):
         nomePadrao=espi + "X" + str(inttxd) + "X" + str(inttyd) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
@@ -3365,7 +3365,7 @@ class OcircleFrame(wx.Frame):
         nomePadrao=espi + "XD" + str(intdiam1) + "XD" + str(intdiam2) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
@@ -4053,7 +4053,7 @@ class CircleSimple(wx.Frame):
         nomePadrao=espi + "X D" + str(intdiam) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
@@ -4669,7 +4669,7 @@ class FrameTriangulo(wx.Frame):
         nomePadrao=espi + "X" + str(inttxd) + "X" + str(inttyd) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
@@ -5353,7 +5353,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         nomePadrao=espi + "X" + str(inttxd) + "X" + str(inttyd) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
@@ -6043,7 +6043,7 @@ class FrameRetanguloFuro(wx.Frame):
         nomePadrao=espi + "X" + str(inttxd) + "X" + str(inttyd) + "XD" + str(intfuro) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
@@ -6735,7 +6735,7 @@ class FrameRetanguloChanfrado(wx.Frame):
         nomePadrao=espi + "X" + str(inttxd) + "X" + str(inttyd) + "-" + str(int(pecasGeradas)) + "P"
         wildcard=Auxiliares.Wildcard()
         if erros == 0:
-            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.SAVE)
+            dlg = wx.FileDialog( self, message="Salvar o código em ...", defaultDir=self.currentDirectory, defaultFile=nomePadrao, wildcard=wildcard, style=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
             if dlg.ShowModal() == wx.ID_OK:
                 salvar = dlg.GetPath()
             dlg.Destroy()
