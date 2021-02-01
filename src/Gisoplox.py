@@ -8,7 +8,6 @@ import gettext
 import Oxicorte
 import Plasma
 import Auxiliares
-import wx.lib.agw.multidirdialog as MDD
 import wx
 import wx.grid as gridlib
 
@@ -477,27 +476,10 @@ class FormatosRetangulares(wx.Frame):
         if sistemaOperacional=="Linux":
             TXFrame=530
             TYFrame=450
-            X1=20
-            Y1=10
-            DistEntreTextos=20
-            DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
-
             
         if sistemaOperacional=="Windows":
             TXFrame=530
             TYFrame=450
-            X1=20
-            Y1=10
-            DistEntreTextos=20
-            DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
             
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
