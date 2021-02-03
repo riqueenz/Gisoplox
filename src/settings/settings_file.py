@@ -1,3 +1,5 @@
+import os
+
 def create():
     settings_file_text = "cutting start command" + "\n"
     settings_file_text += "M07" + "\n" + "\n"
@@ -18,10 +20,10 @@ def create():
     settings_file_text += "positioning speed" + "\n"
     settings_file_text += "2700" + "\n" + "\n"
     settings_file_text += "default save folder Linux" + "\n"
-    settings_file_text += "/media/a/OXICORTE" + "\n" + "\n"
+    settings_file_text += os.getcwd() + "/Gisoplox_output\n" + "\n"
     settings_file_text += "default save folder Windows" + "\n"
-    settings_file_text += "" + "\n" + "\n"
-    #print(settings_file_text);
+    settings_file_text += os.getcwd() + "/Gisoplox_output\n" + "\n"
+    # print(settings_file_text);
     settings_file = open(".gisoplox/settings.ini", "w")
     settings_file.write(settings_file_text)
     settings_file.close()
