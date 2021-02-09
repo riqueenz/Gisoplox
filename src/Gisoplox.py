@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from settings import snap
+snap.change_python_cwd()
 import wx
 import os
 import math
@@ -23,7 +25,7 @@ class Gisoplox(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX | wx.MINIMIZE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("Gisoplox")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -244,7 +246,7 @@ class Intro(wx.Frame):
         kwds["style"] = wx.BORDER_SIMPLE
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("Gisoplox")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((620, 170))
         self.SetBackgroundColour(wx.WHITE)
@@ -351,9 +353,9 @@ class About(wx.Frame):
         #kwds["style"] =  wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.SetTitle("Gisoplox")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((430, 280))
         self.SetBackgroundColour(wx.WHITE)
@@ -485,7 +487,7 @@ class FormatosRetangulares(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("GISOPLOX - Formatos Retangulares")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharFormatosRetangulares)
@@ -594,7 +596,7 @@ class FormatosCirculares(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("GISOPLOX - Formatos Circulares")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharFormatosCirculares)
@@ -677,7 +679,7 @@ class FormatosTriangulares(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("GISOPLOX - Formatos Triangulares")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharFormatosTriangulares)
@@ -768,7 +770,7 @@ class Estat(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("GISOPLOX - estatísticas")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_MOTION,  self.OnMove)
@@ -924,7 +926,7 @@ class Hist(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("GISOPLOX - histórico")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharHist)
@@ -1120,7 +1122,7 @@ class Configurar(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("GISOPLOX - Configurar")
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharConfig)
@@ -1450,7 +1452,7 @@ class Kerf(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(("GISOPLOX - Parâmetros de corte - Oxicorte"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TX, TY))
         self.Bind(wx.EVT_MOTION,  self.OnMove)
@@ -1971,7 +1973,7 @@ class KerfPlasma(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(("GISOPLOX - Parâmetros de corte - Plasma"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TX, TY))
         self.Bind(wx.EVT_MOTION,  self.OnMove)
@@ -2420,7 +2422,7 @@ class OrectangeFrame(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Retângulo"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -3054,7 +3056,7 @@ class OcircleFrame(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Anel"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -3786,7 +3788,7 @@ class CircleSimple(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Círculo simples"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -4412,7 +4414,7 @@ class FrameTriangulo(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Triângulo retângulo"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -5026,7 +5028,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Triângulo com pontas cortadas"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -5748,7 +5750,7 @@ class FrameRetanguloFuro(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Retângulo com furo central"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -6388,7 +6390,7 @@ class FrameRetanguloChanfrado(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle(_("GISOPLOX - Retângulo chanfrado"))
-        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
