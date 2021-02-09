@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from settings import snap
+snap.change_python_cwd()
 import wx
 import os
 import math
