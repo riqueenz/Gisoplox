@@ -493,10 +493,10 @@ def converterDist(dist):
         a = str(int(dist)) + " mm"
         return a
     if 1000 <= dist < 2000:
-        a = str(int(dist / 1000)) + " metro"
+        a = str(int(dist / 1000)) + " meter"
         return a
     if 2000 < dist < 1000000:
-        a = str(int(dist / 1000)) + " metros"
+        a = str(int(dist / 1000)) + " meters"
         return a
     if dist >= 1000000:
         a = str(int(dist / 1000000)) + " km"
@@ -515,29 +515,29 @@ def lerEstat(unidade):
     def converterPeso(peso):
         peso = float(peso)
         if peso <= 1:
-            a = str(int(peso)) + " grama"
+            a = str(int(peso)) + " gram"
             return a
         if 1 < peso < 1000:
-            a = str(int(peso)) + " gramas"
+            a = str(int(peso)) + " grams"
             return a
         if 1000 <= peso < 1000000:
             a = str(int(peso / 1000)) + " kg"
             return a
         if 1000000 <= peso < 2000000:
-            a = str(int(peso / 1000000)) + " tonelada"
+            a = str(int(peso / 1000000)) + " tonne"
             return a
         if peso >= 2000000:
-            a = str(int(peso / 1000000)) + " toneladas"
+            a = str(int(peso / 1000000)) + " tonnes"
             return a
 
     def numParaEscrita(num):
         ano = date.fromordinal(int(num)).year
         mes = date.fromordinal(int(num)).month
-        meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro',
-                 'novembro', 'dezembro']
+        meses = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
         mes = meses[mes - 1]
         dia = date.fromordinal(int(num)).day
-        dia = str(dia) + " de " + str(mes) + " de " + str(ano)
+        #dia = str(dia) + " de " + str(mes) + " de " + str(ano)
+        dia = str(mes) + " " + str(dia) + "th, " + str(ano)
         return dia
 
     # Início da leitura do arquivo

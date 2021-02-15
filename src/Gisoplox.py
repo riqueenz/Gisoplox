@@ -14,9 +14,9 @@ import wx
 import wx.grid as gridlib
 
 sistemaOperacional=platform.system()
-#print sistemaOperacional
+# print sistemaOperacional
 AbrirIntro="Nao"
-versao= "Versão " + Auxiliares.versao()
+versao= "Version " + Auxiliares.versao()
     
 ###################################################### I - Frame Home Gisoplox ###############################################################################
 class Gisoplox(wx.Frame):
@@ -25,7 +25,7 @@ class Gisoplox(wx.Frame):
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX | wx.MINIMIZE_BOX
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("Gisoplox")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -39,82 +39,82 @@ class Gisoplox(wx.Frame):
         menuBar = wx.MenuBar()
         menu = wx.Menu()
 
-        #Menu opções/Teste
+        #Menu options/Teste
         #m_teste = menu.Append(wx.ID_ANY, "&Teste\tAlt-T", "Teste")
         #self.Bind(wx.EVT_MENU, self.AbrirTrianguloPontasCortadas, m_teste)
 
-        #Menu opções/Estatísticas
-        m_estat = menu.Append(wx.ID_ANY, "&Estatísticas\tAlt-E", "Estatísticas do histórico de corte")
+        #Menu options/Metrics
+        m_estat = menu.Append(wx.ID_ANY, "&Metrics\tAlt-M", "Cutting history metrics")
         self.Bind(wx.EVT_MENU, self.AbrirEstat, m_estat)
 
-        #Menu opções/Histórico
-        m_hist = menu.Append(wx.ID_ANY, "&Histórico\tAlt-H", "Histórico de programas gerados")
+        #Menu options/History
+        m_hist = menu.Append(wx.ID_ANY, "&History\tAlt-H", "History of generated CNC files")
         self.Bind(wx.EVT_MENU, self.AbrirHist, m_hist)
         
-        #Menu opções/configurações
-        m_config = menu.Append(wx.ID_ANY, "&Configurações\tAlt-C", "Configurações de escrita do código")
+        #Menu options/Settings
+        m_config = menu.Append(wx.ID_ANY, "&Settings\tAlt-S", "Code writing settings")
         self.Bind(wx.EVT_MENU, self.AbrirConfigurar, m_config)
 
-        #Menu opções/Parâmetros de corte
+        #Menu options/Cutting settings
         SubMenuKerf = wx.Menu()
-        menu.Append(wx.ID_ANY, '&Parâmetros de corte', SubMenuKerf)
-        m_kerf = SubMenuKerf.Append(wx.ID_ANY, "&Oxicorte\tCtrl-O", "Parâmetros de corte para oxicorte")
-        m_kerfPlasma = SubMenuKerf.Append(wx.ID_ANY, "&Plasma\tCtrl-P", "Parâmetros de corte para corte a plasma")
+        menu.Append(wx.ID_ANY, '&Cutting settings', SubMenuKerf)
+        m_kerf = SubMenuKerf.Append(wx.ID_ANY, "&Oxyfuel\tCtrl-O", "Oxyfuel cutting settings")
+        m_kerfPlasma = SubMenuKerf.Append(wx.ID_ANY, "&Plasma\tCtrl-P", "Plasma cutting settings")
         self.Bind(wx.EVT_MENU, self.AbrirKerf, m_kerf)
         self.Bind(wx.EVT_MENU, self.AbrirKerfPlasma, m_kerfPlasma)
 
-        #Menu opções/sair
+        #Menu options/Close
         menu.AppendSeparator()
-        m_sair = menu.Append(wx.ID_EXIT, "S&air\tAlt-S", "Fechar o programa")
+        m_sair = menu.Append(wx.ID_EXIT, "C&lose\tAlt-C", "Close the software")
         self.Bind(wx.EVT_MENU, self.FecharGisoplox, m_sair)
-        menuBar.Append(menu, "&Opções")
+        menuBar.Append(menu, "&Options")
 
-        #Menu Ferramentas
+        #Menu Tools
         menu = wx.Menu()
-        menuBar.Append(menu, "&Ferramentas")
+        menuBar.Append(menu, "&Tools")
 
-        #Sub-menu Ferramentas/retângulos
+        #Sub-menu Tools/Rectangles
         SubMenuRetangulos = wx.Menu()
-        menu.Append(wx.ID_ANY, 'R&etângulos', SubMenuRetangulos)
-        #Ferramentas/retângulos/retângulo
-        m_rectange = SubMenuRetangulos.Append(wx.ID_ANY, "&Retângulo\tCtrl-R", "Abrir a ferramenta de gerar retângulos")
+        menu.Append(wx.ID_ANY, 'R&ectangles', SubMenuRetangulos)
+        #Tools/rectangles/retângulo
+        m_rectange = SubMenuRetangulos.Append(wx.ID_ANY, "&Rectangle\tCtrl-R", "Opens the rectangles generating tool")
         self.Bind(wx.EVT_MENU, self.AbrirRectange, m_rectange)
-        #Ferramentas/retângulos/retângulo com furo central
-        m_RetanguloFuro = SubMenuRetangulos.Append(wx.ID_ANY, "&Retângulo com furo central", "Abrir a ferramenta de gerar retângulos com furo central")
+        #Tools/rectangles/Rectangle with center hole
+        m_RetanguloFuro = SubMenuRetangulos.Append(wx.ID_ANY, "&Rectangle with center hole", "Opens the tool for generating rectangles with a central hole")
         self.Bind(wx.EVT_MENU, self.AbrirRetanguloFuro, m_RetanguloFuro)
-        #Ferramentas/retângulos/retângulo chanfrado
-        m_RetanguloChanfrado = SubMenuRetangulos.Append(wx.ID_ANY, "&Retângulo chanfrado", "Abrir a ferramenta de gerar retângulos chanfrados")
+        #Tools/rectangles/Rectangle with Chamfer Corners
+        m_RetanguloChanfrado = SubMenuRetangulos.Append(wx.ID_ANY, "&Rectangle with chamfer corners", "Rectangle with chamfer corners")
         self.Bind(wx.EVT_MENU, self.AbrirRetanguloChanfrado, m_RetanguloChanfrado)
 
-        #Sub-menu Ferramentas/circulos
+        #Sub-menu Tools/Circles
         SubMenuCirculos = wx.Menu()
-        menu.Append(wx.ID_ANY, 'C&írculos', SubMenuCirculos)
-        #Ferramentas/circulos/anel
-        m_circle = SubMenuCirculos.Append(wx.ID_ANY, "&Anel\tCtrl-A", "Abrir a ferramenta de gerar anéis")
+        menu.Append(wx.ID_ANY, 'C&ircles', SubMenuCirculos)
+        #Tools/circulos/anel
+        m_circle = SubMenuCirculos.Append(wx.ID_ANY, "&Donut\tCtrl-D", "Donut")
         self.Bind(wx.EVT_MENU, self.AbrirCircle, m_circle)
-        #Ferramentas/circulos/círculo
-        m_circleSimple = SubMenuCirculos.Append(wx.ID_ANY, "&Círculo\tCtrl-C", "Abrir a ferramenta de gerar círculos")
+        #Tools/circulos/círculo
+        m_circleSimple = SubMenuCirculos.Append(wx.ID_ANY, "&Circle\tCtrl-C", "Circle")
         self.Bind(wx.EVT_MENU, self.AbrirCircleSimple, m_circleSimple)
 
-        #Sub-menu Ferramentas/triangulos
+        #Sub-menu Tools/triangulos
         SubMenuTriangulos = wx.Menu()
-        menu.Append(wx.ID_ANY, 'T&riângulos', SubMenuTriangulos)
-        m_triangulo = SubMenuTriangulos.Append(wx.ID_ANY, "&T&riângulo retângulo\tCtrl-T", "Abrir a ferramenta de gerar triângulos retângulos")
+        menu.Append(wx.ID_ANY, 'T&riangles', SubMenuTriangulos)
+        m_triangulo = SubMenuTriangulos.Append(wx.ID_ANY, "&R&ight triangle\tCtrl-T", "Right triangle")
         self.Bind(wx.EVT_MENU, self.AbrirTriangulo, m_triangulo)
-        m_trianguloPontasCortadas = SubMenuTriangulos.Append(wx.ID_ANY, "&T&riângulo com pontas cortadas", "Abrir a ferramenta de gerar triângulos com pontas cortadas")
+        m_trianguloPontasCortadas = SubMenuTriangulos.Append(wx.ID_ANY, "&T&riangle with ends cut", "Triangle with ends cut")
         self.Bind(wx.EVT_MENU, self.AbrirTrianguloPontasCortadas, m_trianguloPontasCortadas)
 
-        #Menu ajuda
+        #Menu Help
         menu = wx.Menu()
-        menuBar.Append(menu, "&Ajuda")
-        #Menu ajuda/Estatísticas
-        m_estat = menu.Append(wx.ID_ANY, "&Estatísticas\tAlt-E", "Estatísticas do histórico de corte")
+        menuBar.Append(menu, "&Help")
+        #Menu Help/Metrics
+        m_estat = menu.Append(wx.ID_ANY, "&Metrics\tAlt-E", "Cutting history metrics")
         self.Bind(wx.EVT_MENU, self.AbrirEstat, m_estat)
-        #Menu ajuda/Histórico
-        m_hist = menu.Append(wx.ID_ANY, "&Histórico\tAlt-H", "Histórico de programas gerados")
+        #Menu Help/History
+        m_hist = menu.Append(wx.ID_ANY, "&History\tAlt-H", "History of generated CNC files")
         self.Bind(wx.EVT_MENU, self.AbrirHist, m_hist)
-        #Menu ajuda/Sobre
-        m_about = menu.Append(wx.ID_ABOUT, "&Sobre", "Informações sobre este programa")
+        #Menu Help/About
+        m_about = menu.Append(wx.ID_ABOUT, "&About", "About this software")
         self.Bind(wx.EVT_MENU, self.AbrirAbout, m_about)
         
         self.SetMenuBar(menuBar)
@@ -246,7 +246,7 @@ class Intro(wx.Frame):
         kwds["style"] = wx.BORDER_SIMPLE
         wx.Frame.__init__(self, *args, **kwds)
         self.SetTitle("Gisoplox")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((620, 170))
         self.SetBackgroundColour(wx.WHITE)
@@ -353,9 +353,9 @@ class About(wx.Frame):
         #kwds["style"] =  wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.SetTitle("Gisoplox")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((430, 280))
         self.SetBackgroundColour(wx.WHITE)
@@ -460,8 +460,8 @@ class About(wx.Frame):
 		wx.FONTWEIGHT_BOLD, False, 'Courier New'))
         dc.SetTextForeground('#000000')
         dc.DrawText(versao, 130, 150)
-        dc.DrawText("Autor: Henrique Enzweiler", 80, 180)
-        dc.DrawText("e-mail: henriqueenzweiler@gmail.com", 20, 210)
+        dc.DrawText("Author: Henrique Enzweiler", 80, 180)
+        dc.DrawText("e-mail: gisoplox@gmail.com", 80, 210)
 
         #Botao de fechar
         #self.botao_Gerar = wx.Button(self, id=-1, label='Fechar', pos=(170, 260))
@@ -486,8 +486,8 @@ class FormatosRetangulares(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Formatos Retangulares")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle("GISOPLOX - Rectangular Shapes")
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharFormatosRetangulares)
@@ -574,10 +574,10 @@ class FormatosCirculares(wx.Frame):
             Y1=10
             DistEntreTextos=20
             DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
+            XClose=170
+            YClose=360
+            XReset=70
+            YReset=YClose
 
             
         if sistemaOperacional=="Windows":
@@ -587,16 +587,16 @@ class FormatosCirculares(wx.Frame):
             Y1=10
             DistEntreTextos=20
             DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
+            XClose=170
+            YClose=360
+            XReset=70
+            YReset=YClose
             
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Formatos Circulares")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle("GISOPLOX - Circular Shapes")
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharFormatosCirculares)
@@ -657,10 +657,10 @@ class FormatosTriangulares(wx.Frame):
             Y1=10
             DistEntreTextos=20
             DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
+            XClose=170
+            YClose=360
+            XReset=70
+            YReset=YClose
 
             
         if sistemaOperacional=="Windows":
@@ -670,16 +670,16 @@ class FormatosTriangulares(wx.Frame):
             Y1=10
             DistEntreTextos=20
             DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
+            XClose=170
+            YClose=360
+            XReset=70
+            YReset=YClose
             
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Formatos Triangulares")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle("GISOPLOX - Triangular Shapes")
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharFormatosTriangulares)
@@ -743,15 +743,15 @@ class Estat(wx.Frame):
     def __init__(self, *args, **kwds):
         if sistemaOperacional=="Linux":
             TXFrame=310
-            TYFrame=410
+            TYFrame=460
             X1=20
             Y1=10
             DistEntreTextos=20
             DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
+            XClose=170
+            YClose=360
+            XReset=70
+            YReset=YClose
 
             
         if sistemaOperacional=="Windows":
@@ -761,16 +761,16 @@ class Estat(wx.Frame):
             Y1=10
             DistEntreTextos=20
             DistEntreTitulos=30
-            XSair=170
-            YSair=360
-            XZerar=70
-            YZerar=YSair
+            XClose=170
+            YClose=360
+            XReset=70
+            YReset=YClose
             
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - estatísticas")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle("GISOPLOX - metrics")
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_MOTION,  self.OnMove)
@@ -783,111 +783,112 @@ class Estat(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        wx.StaticText(self, wx.ID_ANY, ("DADOS ESTATÍSTICOS DE CORTE:"), pos=(X1,Y1))
+        wx.StaticText(self, wx.ID_ANY, ("CUTTING DATA:"), pos=(X1,Y1))
         Y=Y1+DistEntreTitulos
-        wx.StaticText(self, wx.ID_ANY, ("DESDE A INSTALAÇÃO:"), pos=(X1,Y))
+        wx.StaticText(self, wx.ID_ANY, ("SINCE THE INSTALLATION:"), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Distância de corte: "
+        mensagem="Cutting distance: "
         mensagem+=str(distTotal)
         self.texto_distTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Peso total das peças: "
+        mensagem="Total weight of parts: "
         mensagem+=str(pesoTotal)
         self.texto_pesoTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Programas gerados: "
+        mensagem="Generated CNC files: "
         mensagem+=str(prgTotal)
         self.texto_prgTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Início da contagem: "
+        mensagem="Starting date: "
         mensagem+=str(diaTotal)
         self.texto_diaTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTitulos
-        wx.StaticText(self, wx.ID_ANY, ("DESDE QUE FOI ZERADO:"), pos=(X1,Y))
+        wx.StaticText(self, wx.ID_ANY, ("SINCE IT WAS RESET:"), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Distância de corte: "
+        mensagem="Cutting distance: "
         mensagem+=str(distZerado)
         self.texto_distZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Peso total das peças: "
+        mensagem="Total weight of parts: "
         mensagem+=str(pesoZerado)
         self.texto_pesoZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Programas gerados: "
+        mensagem="Generated CNC files: "
         mensagem+=str(prgZerado)
         self.texto_prgZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Início da contagem: "
+        mensagem="Starting date: "
         mensagem+=str(diaZerado)
         self.texto_diaZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTitulos
-        mensagem="Obs: Para gerar os dados estatísticos são\nlevados  em  consideração  os  programas\ngerados e não os cortados."
-        mensagem+=" Para o cálculo\ndo peso o material  foi  considerado  aço."
+        # Note: To generate this data, the generated CNC files are taken into account and not the cut parts
+        # To calculate the weight we consider that all the pieces were made of steel
+        mensagem="Note: To calculate the weight we consider\n that all the pieces were made of steel"
         wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
 
         #Botão sair
-        Botao_Sair = wx.Button(self, id=-1, label='Sair', pos=(XSair, YSair))
-        self.Bind(wx.EVT_BUTTON, self.FecharEstat, Botao_Sair)
+        Botao_Close = wx.Button(self, id=-1, label='Close', pos=(XClose, YClose))
+        self.Bind(wx.EVT_BUTTON, self.FecharEstat, Botao_Close)
         #Botão zerar
-        Botao_Zerar = wx.Button(self, id=-1, label='Zerar', pos=(XZerar, YZerar))
-        self.Bind(wx.EVT_BUTTON, self.Zerar, Botao_Zerar)
+        Botao_Reset = wx.Button(self, id=-1, label='Reset', pos=(XReset, YReset))
+        self.Bind(wx.EVT_BUTTON, self.Reset, Botao_Reset)
 
-    def Zerar(self, event):
+    def Reset(self, event):
         Auxiliares.zerarEstat()
         distTotal, pesoTotal, prgTotal, diaTotal, distZerado, pesoZerado, prgZerado, diaZerado = Auxiliares.lerEstat(True)
-        mensagem="Distância de corte: "
+        mensagem="Cutting distance: "
         mensagem+=str(distTotal)
         self.texto_distTotal.SetLabel(mensagem)
-        mensagem="Peso total das peças: "
+        mensagem="Total weight of parts: "
         mensagem+=str(pesoTotal)
         self.texto_pesoTotal.SetLabel(mensagem)
-        mensagem="Programas gerados: "
+        mensagem="Generated CNC files: "
         mensagem+=str(prgTotal)
         self.texto_prgTotal.SetLabel(mensagem)
-        mensagem="Início da contagem: "
+        mensagem="Starting date: "
         mensagem+=str(diaTotal)
         self.texto_diaTotal.SetLabel(mensagem)
-        mensagem="Distância de corte: "
+        mensagem="Cutting distance: "
         mensagem+=str(distZerado)
         self.texto_distZerado.SetLabel(mensagem)
-        mensagem="Peso total das peças: "
+        mensagem="Total weight of parts: "
         mensagem+=str(pesoZerado)
         self.texto_pesoZerado.SetLabel(mensagem)
-        mensagem="Programas gerados: "
+        mensagem="Generated CNC files: "
         mensagem+=str(prgZerado)
         self.texto_prgZerado.SetLabel(mensagem)
-        mensagem="Início da contagem: "
+        mensagem="Starting date: "
         mensagem+=str(diaZerado)
         self.texto_diaZerado.SetLabel(mensagem)
         #Mostrar aviso de sucesso
-        dlg = wx.MessageDialog(parent=None, message="Dados estatícos zerados com sucesso!", caption="Dados estatícos zerados", style=wx.OK|wx.ICON_INFORMATION)
+        dlg = wx.MessageDialog(parent=None, message="Data reset successfully!", caption="Data reset", style=wx.OK|wx.ICON_INFORMATION)
         dlg.ShowModal()
         dlg.Destroy()
 
     def OnMove(self, event):
         distTotal, pesoTotal, prgTotal, diaTotal, distZerado, pesoZerado, prgZerado, diaZerado = Auxiliares.lerEstat(True)
-        mensagem="Distância de corte: "
+        mensagem="Cutting distance: "
         mensagem+=str(distTotal)
         self.texto_distTotal.SetLabel(mensagem)
-        mensagem="Peso total das peças: "
+        mensagem="Total weight of parts: "
         mensagem+=str(pesoTotal)
         self.texto_pesoTotal.SetLabel(mensagem)
-        mensagem="Programas gerados: "
+        mensagem="Generated CNC files: "
         mensagem+=str(prgTotal)
         self.texto_prgTotal.SetLabel(mensagem)
-        mensagem="Início da contagem: "
+        mensagem="Starting date: "
         mensagem+=str(diaTotal)
         self.texto_diaTotal.SetLabel(mensagem)
-        mensagem="Distância de corte: "
+        mensagem="Cutting distance: "
         mensagem+=str(distZerado)
         self.texto_distZerado.SetLabel(mensagem)
-        mensagem="Peso total das peças: "
+        mensagem="Total weight of parts: "
         mensagem+=str(pesoZerado)
         self.texto_pesoZerado.SetLabel(mensagem)
-        mensagem="Programas gerados: "
+        mensagem="Generated CNC files: "
         mensagem+=str(prgZerado)
         self.texto_prgZerado.SetLabel(mensagem)
-        mensagem="Início da contagem: "
+        mensagem="Starting date: "
         mensagem+=str(diaZerado)
         self.texto_diaZerado.SetLabel(mensagem)     
 
@@ -925,8 +926,8 @@ class Hist(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - histórico")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle("GISOPLOX - history")
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharHist)
@@ -936,20 +937,20 @@ class Hist(wx.Frame):
         menuBar = wx.MenuBar()
         menu = wx.Menu()
 
-        #Menu opções/Atualizar
-        m_atualizar = menu.Append(wx.ID_ANY, "&Atualizar")
+        #Menu options/Atualizar
+        m_atualizar = menu.Append(wx.ID_ANY, "&Update")
         self.Bind(wx.EVT_MENU, self.Atualizar, m_atualizar)
 
-        #Menu opções/sair
+        #Menu options/sair
         menu.AppendSeparator()
-        m_sair = menu.Append(wx.ID_EXIT, "S&air\tAlt-S", "Fechar o programa")
+        m_sair = menu.Append(wx.ID_EXIT, "C&lose\tAlt-W", "Closes the software")
         self.Bind(wx.EVT_MENU, self.FecharHist, m_sair)
-        menuBar.Append(menu, "&Opções")
+        menuBar.Append(menu, "&Options")
 
         #Menu Atualizar
         menu = wx.Menu()
-        m_atualizar=menuBar.Append(menu, "&Atualizar")
-        m_atualizar = menu.Append(wx.ID_ANY, "&Atualizar")
+        m_atualizar=menuBar.Append(menu, "&Update")
+        m_atualizar = menu.Append(wx.ID_ANY, "&Update")
         self.Bind(wx.EVT_MENU, self.Atualizar, m_atualizar)
         
         self.SetMenuBar(menuBar)
@@ -978,13 +979,13 @@ class Hist(wx.Frame):
         #Nao permitir ediçao
         self.myGrid.EnableEditing(False)
 
-        self.myGrid.SetColLabelValue(0, "Nome do programa")
-        self.myGrid.SetColLabelValue(1, "Peso Unitario")
-        self.myGrid.SetColLabelValue(2, "Peso Total")
-        self.myGrid.SetColLabelValue(3, "Distância")
-        self.myGrid.SetColLabelValue(4, "Data")
-        self.myGrid.SetColLabelValue(5, "Hora")
-        self.myGrid.SetColLabelValue(6, "Versão")
+        self.myGrid.SetColLabelValue(0, "CNC file name")
+        self.myGrid.SetColLabelValue(1, "Unit Weight")
+        self.myGrid.SetColLabelValue(2, "Total weight")
+        self.myGrid.SetColLabelValue(3, "Distance")
+        self.myGrid.SetColLabelValue(4, "Date")
+        self.myGrid.SetColLabelValue(5, "Time")
+        self.myGrid.SetColLabelValue(6, "Version")
 
         #Escrevendo os programas
         a=0
@@ -1043,9 +1044,9 @@ class Configurar(wx.Frame):
             X6=170
             X7=230
             X8=285
-            X9=230
-            X10=265
-            X11=320
+            X9=170
+            X10=170
+            X11=X10+55
             XCancelar=200
             XAplicar=290
             XOxi=50
@@ -1121,8 +1122,8 @@ class Configurar(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Configurar")
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle("GISOPLOX - Settings")
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
         self.Bind(wx.EVT_CLOSE, self.FecharConfig)
@@ -1131,53 +1132,53 @@ class Configurar(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("COMANDOS:"), pos=(X1,Y0))
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Início de corte:"), pos=(X1,posIcorteY))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("COMMANDS:"), pos=(X1,Y0))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("Cutting start:"), pos=(X1,posIcorteY))
         self.campo_de_texto_Icorte=wx.TextCtrl(self, wx.ID_ANY, icorte, pos=(X2,posIcorteY), size=(T1X,T1Y))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Fim de corte:"), pos=(X3,posIcorteY))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("End of cut:"), pos=(X3,posIcorteY))
         self.campo_de_texto_Fcorte=wx.TextCtrl(self, wx.ID_ANY, fcorte, pos=(X4,posIcorteY), size=(T1X,T1Y))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("TAMANHO DA MESA / LIMITES DE CORTE:"), pos=(X1,Y1))
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Limite X:"), pos=(X1,Y2))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("TABLE SIZE / CUT LIMITS:"), pos=(X1,Y1))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("Limit X:"), pos=(X1,Y2))
         self.campo_de_texto_mesaX=wx.TextCtrl(self, wx.ID_ANY, SmesaX, pos=(posMesa1X,Y2), size=(T1X,T1Y))
         label_1 = wx.StaticText(self, wx.ID_ANY, ("mm"), pos=(X5,Y2))
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Limite Y:"), pos=(X6,Y2))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("Limit Y:"), pos=(X6,Y2))
         self.campo_de_texto_mesaY=wx.TextCtrl(self, wx.ID_ANY, SmesaY, pos=(X7,Y2), size=(T1X,T1Y))
         label_1 = wx.StaticText(self, wx.ID_ANY, ("mm"), pos=(X8,Y2))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ('AJUSTES DO CÓDIGO:'), pos=(X1,Y3), size=(TamAjuCodX,TamAjuCodY))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ('CODE SETTINGS::'), pos=(X1,Y3), size=(TamAjuCodX,TamAjuCodY))
 
         #Usar 1 para SIM e 0 para não
-        self.checarNumerarLinhas = wx.CheckBox(self, -1, 'Numerar linhas', (X1, Y4))
+        self.checarNumerarLinhas = wx.CheckBox(self, -1, 'Number lines', (X1, Y4))
         if numerar == 1:
             self.checarNumerarLinhas.SetValue(True)
         if numerar == 0:
             self.checarNumerarLinhas.SetValue(False)
             
-        self.checarColocarVelocidadeAvanco = wx.CheckBox(self, -1, 'Colocar velocidade de avanço', (X1, Y5))
+        self.checarColocarVelocidadeAvanco = wx.CheckBox(self, -1, 'Set feed speed', (X1, Y5))
         if colocarVelocidadeAvanco == 1:
             self.checarColocarVelocidadeAvanco.SetValue(True)
         if colocarVelocidadeAvanco == 0:
             self.checarColocarVelocidadeAvanco.SetValue(False)
 
-        self.checarColocarVelocidadeAvancoRapido = wx.CheckBox(self, -1, 'Colocar velocidade de avanço rápido', (X1, Y6))
+        self.checarColocarVelocidadeAvancoRapido = wx.CheckBox(self, -1, 'Set positioning speed', (X1, Y6))
         if colocarVelocidadeAvancoRapido == 1:
             self.checarColocarVelocidadeAvancoRapido.SetValue(True)
         if colocarVelocidadeAvancoRapido == 0:
             self.checarColocarVelocidadeAvancoRapido.SetValue(False)
         
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("EXTENÇÃO DO ARQUIVO CNC:"), pos=(X1,Y7))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("CNC FILE EXTENSION:"), pos=(X1,Y7))
         self.campo_de_texto_extencao=wx.TextCtrl(self, wx.ID_ANY, extencao, pos=(X9,Y7), size=(T1X,T1Y))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("VELOCIDADE DO AVANÇO RÁPIDO:"), pos=(X1,Y8))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("POSITIONING SPEED:"), pos=(X1,Y8))
         self.campo_de_texto_velocidadeAvancoRapido=wx.TextCtrl(self, wx.ID_ANY, SmesaX, pos=(X10,Y8), size=(T1X,T1Y))
         label_1 = wx.StaticText(self, wx.ID_ANY, ("mm/min"), pos=(X11,Y8))
 
         #Botões Oxicorte e Plasma
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("CONFIGURAR PARÂMETROS DE CORTE:"), pos=(X1,YTextConfigurar))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ("CONFIGURE CUTTING PARAMETERS:"), pos=(X1,YTextConfigurar))
         
-        Botao_ConfigOxi = wx.Button(self, id=-1, label='Oxicorte', pos=(XOxi, YOxi))
+        Botao_ConfigOxi = wx.Button(self, id=-1, label='Oxyfuel', pos=(XOxi, YOxi))
         self.Bind(wx.EVT_BUTTON, self.MostrarKerf, Botao_ConfigOxi)
         
         Botao_ConfigPlas = wx.Button(self, id=-1, label='Plasma', pos=(XPlas, YOxi))
@@ -1185,24 +1186,24 @@ class Configurar(wx.Frame):
 
         #Pasta salvar padrão
         #pastaPad="CNC/"
-        label_1 = wx.StaticText(self, wx.ID_ANY, ('PASTA "SALVAR PADRÃO:"'), pos=(X1,YTextPastaSalvar))
+        label_1 = wx.StaticText(self, wx.ID_ANY, ('"STANDARD SAVE" FOLDER'), pos=(X1,YTextPastaSalvar))
 
         if sistemaOperacional=="Windows":
             textoPastaPad = pastaPadWin
-            texto = 'Alterar pasta'
+            texto = 'Change'
         if sistemaOperacional=="Linux":
             textoPastaPad = pastaPadLinux
-            texto = 'Alterar'
+            texto = 'Change'
         self.campo_de_texto_PastaSalvarPadrao=wx.TextCtrl(self, wx.ID_ANY, textoPastaPad, pos=(XCampoPastaSalvar,YCampoPastaSalvar), size=(TamXCampoPastaSalvar,T1Y), style=(wx.TE_READONLY))
         
         Botao_Alterar = wx.Button(self, id=-1, label=texto, pos=(XBotaoPastaSalvar, YBotaoPastaSalvar))
         self.Bind(wx.EVT_BUTTON, self.AlterarSalvarPad, Botao_Alterar)
 
         #Botões Cancelar e Aplicar        
-        Botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XCancelar, YCancelar))
+        Botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XCancelar, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharConfig, Botao_Cancelar)
         
-        Botao_Aplicar = wx.Button(self, id=-1, label='Aplicar', pos=(XAplicar, YCancelar))
+        Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XAplicar, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.AplicarConfig, Botao_Aplicar)
 
         
@@ -1259,7 +1260,7 @@ class Configurar(wx.Frame):
         escrever.close()
 
         #Mostrar aviso de sucesso
-        dlg = wx.MessageDialog(parent=None, message="Configurações salvas com sucesso", caption="Configurações salvas", style=wx.OK|wx.ICON_INFORMATION)
+        dlg = wx.MessageDialog(parent=None, message="Settings salvas com sucesso", caption="Settings salvas", style=wx.OK|wx.ICON_INFORMATION)
         dlg.ShowModal()
         dlg.Destroy()
 
@@ -1451,8 +1452,8 @@ class Kerf(wx.Frame):
         
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(("GISOPLOX - Parâmetros de corte - Oxicorte"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(("GISOPLOX - Cutting settings - Oxyfuel"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TX, TY))
         self.Bind(wx.EVT_MOTION,  self.OnMove)
@@ -1462,9 +1463,9 @@ class Kerf(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        wx.StaticText(self, wx.ID_ANY, ("Espessura (mm)"), pos=(15,10))
-        wx.StaticText(self, wx.ID_ANY, ("Largura de corte (mm)"), pos=(120,10))
-        wx.StaticText(self, wx.ID_ANY, ("Velocidade (mm/min)"), pos=(270,10))
+        wx.StaticText(self, wx.ID_ANY, ("Thickness (mm)"), pos=(15,10))
+        wx.StaticText(self, wx.ID_ANY, ("Cutting width (mm)"), pos=(130,10))
+        wx.StaticText(self, wx.ID_ANY, ("Speed (mm/min)"), pos=(270,10))
 
         #Desenhando a tabela
         
@@ -1560,11 +1561,11 @@ class Kerf(wx.Frame):
 
         Y=Y+50
         #Botão Cancelar
-        Botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, Y))
+        Botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, Y))
         self.Bind(wx.EVT_BUTTON, self.FecharKerf, Botao_Cancelar)
 
         #Botao Aplicar
-        Botao_Aplicar = wx.Button(self, id=-1, label='Aplicar', pos=(XBA, Y))
+        Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XBA, Y))
         self.Bind(wx.EVT_BUTTON, self.AplicarKerf, Botao_Aplicar)
 
         #Comando do botão cancelar
@@ -1783,7 +1784,7 @@ class Kerf(wx.Frame):
             escrever.close()
 
             #Mostrar aviso de sucesso
-            dlg = wx.MessageDialog(parent=None, message="Configurações salvas com sucesso", caption="Configurações salvas", style=wx.OK|wx.ICON_INFORMATION)
+            dlg = wx.MessageDialog(parent=None, message="Settings salvas com sucesso", caption="Settings salvas", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
         
@@ -1972,8 +1973,8 @@ class KerfPlasma(wx.Frame):
         
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(("GISOPLOX - Parâmetros de corte - Plasma"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(("GISOPLOX - Cutting settings - Plasma"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TX, TY))
         self.Bind(wx.EVT_MOTION,  self.OnMove)
@@ -1983,9 +1984,9 @@ class KerfPlasma(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        wx.StaticText(self, wx.ID_ANY, ("Espessura (mm)"), pos=(15,10))
-        wx.StaticText(self, wx.ID_ANY, ("Largura de corte (mm)"), pos=(120,10))
-        wx.StaticText(self, wx.ID_ANY, ("Velocidade (mm/min)"), pos=(270,10))
+        wx.StaticText(self, wx.ID_ANY, ("Thickness (mm)"), pos=(15,10))
+        wx.StaticText(self, wx.ID_ANY, ("Cutting width (mm)"), pos=(130,10))
+        wx.StaticText(self, wx.ID_ANY, ("Speed (mm/min)"), pos=(270,10))
 
         #Desenhando a tabela
         
@@ -2081,11 +2082,11 @@ class KerfPlasma(wx.Frame):
 
         Y=Y+50
         #Botão Cancelar
-        Botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, Y))
+        Botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, Y))
         self.Bind(wx.EVT_BUTTON, self.FecharkerfPlasma, Botao_Cancelar)
 
         #Botao Aplicar
-        Botao_Aplicar = wx.Button(self, id=-1, label='Aplicar', pos=(XBA, Y))
+        Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XBA, Y))
         self.Bind(wx.EVT_BUTTON, self.AplicarkerfPlasma, Botao_Aplicar)
 
         #Comando do botão cancelar
@@ -2304,7 +2305,7 @@ class KerfPlasma(wx.Frame):
             escrever.close()
 
             #Mostrar aviso de sucesso
-            dlg = wx.MessageDialog(parent=None, message="Configurações salvas com sucesso", caption="Configurações salvas", style=wx.OK|wx.ICON_INFORMATION)
+            dlg = wx.MessageDialog(parent=None, message="Settings salvas com sucesso", caption="Settings salvas", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
         
@@ -2421,8 +2422,8 @@ class OrectangeFrame(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Retângulo"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Rectangle"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -2435,39 +2436,39 @@ class OrectangeFrame(wx.Frame):
         self.campo_de_texto_TamanhoY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X2,Y2), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharRectange, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -2572,26 +2573,26 @@ class OrectangeFrame(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of pieces reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -2599,11 +2600,11 @@ class OrectangeFrame(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -2611,25 +2612,25 @@ class OrectangeFrame(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -2641,7 +2642,7 @@ class OrectangeFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
@@ -2665,16 +2666,16 @@ class OrectangeFrame(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -2682,18 +2683,18 @@ class OrectangeFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -2761,26 +2762,26 @@ class OrectangeFrame(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -2788,11 +2789,11 @@ class OrectangeFrame(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -2800,25 +2801,25 @@ class OrectangeFrame(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -2830,7 +2831,7 @@ class OrectangeFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             print(Kerf)
@@ -2876,16 +2877,16 @@ class OrectangeFrame(wx.Frame):
         salvar+="/" + nomePadrao
         #print salvar
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -2893,12 +2894,12 @@ class OrectangeFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -3055,8 +3056,8 @@ class OcircleFrame(wx.Frame):
 
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Anel"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Donut"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -3075,39 +3076,39 @@ class OcircleFrame(wx.Frame):
         self.campo_de_texto_DiamInt=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y4), size=(TX2,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X5,Y5))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X5,Y5))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X6,Y5), size=(XCX1,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X7, 70))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X8, Y5))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X8, Y5))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X9,Y6))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X9,Y6))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X10,Y6), size=(XCX1,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X11,Y6))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X11,Y6))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X12,Y7))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X12,Y7))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X13,Y7), size=(XCX2,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X14,Y7))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X15,181))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X15,181))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X16,Y8), size=(XCX3,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X17,Y8))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X18,Y8), size=(XCX3,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharCircle, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -3218,21 +3219,21 @@ class OcircleFrame(wx.Frame):
 
         #Erro: A espessura digitada é inválida
         if str(espessura).replace('.', '').replace('/', '').replace('"', '').replace('-', '').replace(' ', '').isdigit() == False:
-            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nDigite apenas números!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nEnter numbers only!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
         #Erro: A espessura digitada é inválida
         if str(espessura).replace('.', '').replace('/', '').replace('"', '').replace('-', '').replace(' ', '').isdigit() == False:
-            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nDigite apenas números!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nEnter numbers only!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -3240,12 +3241,12 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro externo não for preenchido
         if diam1=="" or diam1.replace('.', '').isdigit() == False:
             if diam1=="":
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro externo não foi digitado!", caption="Verifique o diâmetro externo digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The outside diameter was not entered!", caption="Check the entered outside diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
             if diam1!="":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no diâmetro externo informado!\nDigite apenas números.", caption="Verifique o diâmetro externo digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the reported outside diameter!\nEnter numbers only.", caption="Check the entered outside diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
@@ -3253,12 +3254,12 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro interno não for preenchido
         if diam2=="" or diam2.replace('.', '').isdigit() == False:
             if diam2=="":
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro interno não foi digitado!\n\nCaso queira gerar o código de uma peça sem furo\nabra a página principal do GISOPLOX e no menu\nescolha as seguintes opções:\n\n>>Ferramentas/Círculos/Círculo", caption="Verifique o diâmetro interno digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The internal diameter has not been entered!\n\nIf you want to generate the code for a part without a hole\nopen the main page of GISOPLOX and in the menu\nchoose the following options:\n\n>>Tools/Circles/Circle", caption="Check the entered internal diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
             if diam2!="":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no diâmetro interno informado!\nDigite apenas números.", caption="Verifique o diâmetro interno digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the informed internal diameter!\nEnter numbers only.", caption="Check the entered internal diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
@@ -3266,7 +3267,7 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro externo e' menor que o interno
         if diam1.replace('.', '').isdigit() == True and diam2.replace('.', '').isdigit() == True:
             if float(diam1) < float(diam2):
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro externo digitado é menor que o diâmetro interno!", caption="Verifique os diâmetros digitados", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The entered outside diameter is smaller than the inside diameter!", caption="Check the entered diameters", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
@@ -3274,26 +3275,26 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro externo e' igual que o interno
         if diam1.replace('.', '').isdigit() == True and diam2.replace('.', '').isdigit() == True:
             if float(diam1) == float(diam2):
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro externo digitado é igual ao diâmetro interno!", caption="Verifique os diâmetros digitados", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The entered outside diameter is the same as the inside diameter!", caption="Check the entered diameters", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!\nDigite apenas números.", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!\nEnter numbers only.", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -3301,25 +3302,25 @@ class OcircleFrame(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -3331,7 +3332,7 @@ class OcircleFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
@@ -3354,16 +3355,16 @@ class OcircleFrame(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -3371,18 +3372,18 @@ class OcircleFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -3453,21 +3454,21 @@ class OcircleFrame(wx.Frame):
 
         #Erro: A espessura digitada é inválida
         if str(espessura).replace('.', '').replace('/', '').replace('"', '').replace('-', '').replace(' ', '').isdigit() == False:
-            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nDigite apenas números!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nEnter numbers only!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
         #Erro: A espessura digitada é inválida
         if str(espessura).replace('.', '').replace('/', '').replace('"', '').replace('-', '').replace(' ', '').isdigit() == False:
-            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nDigite apenas números!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nEnter numbers only!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -3475,12 +3476,12 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro externo não for preenchido
         if diam1=="" or diam1.replace('.', '').isdigit() == False:
             if diam1=="":
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro externo não foi digitado!", caption="Verifique o diâmetro externo digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The outside diameter was not entered!", caption="Check the entered outside diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
             if diam1!="":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no diâmetro externo informado!\nDigite apenas números.", caption="Verifique o diâmetro externo digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the reported outside diameter!\nEnter numbers only.", caption="Check the entered outside diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
@@ -3488,12 +3489,12 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro interno não for preenchido
         if diam2=="" or diam2.replace('.', '').isdigit() == False:
             if diam2=="":
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro interno não foi digitado!\n\nCaso queira gerar o código de uma peça sem furo\nabra a página principal do GISOPLOX e no menu\nescolha as seguintes opções:\n\n>>Ferramentas/Círculos/Círculo", caption="Verifique o diâmetro interno digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The internal diameter has not been entered!\n\nIf you want to generate the code for a part without a hole\nopen the main page of GISOPLOX and in the menu\nchoose the following options:\n\n>>Tools/Círculos/Círculo", caption="Check the entered internal diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
             if diam2!="":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no diâmetro interno informado!\nDigite apenas números.", caption="Verifique o diâmetro interno digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the informed internal diameter!\nEnter numbers only.", caption="Check the entered internal diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
@@ -3501,7 +3502,7 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro externo e' menor que o interno
         if diam1.replace('.', '').isdigit() == True and diam2.replace('.', '').isdigit() == True:
             if float(diam1) < float(diam2):
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro externo digitado é menor que o diâmetro interno!", caption="Verifique os diâmetros digitados", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The entered outside diameter is smaller than the inside diameter!", caption="Check the entered diameters", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
@@ -3509,26 +3510,26 @@ class OcircleFrame(wx.Frame):
         #Erro: Diametro externo e' igual que o interno
         if diam1.replace('.', '').isdigit() == True and diam2.replace('.', '').isdigit() == True:
             if float(diam1) == float(diam2):
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro externo digitado é igual ao diâmetro interno!", caption="Verifique os diâmetros digitados", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The entered outside diameter is the same as the inside diameter!", caption="Check the entered diameters", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!\nDigite apenas números.", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!\nEnter numbers only.", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -3536,25 +3537,25 @@ class OcircleFrame(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -3566,7 +3567,7 @@ class OcircleFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
@@ -3610,16 +3611,16 @@ class OcircleFrame(wx.Frame):
         salvar+="/" + nomePadrao
         #print salvar
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -3627,12 +3628,12 @@ class OcircleFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -3787,8 +3788,8 @@ class CircleSimple(wx.Frame):
 
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Círculo simples"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Simple circle"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -3803,39 +3804,39 @@ class CircleSimple(wx.Frame):
         self.campo_de_texto_DiamExt=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y4), size=(TX2,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X5,Y5))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X5,Y5))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X6,Y5), size=(XCX1,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X7, 70))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X8, Y5))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X8, Y5))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X9,Y6))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X9,Y6))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X10,Y6), size=(XCX1,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X11,Y6))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X11,Y6))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X12,Y7))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X12,Y7))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X13,Y7), size=(XCX2,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X14,Y7))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X15,181))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X15,181))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X16,Y8), size=(XCX3,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X17,Y8))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X18,Y8), size=(XCX3,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharCircleSimple, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -3939,14 +3940,14 @@ class CircleSimple(wx.Frame):
 
         #Erro: A espessura digitada é inválida
         if str(espessura).replace('.', '').replace('/', '').replace('"', '').replace('-', '').replace(' ', '').isdigit() == False:
-            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nDigite apenas números!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nEnter numbers only!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -3954,31 +3955,31 @@ class CircleSimple(wx.Frame):
         #Erro: Diametro externo não for preenchido
         if diam=="" or diam.replace('.', '').isdigit() == False:
             if diam=="":
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro não foi digitado!", caption="Verifique o diâmetro digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The diameter was not entered!", caption="Check the entered diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
             if diam!="":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no diâmetro externo informado!\nDigite apenas números.", caption="Verifique o diâmetro externo digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the reported outside diameter!\nEnter numbers only.", caption="Check the entered outside diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!\nDigite apenas números.", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!\nEnter numbers only.", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -3986,25 +3987,25 @@ class CircleSimple(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -4020,13 +4021,13 @@ class CircleSimple(wx.Frame):
             espi+=" mm "
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
-        #Calculando o peso das peças em gramas
+        #Calculando o peso das parts em gramas
         pesoUnitario, pesoTotal=Auxiliares.pesoCirculo(Esp, diam, pecasGeradas)
 
         #Adicionar os dados ao arquivo estat
@@ -4042,16 +4043,16 @@ class CircleSimple(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -4059,18 +4060,18 @@ class CircleSimple(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -4139,14 +4140,14 @@ class CircleSimple(wx.Frame):
 
         #Erro: A espessura digitada é inválida
         if str(espessura).replace('.', '').replace('/', '').replace('"', '').replace('-', '').replace(' ', '').isdigit() == False:
-            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nDigite apenas números!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="A espessura digitada é inválida!\nEnter numbers only!", caption="Espessura inválida", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -4154,31 +4155,31 @@ class CircleSimple(wx.Frame):
         #Erro: Diametro externo não for preenchido
         if diam=="" or diam.replace('.', '').isdigit() == False:
             if diam=="":
-                dlg = wx.MessageDialog(parent=None, message="O diâmetro não foi digitado!", caption="Verifique o diâmetro digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The diameter was not entered!", caption="Check the entered diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
             if diam!="":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no diâmetro externo informado!\nDigite apenas números.", caption="Verifique o diâmetro externo digitado", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the reported outside diameter!\nEnter numbers only.", caption="Check the entered outside diameter", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
                 erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!\nDigite apenas números.", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!\nEnter numbers only.", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -4186,25 +4187,25 @@ class CircleSimple(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -4220,13 +4221,13 @@ class CircleSimple(wx.Frame):
             espi+=" mm "
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
-        #Calculando o peso das peças em gramas
+        #Calculando o peso das parts em gramas
         pesoUnitario, pesoTotal=Auxiliares.pesoCirculo(Esp, diam, pecasGeradas)
 
         #Adicionar os dados ao arquivo estat
@@ -4263,16 +4264,16 @@ class CircleSimple(wx.Frame):
         salvar+="/" + nomePadrao
         #print salvar
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -4280,18 +4281,18 @@ class CircleSimple(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -4413,8 +4414,8 @@ class FrameTriangulo(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Triângulo retângulo"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Right triangle"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -4429,39 +4430,39 @@ class FrameTriangulo(wx.Frame):
         self.campo_de_texto_TamanhoY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X2,Y2), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharTriangulo, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -4565,26 +4566,26 @@ class FrameTriangulo(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -4592,11 +4593,11 @@ class FrameTriangulo(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -4604,25 +4605,25 @@ class FrameTriangulo(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -4634,14 +4635,14 @@ class FrameTriangulo(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
-        #Calculando o peso das peças em gramas
+        #Calculando o peso das parts em gramas
         pesoUnitario, pesoTotal=Auxiliares.pesoTrianguloRetangulo(espessura, txd, tyd, pecasGeradas)
 
         #Adicionar os dados ao arquivo estat
@@ -4658,16 +4659,16 @@ class FrameTriangulo(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -4675,18 +4676,18 @@ class FrameTriangulo(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -4756,26 +4757,26 @@ class FrameTriangulo(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -4783,11 +4784,11 @@ class FrameTriangulo(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -4795,25 +4796,25 @@ class FrameTriangulo(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -4825,14 +4826,14 @@ class FrameTriangulo(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
-        #Calculando o peso das peças em gramas
+        #Calculando o peso das parts em gramas
         pesoUnitario, pesoTotal=Auxiliares.pesoTrianguloRetangulo(espessura, txd, tyd, pecasGeradas)
 
         #Adicionar os dados ao arquivo estat
@@ -4870,16 +4871,16 @@ class FrameTriangulo(wx.Frame):
         salvar+="/" + nomePadrao
         #print salvar
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -4887,12 +4888,12 @@ class FrameTriangulo(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -5027,8 +5028,8 @@ class FrameTrianguloPontasCortadas(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Triângulo com pontas cortadas"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Triangle with ends cut"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -5045,39 +5046,39 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         self.campo_de_texto_TamanhoY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X2,Y2), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharTrianguloPontasCortadas, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -5224,26 +5225,26 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -5251,22 +5252,22 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             elif txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         if chanfroX.replace('.', '').isdigit() == False or chanfroY.replace('.', '').isdigit() == False:
             if chanfroX == "" or chanfroY == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             elif chanfroX != "" or chanfroY != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -5287,25 +5288,25 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -5317,7 +5318,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
@@ -5325,7 +5326,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         pecasFaltantes=int(float(pecas))-int(pecasGeradas)
 
-        #Calculando o peso das peças em gramas
+        #Calculando o peso das parts em gramas
         pesoUnitario, pesoTotal=Auxiliares.pesoTrianguloPontasCortadas(espessura, txd, tyd, chanfroX, chanfroY, pecasGeradas)
 
         #Adicionar os dados ao arquivo estat
@@ -5342,16 +5343,16 @@ class FrameTrianguloPontasCortadas(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -5359,18 +5360,18 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -5449,26 +5450,26 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -5476,22 +5477,22 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             elif txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         if chanfroX.replace('.', '').isdigit() == False or chanfroY.replace('.', '').isdigit() == False:
             if chanfroX == "" or chanfroY == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             elif chanfroX != "" or chanfroY != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -5512,25 +5513,25 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -5542,7 +5543,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
@@ -5550,7 +5551,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         pecasFaltantes=int(float(pecas))-int(pecasGeradas)
 
-        #Calculando o peso das peças em gramas
+        #Calculando o peso das parts em gramas
         pesoUnitario, pesoTotal=Auxiliares.pesoTrianguloPontasCortadas(espessura, txd, tyd, chanfroX, chanfroY, pecasGeradas)
 
         #Adicionar os dados ao arquivo estat
@@ -5588,16 +5589,16 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         salvar+="/" + nomePadrao
         
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -5605,18 +5606,18 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -5749,8 +5750,8 @@ class FrameRetanguloFuro(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Retângulo com furo central"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Rectangle with center hole"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -5767,39 +5768,39 @@ class FrameRetanguloFuro(wx.Frame):
         texto.SetFont(fonteDiam)
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharRetanguloFuro, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
     def OnPaint(self, event):
@@ -5931,26 +5932,26 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -5958,11 +5959,11 @@ class FrameRetanguloFuro(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False or furo.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "" or furo== "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "" or furo != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -5977,25 +5978,25 @@ class FrameRetanguloFuro(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -6007,7 +6008,7 @@ class FrameRetanguloFuro(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
@@ -6032,16 +6033,16 @@ class FrameRetanguloFuro(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -6049,18 +6050,18 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -6132,26 +6133,26 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -6159,11 +6160,11 @@ class FrameRetanguloFuro(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False or furo.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "" or furo== "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "" or furo != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -6177,14 +6178,14 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -6196,7 +6197,7 @@ class FrameRetanguloFuro(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
@@ -6242,16 +6243,16 @@ class FrameRetanguloFuro(wx.Frame):
         salvar+="/" + nomePadrao
         #print salvar
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -6259,12 +6260,12 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -6389,8 +6390,8 @@ class FrameRetanguloChanfrado(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Retângulo chanfrado"))
-        #self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
+        self.SetTitle(_("GISOPLOX - Retangle with chanfer corners"))
+        self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
             self.SetBackgroundColour(wx.WHITE)
@@ -6422,39 +6423,39 @@ class FrameRetanguloChanfrado(wx.Frame):
         self.campo_de_texto_ChanfroXI=wx.TextCtrl(self, wx.ID_ANY, "", pos=(XchanfroXI,YchanfroXI), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Espessura:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='polegada', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantidade:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("peças"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Entrada de corte:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Tamanho da chapa:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Processo:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxicorte', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = ['Oxyfuel', 'Plasma']
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Salvar Padrão         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Cancelar', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharRetanguloChanfrado, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Salvar', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #achar coordenada
@@ -6631,26 +6632,26 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -6658,11 +6659,11 @@ class FrameRetanguloChanfrado(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -6670,25 +6671,25 @@ class FrameRetanguloChanfrado(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -6700,7 +6701,7 @@ class FrameRetanguloChanfrado(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             pecasGeradas, programa, distCorte=Plasma.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
@@ -6724,16 +6725,16 @@ class FrameRetanguloChanfrado(wx.Frame):
                 salvar = dlg.GetPath()
             dlg.Destroy()
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -6741,18 +6742,18 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
-            dlg = wx.MessageDialog(parent=None, message="GERAÇÃO DE PROGRAMA CANCELADO!\n\nO procedimento de geração do programa foi cancelado por ação do usuário!", caption='Procedimento cancelado!', style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="CODE GENERATION CANCELED!\n\nThe procedure for generating the program was canceled due to user action!", caption='Procedure canceled!', style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -6820,26 +6821,26 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Erro: Nenhuma unidade para a espessura
         if self.radio_esp_pol.GetValue() == False and self.radio_esp_mm.GetValue() == False:
-            dlg = wx.MessageDialog(parent=None, message="Você deve selecionar uma unidade para a espessura (mm ou polegada)!", caption="Escolha uma unidade", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="You must select a unit for the thickness (mm or inch)!", caption="Choose a unit", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
 
-        #Erro: O número de peças não foi informado
+        #Erro: O número de parts não foi informado
         if pecas.isdigit() == False or pecas == "":
             if pecas == "":
-                dlg = wx.MessageDialog(parent=None, message="O número de peças não foi informado!", caption="Digite o número de peças", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The number of pieces was not informed!", caption="Enter the number of pieces", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if pecas != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação no número de peças informado!", caption="Digite o número de peças novamente", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the number of parts reported!", caption="Enter the number of pieces again", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
-        #Erro: A espessura das peças não foi informada
+        #Erro: A espessura das parts não foi informada
         if espi == "" or espi == " POL ":
-            dlg = wx.MessageDialog(parent=None, message="A espessura não foi informada!", caption="Digite a espessura", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="The thickness was not informed!", caption="Enter thickness", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros=erros + 1
@@ -6847,11 +6848,11 @@ class FrameRetanguloChanfrado(wx.Frame):
         #Erro: Encontrar erros de preenchimento nas cotas
         if txd.replace('.', '').isdigit() == False or tyd.replace('.', '').isdigit() == False:
             if txd == "" or tyd == "":
-                dlg = wx.MessageDialog(parent=None, message="Há cotas sem nenhuma medida informada!", caption="Digite a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are quotas without any informed measure!", caption="Enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if txd != "" or tyd != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação nas cotas!", caption="Digite novamente a medida das cotas", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the dimensions!", caption="Re-enter the dimension", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
@@ -6859,25 +6860,25 @@ class FrameRetanguloChanfrado(wx.Frame):
         #Erro: Encontrar erros de preenchimento na entrada de corte
         if entrada.isdigit() == False:
             if entrada == "":
-                dlg = wx.MessageDialog(parent=None, message="A medida de entrada de corte não foi informada!", caption="Digite uma medida de entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="The cut entry distance was not informed!", caption="Enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             if entrada != "":
-                dlg = wx.MessageDialog(parent=None, message="Há erros de digitação na entrada de corte!", caption="Digite novamente a entrada de corte", style=wx.OK|wx.ICON_EXCLAMATION)
+                dlg = wx.MessageDialog(parent=None, message="There are typos in the cut entry input!", caption="Re-enter a cut entry distance", style=wx.OK|wx.ICON_EXCLAMATION)
                 dlg.ShowModal()
                 dlg.Destroy()
             erros=erros + 1
 
         #Erro: Nenhum processo de corte foi selecionado
         if processo=="":
-            dlg = wx.MessageDialog(parent=None, message="Processo de corte não selecionado!\n\nSelecione um processo disponível na lista!", caption="Processo não selecionado", style=wx.OK|wx.ICON_EXCLAMATION)
+            dlg = wx.MessageDialog(parent=None, message="Cutting process not selected!\n\nSelect an available process from the list!", caption="Process not selected", style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
             erros+=1
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             Kerf, avanco = Auxiliares.Kerf(espessura)
         if processo=="Plasma":
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
@@ -6889,7 +6890,7 @@ class FrameRetanguloChanfrado(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxicorte":
+        if processo=="Oxyfuel":
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
         if processo=="Plasma":
             print(Kerf)
@@ -6935,16 +6936,16 @@ class FrameRetanguloChanfrado(wx.Frame):
         salvar+="/" + nomePadrao
         #print salvar
 
-        #Se não houve espaço para colocar todas as peças na chapa, mostrar aviso
+        #Se não houve espaço para colocar todas as parts na chapa, mostrar aviso
         if pecasFaltantes!=0:
-            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de peças informadas!\n"
-            mensagem+="A quantidade máxima suportada de peças\npara este tamanho de chapa foi gerada!\n\n"
+            mensagem="Não há espaço suficiente na chapa para\ncortar a quantidade de parts informadas!\n"
+            mensagem+="A quantidade máxima suportada de parts\npara este tamanho de chapa foi gerada!\n\n"
             mensagem+="Informações sobre o programa gerado:\n"
-            mensagem+="\nQuantidade pretendida de peças: " + str(pecas) + " pçs"
-            mensagem+="\nQuantidade de peças que faltaram:" + str(pecasFaltantes) + " pçs"
-            mensagem+="\nQuantidade de peças geradas: " + str(pecasGeradas) + " pçs"
-            mensagem+="\nTamanho da chapa: " + str(chapaX) + " X " + str(chapaY) + " mm"
-            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " peças"
+            mensagem+="\nQuantidade pretendida de parts: " + str(pecas) + " pçs"
+            mensagem+="\nQuantidade de parts que faltaram:" + str(pecasFaltantes) + " pçs"
+            mensagem+="\nQuantidade de parts geradas: " + str(pecasGeradas) + " pçs"
+            mensagem+="\nSheet metal size: " + str(chapaX) + " X " + str(chapaY) + " mm"
+            titulo="Espaço insuficiente | Faltaram: " + str(pecasFaltantes) + " parts"
             dlg = wx.MessageDialog(parent=None, message=mensagem, caption=titulo, style=wx.OK|wx.ICON_EXCLAMATION)
             dlg.ShowModal()
             dlg.Destroy()
@@ -6952,12 +6953,12 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="O seu código foi gerado com sucesso!\n\n"
-            mensagem+="Peso unitário: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nPeso total: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nDistância de corte: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nObs: Peso para peças de aço"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Gódigo salvo", style=wx.OK|wx.ICON_INFORMATION)
+            mensagem="Your code has been successfully generated!\n\n"
+            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
+            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
+            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
+            mensagem+="\nNote: Weight for steel parts"
+            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
 
@@ -7030,7 +7031,7 @@ if __name__ == "__main__":
     #Frame círculo simples
     frame_CircleSimple = CircleSimple(None, wx.ID_ANY, "")
     GisoploxApp.SetTopWindow(frame_CircleSimple)
-    #Frame Triângulo retângulo
+    #Frame Right triangle
     frame_TrianguloPontasCortadas = FrameTrianguloPontasCortadas(None, wx.ID_ANY, "")
     GisoploxApp.SetTopWindow(frame_TrianguloPontasCortadas)
     #Frame Retângulo com furo
