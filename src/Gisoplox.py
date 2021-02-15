@@ -2,7 +2,7 @@
 
 from settings import snap
 snap.change_python_cwd()
-import wx
+from settings import dialogs
 import os
 import math
 import platform
@@ -2683,14 +2683,7 @@ class OrectangeFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -2894,14 +2887,7 @@ class OrectangeFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Adicionar dados ao historico
         if erros==0:
@@ -3372,14 +3358,7 @@ class OcircleFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -3628,14 +3607,7 @@ class OcircleFrame(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
          #Adicionar dados ao historico
         if erros==0:
@@ -4060,14 +4032,7 @@ class CircleSimple(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -4281,14 +4246,7 @@ class CircleSimple(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -4676,14 +4634,7 @@ class FrameTriangulo(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -4888,14 +4839,7 @@ class FrameTriangulo(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
          #Adicionar dados ao historico
         if erros==0:
@@ -5360,14 +5304,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -5606,14 +5543,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -6050,14 +5980,7 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -6260,14 +6183,7 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Adicionar dados ao historico
         if erros==0:
@@ -6742,14 +6658,7 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and salvar!="":
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Mostrar aviso quando o usuário presiona "cancelar"
         if salvar=="":
@@ -6953,14 +6862,7 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Mostrar aviso de sucesso
         if pecasFaltantes==0 and erros==0:
-            mensagem="Your code has been successfully generated!\n\n"
-            mensagem+="Unit Weight: "+Auxiliares.pesoString(pesoUnitario)
-            mensagem+="\nTotal weight: "+Auxiliares.pesoString(pesoTotal)
-            mensagem+="\nCutting distance: "+Auxiliares.converterDist(distCorte)
-            mensagem+="\nNote: Weight for steel parts"
-            dlg = wx.MessageDialog(parent=None, message=mensagem, caption="Saved code", style=wx.OK|wx.ICON_INFORMATION)
-            dlg.ShowModal()
-            dlg.Destroy()
+            dialogs.saved_successfully(pesoUnitario, pesoTotal, distCorte, salvar)
 
         #Adicionar dados ao historico
         if erros==0:
