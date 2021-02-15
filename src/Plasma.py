@@ -3,8 +3,7 @@ import Auxiliares
 from math import sqrt
 from math import tan
 from math import atan
-from math import degrees
-from math import radians
+
 icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
 
 def calcularHipotenusa(catX, catY):
@@ -53,7 +52,6 @@ def Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, kerf):
     gx=1
     gy=0
     divX=txd+lcorte
-    mx=chapaX/divX
     l=0
     pecasFeitas=0
 
@@ -923,11 +921,9 @@ def TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, kerf):
     ty=tyd+lcorte
     tyf=tyd+lcorte+kerf
     mover=tx+kerf+entrada
-    mover2=mover+mover-kerf-entrada
     gx=1
     gy=0
     divX=txd+lcorte
-    mx=chapaX/divX
     l=0
     pecasFeitas=0
 
@@ -1190,19 +1186,15 @@ def RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, kerf):
     raio=float(furo)/2.0
     lcorte=kerf+kerf
     tx=txd+kerf
-    mtx=float(tx)/2.0
     txf=txd+lcorte
     mtxf=float(txf)/2.0
     ty=tyd+kerf
-    mty=float(ty)/2.0
     tyf=tyd+lcorte
     mtyf=float(tyf)/2.0
     mover=tx+kerf+entrada
-    mover2=mover+mover-kerf-entrada
     gx=1
     gy=0
     divX=txd+lcorte
-    mx=chapaX/divX
     l=0
     pecasFeitas=0
 
@@ -1488,16 +1480,13 @@ def TrianguloPontasCortadas(txd, tyd, chfXd, chfYd, entrada, chapaX, chapaY, pec
     lcorte=kerf+kerf
     tx=txd+kerf
     txf=txd+lcorte
-    ty=tyd+kerf
     tyf=tyd+lcorte
     chanfroX=chfXd+kerf
     chanfroY=chfYd+kerf
     mover=tx+kerf+entrada
-    mover2=mover+mover-kerf-entrada
     gx=1
     gy=0
     divX=txd+lcorte
-    mx=chapaX/divX
     l=0
     pecasFeitas=0
 
@@ -2087,22 +2076,6 @@ def RetanguloChanfrado(txd, tyd, chanfroXs, chanfroYs, chanfroXi, chanfroYi, ent
         return offsetkcxi, offsetkcyi
     offsetkcxi, offsetkcyi=calcularOffset(kerf, kcxi, kcyi)
     
-    def mostrarValores():
-        print("kerf:" + str(kerf))
-        print()
-        print("ktxs:" + str(ktxs))
-        print("ktxi:" + str(ktxi))
-        print("kty:" + str(kty))
-        print()
-        print("kcxs:" + str(kcxs))
-        print("kcys:" + str(kcys))
-        print("kcxi:" + str(kcxi))
-        print("kcyi:" + str(kcyi))
-        print()
-        print("offsetkcxi:" + str(offsetkcxi))
-        print("offsetkcyi:" + str(offsetkcyi))
-    #mostrarValores()
-    
     #Ajustar chapa
     if chapaX == 0:
         chapaX=mesaX
@@ -2116,16 +2089,12 @@ def RetanguloChanfrado(txd, tyd, chanfroXs, chanfroYs, chanfroXi, chanfroYi, ent
     #Calculo de tamanhos
     lcorte=kerf+kerf
     tx=txd+kerf
-    txf=txd+lcorte
     ty=tyd+kerf
-    tyf=tyd+lcorte
     mover=tx+kerf+entrada
     mover=round(mover, 4)
-    mover2=mover+mover-kerf-entrada
     gx=1
     gy=0
     divX=txd+lcorte
-    mx=chapaX/divX
     l=0
     pecasFeitas=0
     linhaPar=False
