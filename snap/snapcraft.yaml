@@ -1,5 +1,5 @@
 name: gisoplox
-version: '0.21.0129'
+version: '0.21.0215'
 summary: 'Simple CAM software for cutting machines'
 description: |
   CAM software to generate G code for plasma and oxyfuel cutting machines
