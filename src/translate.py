@@ -117,5 +117,51 @@ def translate(text):
             text = "Salvar"
         if text == "         Standard Save         ":
             text = "         Salvar Padrão         "
+            
+        if text == "COMMANDS:":
+            text = "COMANDOS:"
+        if text == "Cutting start:":
+            text = "Início de corte:"
+        if text == "End of cut:":
+            text = "Fim de corte:"
+        if text == "TABLE SIZE / CUT LIMITS:":
+            text = "TAMANHO DA MESA / LIMITES DE CORTE:"
+        if text == "Limit X:":
+            text = "Limite X:"
+        if text == "Limit Y:":
+            text = "Limite Y:"
+        if text == 'CODE SETTINGS:':
+            text = 'AJUSTES DO CÓDIGO:'
+        if text == 'Number lines':
+            text = 'Numerar linhas'
+        if text == 'Set feed speed':
+            text = 'Colocar velocidade de avanço'
+        if text == 'Set positioning speed':
+            text = 'Colocar velocidade de avanço rápido'
+        if text == "CNC FILE EXTENSION:":
+            text = "EXTENÇÃO DO ARQUIVO CNC:"
+        if text == "POSITIONING SPEED:":
+            text = "VELOCIDADE DO AVANÇO RÁPIDO:"
+        if text == "CONFIGURE CUTTING PARAMETERS:":
+            text = "CONFIGURAR PARÂMETROS DE CORTE:"
+        if text == '"STANDARD SAVE" FOLDER':
+            text = 'PASTA "SALVAR PADRÃO:"'
+        if text == 'Change':
+            text = 'Alterar'
+        if text == 'Apply':
+            text = 'Aplicar'
+        if text == "Choose a folder:":
+            text = "Escolha uma pasta:"
+        if text == "Settings saved successfully":
+            text = "Configurações salvas com sucesso"
+        if text == "Settings saved":
+            text = "Configurações salvas"
+            
+        if text == "Thickness (mm)":
+            text = "Espessura (mm)"
+        if text == "Cutting width (mm)":
+            text = "Largura de corte (mm)"
+        if text == "Speed (mm/min)":
+            text = "Velocidade (mm/min)"
 
     return text

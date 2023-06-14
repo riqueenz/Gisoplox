@@ -1133,68 +1133,68 @@ class Configurar(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("COMMANDS:"), pos=(X1,Y0))
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Cutting start:"), pos=(X1,posIcorteY))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("COMMANDS:")), pos=(X1,Y0))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("Cutting start:")), pos=(X1,posIcorteY))
         self.campo_de_texto_Icorte=wx.TextCtrl(self, wx.ID_ANY, icorte, pos=(X2,posIcorteY), size=(T1X,T1Y))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("End of cut:"), pos=(X3,posIcorteY))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("End of cut:")), pos=(X3,posIcorteY))
         self.campo_de_texto_Fcorte=wx.TextCtrl(self, wx.ID_ANY, fcorte, pos=(X4,posIcorteY), size=(T1X,T1Y))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("TABLE SIZE / CUT LIMITS:"), pos=(X1,Y1))
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Limit X:"), pos=(X1,Y2))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("TABLE SIZE / CUT LIMITS:")), pos=(X1,Y1))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("Limit X:")), pos=(X1,Y2))
         self.campo_de_texto_mesaX=wx.TextCtrl(self, wx.ID_ANY, SmesaX, pos=(posMesa1X,Y2), size=(T1X,T1Y))
         label_1 = wx.StaticText(self, wx.ID_ANY, ("mm"), pos=(X5,Y2))
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("Limit Y:"), pos=(X6,Y2))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("Limit Y:")), pos=(X6,Y2))
         self.campo_de_texto_mesaY=wx.TextCtrl(self, wx.ID_ANY, SmesaY, pos=(X7,Y2), size=(T1X,T1Y))
         label_1 = wx.StaticText(self, wx.ID_ANY, ("mm"), pos=(X8,Y2))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ('CODE SETTINGS::'), pos=(X1,Y3), size=(TamAjuCodX,TamAjuCodY))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate('CODE SETTINGS::')), pos=(X1,Y3), size=(TamAjuCodX,TamAjuCodY))
 
         #Usar 1 para SIM e 0 para não
-        self.checarNumerarLinhas = wx.CheckBox(self, -1, 'Number lines', (X1, Y4))
+        self.checarNumerarLinhas = wx.CheckBox(self, -1, translate('Number lines'), (X1, Y4))
         if numerar == 1:
             self.checarNumerarLinhas.SetValue(True)
         if numerar == 0:
             self.checarNumerarLinhas.SetValue(False)
             
-        self.checarColocarVelocidadeAvanco = wx.CheckBox(self, -1, 'Set feed speed', (X1, Y5))
+        self.checarColocarVelocidadeAvanco = wx.CheckBox(self, -1, translate('Set feed speed'), (X1, Y5))
         if colocarVelocidadeAvanco == 1:
             self.checarColocarVelocidadeAvanco.SetValue(True)
         if colocarVelocidadeAvanco == 0:
             self.checarColocarVelocidadeAvanco.SetValue(False)
 
-        self.checarColocarVelocidadeAvancoRapido = wx.CheckBox(self, -1, 'Set positioning speed', (X1, Y6))
+        self.checarColocarVelocidadeAvancoRapido = wx.CheckBox(self, -1, translate('Set positioning speed'), (X1, Y6))
         if colocarVelocidadeAvancoRapido == 1:
             self.checarColocarVelocidadeAvancoRapido.SetValue(True)
         if colocarVelocidadeAvancoRapido == 0:
             self.checarColocarVelocidadeAvancoRapido.SetValue(False)
         
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("CNC FILE EXTENSION:"), pos=(X1,Y7))
+        label_1 = wx.StaticText(self, wx.ID_ANY, translate(("CNC FILE EXTENSION:")), pos=(X1,Y7))
         self.campo_de_texto_extencao=wx.TextCtrl(self, wx.ID_ANY, extencao, pos=(X9,Y7), size=(T1X,T1Y))
 
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("POSITIONING SPEED:"), pos=(X1,Y8))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("POSITIONING SPEED:")), pos=(X1,Y8))
         self.campo_de_texto_velocidadeAvancoRapido=wx.TextCtrl(self, wx.ID_ANY, SmesaX, pos=(X10,Y8), size=(T1X,T1Y))
         label_1 = wx.StaticText(self, wx.ID_ANY, ("mm/min"), pos=(X11,Y8))
 
         #Botões Oxicorte e Plasma
-        label_1 = wx.StaticText(self, wx.ID_ANY, ("CONFIGURE CUTTING PARAMETERS:"), pos=(X1,YTextConfigurar))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate("CONFIGURE CUTTING PARAMETERS:")), pos=(X1,YTextConfigurar))
         
-        Botao_ConfigOxi = wx.Button(self, id=-1, label='Oxyfuel', pos=(XOxi, YOxi))
+        Botao_ConfigOxi = wx.Button(self, id=-1, label=translate('Oxyfuel'), pos=(XOxi, YOxi))
         self.Bind(wx.EVT_BUTTON, self.MostrarKerf, Botao_ConfigOxi)
         
-        Botao_ConfigPlas = wx.Button(self, id=-1, label='Plasma', pos=(XPlas, YOxi))
+        Botao_ConfigPlas = wx.Button(self, id=-1, label=translate('Plasma'), pos=(XPlas, YOxi))
         self.Bind(wx.EVT_BUTTON, self.MostrarKerfPlasma, Botao_ConfigPlas)
 
         #Pasta salvar padrão
         #pastaPad="CNC/"
-        label_1 = wx.StaticText(self, wx.ID_ANY, ('"STANDARD SAVE" FOLDER'), pos=(X1,YTextPastaSalvar))
+        label_1 = wx.StaticText(self, wx.ID_ANY, (translate('"STANDARD SAVE" FOLDER')), pos=(X1,YTextPastaSalvar))
 
         if sistemaOperacional=="Windows":
             textoPastaPad = pastaPadWin
-            texto = 'Change'
+            texto = translate('Change')
         if sistemaOperacional=="Linux":
             textoPastaPad = pastaPadLinux
-            texto = 'Change'
+            texto = translate('Change')
         self.campo_de_texto_PastaSalvarPadrao=wx.TextCtrl(self, wx.ID_ANY, textoPastaPad, pos=(XCampoPastaSalvar,YCampoPastaSalvar), size=(TamXCampoPastaSalvar,T1Y), style=(wx.TE_READONLY))
         
         Botao_Alterar = wx.Button(self, id=-1, label=texto, pos=(XBotaoPastaSalvar, YBotaoPastaSalvar))
@@ -1204,7 +1204,7 @@ class Configurar(wx.Frame):
         Botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XCancelar, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharConfig, Botao_Cancelar)
         
-        Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XAplicar, YCancelar))
+        Botao_Aplicar = wx.Button(self, id=-1, label=translate('Apply'), pos=(XAplicar, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.AplicarConfig, Botao_Aplicar)
 
         
@@ -1261,7 +1261,7 @@ class Configurar(wx.Frame):
         escrever.close()
 
         #Mostrar aviso de sucesso
-        dlg = wx.MessageDialog(parent=None, message="Settings salvas com sucesso", caption="Settings salvas", style=wx.OK|wx.ICON_INFORMATION)
+        dlg = wx.MessageDialog(parent=None, message=translate("Settings saved successfully"), caption=translate("Settings saved"), style=wx.OK|wx.ICON_INFORMATION)
         dlg.ShowModal()
         dlg.Destroy()
 
@@ -1282,7 +1282,7 @@ class Configurar(wx.Frame):
 
     #Comando do botão "Alterar" pasta Salvar padrão
     def AlterarSalvarPad(self, event):
-        dialog = wx.DirDialog(None, "Escolha uma pasta:",style=wx.DD_DEFAULT_STYLE | wx.DD_NEW_DIR_BUTTON)
+        dialog = wx.DirDialog(None, translate("Choose a folder:"),style=wx.DD_DEFAULT_STYLE | wx.DD_NEW_DIR_BUTTON)
         if dialog.ShowModal() == wx.ID_OK:
             salvarPad=dialog.GetPath()
             self.campo_de_texto_PastaSalvarPadrao.SetValue(salvarPad)
@@ -1464,9 +1464,9 @@ class Kerf(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        wx.StaticText(self, wx.ID_ANY, ("Thickness (mm)"), pos=(15,10))
-        wx.StaticText(self, wx.ID_ANY, ("Cutting width (mm)"), pos=(130,10))
-        wx.StaticText(self, wx.ID_ANY, ("Speed (mm/min)"), pos=(270,10))
+        wx.StaticText(self, wx.ID_ANY, (translate("Thickness (mm)")), pos=(15,10))
+        wx.StaticText(self, wx.ID_ANY, (translate("Cutting width (mm)")), pos=(130,10))
+        wx.StaticText(self, wx.ID_ANY, (translate("Speed (mm/min)")), pos=(270,10))
 
         #Desenhando a tabela
         
@@ -1566,7 +1566,7 @@ class Kerf(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.FecharKerf, Botao_Cancelar)
 
         #Botao Aplicar
-        Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XBA, Y))
+        Botao_Aplicar = wx.Button(self, id=-1, label=translate('Apply'), pos=(XBA, Y))
         self.Bind(wx.EVT_BUTTON, self.AplicarKerf, Botao_Aplicar)
 
         #Comando do botão cancelar
@@ -1785,7 +1785,7 @@ class Kerf(wx.Frame):
             escrever.close()
 
             #Mostrar aviso de sucesso
-            dlg = wx.MessageDialog(parent=None, message="Settings salvas com sucesso", caption="Settings salvas", style=wx.OK|wx.ICON_INFORMATION)
+            dlg = wx.MessageDialog(parent=None, message=translate("Settings saved successfully"), caption=translate("Settings saved"), style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
         
@@ -1985,9 +1985,9 @@ class KerfPlasma(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        wx.StaticText(self, wx.ID_ANY, ("Thickness (mm)"), pos=(15,10))
-        wx.StaticText(self, wx.ID_ANY, ("Cutting width (mm)"), pos=(130,10))
-        wx.StaticText(self, wx.ID_ANY, ("Speed (mm/min)"), pos=(270,10))
+        wx.StaticText(self, wx.ID_ANY, (translate("Thickness (mm)")), pos=(15,10))
+        wx.StaticText(self, wx.ID_ANY, (translate("Cutting width (mm)")), pos=(130,10))
+        wx.StaticText(self, wx.ID_ANY, (translate("Speed (mm/min)")), pos=(270,10))
 
         #Desenhando a tabela
         
@@ -2087,7 +2087,7 @@ class KerfPlasma(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.FecharkerfPlasma, Botao_Cancelar)
 
         #Botao Aplicar
-        Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XBA, Y))
+        Botao_Aplicar = wx.Button(self, id=-1, label=translate('Apply'), pos=(XBA, Y))
         self.Bind(wx.EVT_BUTTON, self.AplicarkerfPlasma, Botao_Aplicar)
 
         #Comando do botão cancelar
@@ -2306,7 +2306,7 @@ class KerfPlasma(wx.Frame):
             escrever.close()
 
             #Mostrar aviso de sucesso
-            dlg = wx.MessageDialog(parent=None, message="Settings salvas com sucesso", caption="Settings salvas", style=wx.OK|wx.ICON_INFORMATION)
+            dlg = wx.MessageDialog(parent=None, message=translate("Settings saved successfully"), caption=translate("Settings saved"), style=wx.OK|wx.ICON_INFORMATION)
             dlg.ShowModal()
             dlg.Destroy()
         
