@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from settings import local_data_files
+import local_data_files
 import os
 from datetime import date
 import time

@@ -1,9 +1,9 @@
 import os
-from settings import oxyfuel_cutting_width_file
-from settings import plasma_cutting_width_file
-from settings import settings_file
-from settings import metrics_file
-from settings import history_file
+import oxyfuel_cutting_width_file
+import plasma_cutting_width_file
+import settings_file
+import metrics_file
+import history_file
 
 
 def create_data_folders():

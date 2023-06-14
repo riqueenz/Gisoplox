@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from settings import snap
-snap.change_python_cwd()
-from settings import dialogs
+import snap
+#snap.change_python_cwd()
+import dialogs
 import os
 import math
 import platform
@@ -12,11 +12,12 @@ import Plasma
 import Auxiliares
 import wx
 import wx.grid as gridlib
+from translate import translate
 
 sistemaOperacional=platform.system()
 # print sistemaOperacional
 AbrirIntro="Nao"
-versao= "Version " + Auxiliares.versao()
+versao= translate("Version")+ " " + Auxiliares.versao()
     
 ###################################################### I - Frame Home Gisoplox ###############################################################################
 class Gisoplox(wx.Frame):
@@ -44,77 +45,77 @@ class Gisoplox(wx.Frame):
         #self.Bind(wx.EVT_MENU, self.AbrirTrianguloPontasCortadas, m_teste)
 
         #Menu options/Metrics
-        m_estat = menu.Append(wx.ID_ANY, "&Metrics\tAlt-M", "Cutting history metrics")
+        m_estat = menu.Append(wx.ID_ANY, "&"+translate("Metrics")+"\tAlt-M", translate("Cutting history metrics"))
         self.Bind(wx.EVT_MENU, self.AbrirEstat, m_estat)
 
         #Menu options/History
-        m_hist = menu.Append(wx.ID_ANY, "&History\tAlt-H", "History of generated CNC files")
+        m_hist = menu.Append(wx.ID_ANY, "&"+translate("History")+"\tAlt-H", translate("History of generated CNC files"))
         self.Bind(wx.EVT_MENU, self.AbrirHist, m_hist)
         
         #Menu options/Settings
-        m_config = menu.Append(wx.ID_ANY, "&Settings\tAlt-S", "Code writing settings")
+        m_config = menu.Append(wx.ID_ANY, "&"+translate("Settings")+"\tAlt-S", translate("Code writing settings"))
         self.Bind(wx.EVT_MENU, self.AbrirConfigurar, m_config)
 
         #Menu options/Cutting settings
         SubMenuKerf = wx.Menu()
-        menu.Append(wx.ID_ANY, '&Cutting settings', SubMenuKerf)
-        m_kerf = SubMenuKerf.Append(wx.ID_ANY, "&Oxyfuel\tCtrl-O", "Oxyfuel cutting settings")
-        m_kerfPlasma = SubMenuKerf.Append(wx.ID_ANY, "&Plasma\tCtrl-P", "Plasma cutting settings")
+        menu.Append(wx.ID_ANY, '&'+translate("Cutting settings"), SubMenuKerf)
+        m_kerf = SubMenuKerf.Append(wx.ID_ANY, "&"+translate("Oxyfuel")+"\tCtrl-O", translate("Oxyfuel cutting settings"))
+        m_kerfPlasma = SubMenuKerf.Append(wx.ID_ANY, "&"+translate("Plasma")+"\tCtrl-P", translate("Plasma cutting settings"))
         self.Bind(wx.EVT_MENU, self.AbrirKerf, m_kerf)
         self.Bind(wx.EVT_MENU, self.AbrirKerfPlasma, m_kerfPlasma)
 
         #Menu options/Close
         menu.AppendSeparator()
-        m_sair = menu.Append(wx.ID_EXIT, "C&lose\tAlt-C", "Close the software")
+        m_sair = menu.Append(wx.ID_EXIT, "&"+translate("Close")+"\tAlt-C", translate("Close the software"))
         self.Bind(wx.EVT_MENU, self.FecharGisoplox, m_sair)
-        menuBar.Append(menu, "&Options")
+        menuBar.Append(menu, "&"+translate("Options"))
 
         #Menu Tools
         menu = wx.Menu()
-        menuBar.Append(menu, "&Tools")
+        menuBar.Append(menu, "&"+translate("Tools"))
 
         #Sub-menu Tools/Rectangles
         SubMenuRetangulos = wx.Menu()
-        menu.Append(wx.ID_ANY, 'R&ectangles', SubMenuRetangulos)
+        menu.Append(wx.ID_ANY, translate('R&ectangles'), SubMenuRetangulos)
         #Tools/rectangles/retângulo
-        m_rectange = SubMenuRetangulos.Append(wx.ID_ANY, "&Rectangle\tCtrl-R", "Opens the rectangles generating tool")
+        m_rectange = SubMenuRetangulos.Append(wx.ID_ANY, "&"+translate("Rectangle")+"\tCtrl-R", translate("Opens the rectangles generating tool"))
         self.Bind(wx.EVT_MENU, self.AbrirRectange, m_rectange)
         #Tools/rectangles/Rectangle with center hole
-        m_RetanguloFuro = SubMenuRetangulos.Append(wx.ID_ANY, "&Rectangle with center hole", "Opens the tool for generating rectangles with a central hole")
+        m_RetanguloFuro = SubMenuRetangulos.Append(wx.ID_ANY, "&"+translate("Rectangle with center hole"), translate("Opens the tool for generating rectangles with a central hole"))
         self.Bind(wx.EVT_MENU, self.AbrirRetanguloFuro, m_RetanguloFuro)
         #Tools/rectangles/Rectangle with Chamfer Corners
-        m_RetanguloChanfrado = SubMenuRetangulos.Append(wx.ID_ANY, "&Rectangle with chamfer corners", "Rectangle with chamfer corners")
+        m_RetanguloChanfrado = SubMenuRetangulos.Append(wx.ID_ANY, "&"+translate("Rectangle with chamfer corners"), translate("Rectangle with chamfer corners"))
         self.Bind(wx.EVT_MENU, self.AbrirRetanguloChanfrado, m_RetanguloChanfrado)
 
         #Sub-menu Tools/Circles
         SubMenuCirculos = wx.Menu()
-        menu.Append(wx.ID_ANY, 'C&ircles', SubMenuCirculos)
+        menu.Append(wx.ID_ANY, translate('C&ircles'), SubMenuCirculos)
         #Tools/circulos/anel
-        m_circle = SubMenuCirculos.Append(wx.ID_ANY, "&Donut\tCtrl-D", "Donut")
+        m_circle = SubMenuCirculos.Append(wx.ID_ANY, "&"+translate("Donut")+"\tCtrl-D", "Donut")
         self.Bind(wx.EVT_MENU, self.AbrirCircle, m_circle)
         #Tools/circulos/círculo
-        m_circleSimple = SubMenuCirculos.Append(wx.ID_ANY, "&Circle\tCtrl-C", "Circle")
+        m_circleSimple = SubMenuCirculos.Append(wx.ID_ANY, "&"+translate("Circle")+"\tCtrl-C", translate("Circle"))
         self.Bind(wx.EVT_MENU, self.AbrirCircleSimple, m_circleSimple)
 
         #Sub-menu Tools/triangulos
         SubMenuTriangulos = wx.Menu()
-        menu.Append(wx.ID_ANY, 'T&riangles', SubMenuTriangulos)
-        m_triangulo = SubMenuTriangulos.Append(wx.ID_ANY, "&R&ight triangle\tCtrl-T", "Right triangle")
+        menu.Append(wx.ID_ANY, translate('T&riangles'), SubMenuTriangulos)
+        m_triangulo = SubMenuTriangulos.Append(wx.ID_ANY, "&"+translate("Right triangle")+"\tCtrl-T", translate("Right triangle"))
         self.Bind(wx.EVT_MENU, self.AbrirTriangulo, m_triangulo)
-        m_trianguloPontasCortadas = SubMenuTriangulos.Append(wx.ID_ANY, "&T&riangle with ends cut", "Triangle with ends cut")
+        m_trianguloPontasCortadas = SubMenuTriangulos.Append(wx.ID_ANY, "&"+translate("Triangle with ends cut"), translate("Triangle with ends cut"))
         self.Bind(wx.EVT_MENU, self.AbrirTrianguloPontasCortadas, m_trianguloPontasCortadas)
 
         #Menu Help
         menu = wx.Menu()
-        menuBar.Append(menu, "&Help")
+        menuBar.Append(menu, "&"+translate("Help"))
         #Menu Help/Metrics
-        m_estat = menu.Append(wx.ID_ANY, "&Metrics\tAlt-E", "Cutting history metrics")
+        m_estat = menu.Append(wx.ID_ANY, "&"+translate("Metrics")+"\tAlt-E", translate("Cutting history metrics"))
         self.Bind(wx.EVT_MENU, self.AbrirEstat, m_estat)
         #Menu Help/History
-        m_hist = menu.Append(wx.ID_ANY, "&History\tAlt-H", "History of generated CNC files")
+        m_hist = menu.Append(wx.ID_ANY, "&"+translate("History")+"\tAlt-H", translate("History of generated CNC files"))
         self.Bind(wx.EVT_MENU, self.AbrirHist, m_hist)
         #Menu Help/About
-        m_about = menu.Append(wx.ID_ABOUT, "&About", "About this software")
+        m_about = menu.Append(wx.ID_ABOUT, "&"+translate("About"), translate("About this software"))
         self.Bind(wx.EVT_MENU, self.AbrirAbout, m_about)
         
         self.SetMenuBar(menuBar)
@@ -371,96 +372,96 @@ class About(wx.Frame):
         dc = wx.PaintDC(self)
         esc=0.7
 
-        fundo=wx.Pen("#660066",50*esc)
+        fundo=wx.Pen("#660066",int(50*esc))
         dc.SetPen(fundo)
 
         #Retangulo roxo
         dc.SetBrush(wx.Brush('#660066'))
-        dc.DrawRectangle(0,0,540*esc,170*esc)
-        fundo=wx.Pen("#ffffff",50*esc)
+        dc.DrawRectangle(0,0,int(540*esc),int(170*esc))
+        fundo=wx.Pen("#ffffff",int(50*esc))
         dc.SetPen(fundo)
-        dc.DrawLine(0,200*esc,700*esc,200*esc)
+        dc.DrawLine(0,int(200*esc),int(700*esc),int(200*esc))
 
         #Amarelo do fogo
-        amarelo=wx.Pen("#ffff00",12*esc)
+        amarelo=wx.Pen("#ffff00",int(12*esc))
         dc.SetPen(amarelo)
-        dc.DrawLine(13*esc,102*esc,19*esc,92*esc)
-        dc.DrawLine(19*esc,92*esc,11*esc,86*esc)
-        dc.DrawLine(11*esc,86*esc,23*esc,84*esc)
-        dc.DrawLine(23*esc,84*esc,16*esc,64*esc)
-        dc.DrawLine(12*esc,64*esc,24*esc,74*esc)
-        dc.DrawLine(24*esc,74*esc,19*esc,57*esc)
-        dc.DrawLine(19*esc,57*esc,26*esc,57*esc)
-        dc.DrawLine(11*esc,63*esc,11*esc,81*esc)
-        dc.DrawLine(21*esc,46*esc,22*esc,47*esc)
+        dc.DrawLine(int(13*esc),int(102*esc),int(19*esc),int(92*esc))
+        dc.DrawLine(int(19*esc),int(92*esc),int(11*esc),int(86*esc))
+        dc.DrawLine(int(11*esc),int(86*esc),int(23*esc),int(84*esc))
+        dc.DrawLine(int(23*esc),int(84*esc),int(16*esc),int(64*esc))
+        dc.DrawLine(int(12*esc),int(64*esc),int(24*esc),int(74*esc))
+        dc.DrawLine(int(24*esc),int(74*esc),int(19*esc),int(57*esc))
+        dc.DrawLine(int(19*esc),int(57*esc),int(26*esc),int(57*esc))
+        dc.DrawLine(int(11*esc),int(63*esc),int(11*esc),int(81*esc))
+        dc.DrawLine(int(21*esc),int(46*esc),int(22*esc),int(47*esc))
         
 
         #Vermelho do fogo
-        vermelho=wx.Pen("#cc0000",7*esc)
+        vermelho=wx.Pen("#cc0000",int(7*esc))
         dc.SetPen(vermelho)
-        dc.DrawLine(10*esc,127*esc,10*esc,110*esc)
-        dc.DrawLine(10*esc,110*esc,17*esc,118*esc)
-        dc.DrawLine(17*esc,118*esc,17*esc,105*esc)
-        dc.DrawLine(17*esc,105*esc,21*esc,113*esc)
-        dc.DrawLine(21*esc,113*esc,21*esc,98*esc)
-        dc.DrawLine(21*esc,98*esc,27*esc,106*esc)
-        dc.DrawLine(27*esc,106*esc,25*esc,90*esc)
-        dc.DrawLine(25*esc,90*esc,33*esc,97*esc)
-        dc.DrawLine(33*esc,97*esc,28*esc,80*esc)
-        dc.DrawLine(28*esc,80*esc,33*esc,75*esc)
-        dc.DrawLine(33*esc,75*esc,28*esc,65*esc)
-        dc.DrawLine(28*esc,65*esc,38*esc,52*esc)
-        dc.DrawLine(38*esc,52*esc,28*esc,51*esc)
-        dc.DrawLine(28*esc,51*esc,32*esc,34*esc)
-        dc.DrawLine(32*esc,34*esc,24*esc,47*esc)
-        dc.DrawLine(24*esc,47*esc,26*esc,18*esc)
-        dc.DrawLine(26*esc,18*esc,21*esc,38*esc)
-        dc.DrawLine(21*esc,38*esc,17*esc,28*esc)
-        dc.DrawLine(17*esc,28*esc,17*esc,50*esc)
-        dc.DrawLine(17*esc,50*esc,9*esc,37*esc)
-        dc.DrawLine(9*esc,37*esc,12*esc,58*esc)
-        dc.DrawLine(12*esc,58*esc,4*esc,60*esc)
-        dc.DrawLine(4*esc,60*esc,9*esc,77*esc)
-        dc.DrawLine(9*esc,77*esc,2*esc,83*esc)
-        dc.DrawLine(2*esc,83*esc,8*esc,97*esc)
-        dc.DrawLine(8*esc,97*esc,4*esc,108*esc)
-        dc.DrawLine(4*esc,108*esc,11*esc,114*esc)
+        dc.DrawLine(int(10*esc),int(127*esc),int(10*esc),int(110*esc))
+        dc.DrawLine(int(10*esc),int(110*esc),int(17*esc),int(118*esc))
+        dc.DrawLine(int(17*esc),int(118*esc),int(17*esc),int(105*esc))
+        dc.DrawLine(int(17*esc),int(105*esc),int(21*esc),int(113*esc))
+        dc.DrawLine(int(21*esc),int(113*esc),int(21*esc),int(98*esc))
+        dc.DrawLine(int(21*esc),int(98*esc),int(27*esc),int(106*esc))
+        dc.DrawLine(int(27*esc),int(106*esc),int(25*esc),int(90*esc))
+        dc.DrawLine(int(25*esc),int(90*esc),int(33*esc),int(97*esc))
+        dc.DrawLine(int(33*esc),int(97*esc),int(28*esc),int(80*esc))
+        dc.DrawLine(int(28*esc),int(80*esc),int(33*esc),int(75*esc))
+        dc.DrawLine(int(33*esc),int(75*esc),int(28*esc),int(65*esc))
+        dc.DrawLine(int(28*esc),int(65*esc),int(38*esc),int(52*esc))
+        dc.DrawLine(int(38*esc),int(52*esc),int(28*esc),int(51*esc))
+        dc.DrawLine(int(28*esc),int(51*esc),int(32*esc),int(34*esc))
+        dc.DrawLine(int(32*esc),int(34*esc),int(24*esc),int(47*esc))
+        dc.DrawLine(int(24*esc),int(47*esc),int(26*esc),int(18*esc))
+        dc.DrawLine(int(26*esc),int(18*esc),int(21*esc),int(38*esc))
+        dc.DrawLine(int(21*esc),int(38*esc),int(17*esc),int(28*esc))
+        dc.DrawLine(int(17*esc),int(28*esc),int(17*esc),int(50*esc))
+        dc.DrawLine(int(17*esc),int(50*esc),int(9*esc),int(37*esc))
+        dc.DrawLine(int(9*esc),int(37*esc),int(12*esc),int(58*esc))
+        dc.DrawLine(int(12*esc),int(58*esc),int(4*esc),int(60*esc))
+        dc.DrawLine(int(4*esc),int(60*esc),int(9*esc),int(77*esc))
+        dc.DrawLine(int(9*esc),int(77*esc),int(2*esc),int(83*esc))
+        dc.DrawLine(int(2*esc),int(83*esc),int(8*esc),int(97*esc))
+        dc.DrawLine(int(8*esc),int(97*esc),int(4*esc),int(108*esc))
+        dc.DrawLine(int(4*esc),int(108*esc),int(11*esc),int(114*esc))
 
         #Escrevendo gisoplox
-        fonte = wx.Font(80*esc, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, 
+        fonte = wx.Font(int(80*esc), wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, 
 		wx.FONTWEIGHT_BOLD, False, 'Courier New')
         dc = wx.PaintDC(self)
         dc.SetFont(fonte)
         dc.SetTextForeground('WHITE')
-        dc.DrawText('GISOPLOX', 40*esc, 30*esc)
+        dc.DrawText('GISOPLOX', int(40*esc), int(30*esc))
 
         #Desenhando cotas
-        cotas=wx.Pen("#ff0000",3*esc)
+        cotas=wx.Pen("#ff0000",int(3*esc))
         dc.SetPen(cotas)
-        dc.DrawLine(572*esc,167*esc,588*esc,167*esc)
-        dc.DrawLine(572*esc,2*esc,588*esc,2*esc)
-        dc.DrawLine(580*esc,2*esc,580*esc,167*esc)
+        dc.DrawLine(int(572*esc),int(167*esc),int(588*esc),int(167*esc))
+        dc.DrawLine(int(572*esc),int(2*esc),int(588*esc),int(2*esc))
+        dc.DrawLine(int(580*esc),int(2*esc),int(580*esc),int(167*esc))
 
         #Cota Superior
-        dc.DrawLine(580*esc,3*esc,576*esc,18*esc)
-        dc.DrawLine(580*esc,3*esc,584*esc,18*esc)
-        dc.DrawLine(576*esc,18*esc,584*esc,18*esc)
+        dc.DrawLine(int(580*esc),int(3*esc),int(576*esc),int(18*esc))
+        dc.DrawLine(int(580*esc),int(3*esc),int(584*esc),int(18*esc))
+        dc.DrawLine(int(576*esc),int(18*esc),int(584*esc),int(18*esc))
 
         #Cota inferior
-        dc.DrawLine(580*esc,166*esc,576*esc,153*esc)
-        dc.DrawLine(580*esc,166*esc,584*esc,153*esc)
-        dc.DrawLine(576*esc,153*esc,584*esc,153*esc)
+        dc.DrawLine(int(580*esc),int(166*esc),int(576*esc),int(153*esc))
+        dc.DrawLine(int(580*esc),int(166*esc),int(584*esc),int(153*esc))
+        dc.DrawLine(int(576*esc),int(153*esc),int(584*esc),int(153*esc))
 
         #Triangulo
         dc.SetBrush(wx.Brush('#ff0000'))
-        dc.DrawPolygon(((587*esc, 97*esc), (611*esc, 97*esc), (599*esc, 70*esc)))
+        #dc.DrawPolygon((int(587*esc), int(97*esc)), (int(611*esc), int(97*esc)), (int(599*esc), int(70*esc)))
 
         #Escrevendo dados
         dc.SetFont(wx.Font(14, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, 
 		wx.FONTWEIGHT_BOLD, False, 'Courier New'))
         dc.SetTextForeground('#000000')
         dc.DrawText(versao, 130, 150)
-        dc.DrawText("Author: Henrique Enzweiler", 80, 180)
+        dc.DrawText(translate("Author")+": Henrique Enzweiler", 80, 180)
         dc.DrawText("e-mail: gisoplox@gmail.com", 80, 210)
 
         #Botao de fechar
@@ -486,7 +487,7 @@ class FormatosRetangulares(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Rectangular Shapes")
+        self.SetTitle("GISOPLOX - "+translate("Rectangular Shapes"))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
@@ -595,7 +596,7 @@ class FormatosCirculares(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Circular Shapes")
+        self.SetTitle("GISOPLOX - "+translate("Circular Shapes"))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
@@ -678,7 +679,7 @@ class FormatosTriangulares(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Triangular Shapes")
+        self.SetTitle("GISOPLOX - "+translate("Triangular Shapes"))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
@@ -769,7 +770,7 @@ class Estat(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - metrics")
+        self.SetTitle("GISOPLOX - "+translate("metrics"))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
@@ -783,112 +784,112 @@ class Estat(wx.Frame):
             self.SetBackgroundColour(wx.WHITE)
 
         #Desenhando a interfácie
-        wx.StaticText(self, wx.ID_ANY, ("CUTTING DATA:"), pos=(X1,Y1))
+        wx.StaticText(self, wx.ID_ANY, (translate("CUTTING DATA:")), pos=(X1,Y1))
         Y=Y1+DistEntreTitulos
-        wx.StaticText(self, wx.ID_ANY, ("SINCE THE INSTALLATION:"), pos=(X1,Y))
+        wx.StaticText(self, wx.ID_ANY, (translate("SINCE THE INSTALLATION:")), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Cutting distance: "
+        mensagem=translate("Cutting distance: ")
         mensagem+=str(distTotal)
         self.texto_distTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Total weight of parts: "
+        mensagem=translate("Total weight of parts: ")
         mensagem+=str(pesoTotal)
         self.texto_pesoTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Generated CNC files: "
+        mensagem=translate("Generated CNC files: ")
         mensagem+=str(prgTotal)
         self.texto_prgTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Starting date: "
+        mensagem=translate("Starting date: ")
         mensagem+=str(diaTotal)
         self.texto_diaTotal=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTitulos
-        wx.StaticText(self, wx.ID_ANY, ("SINCE IT WAS RESET:"), pos=(X1,Y))
+        wx.StaticText(self, wx.ID_ANY, (translate("SINCE IT WAS RESET:")), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Cutting distance: "
+        mensagem=translate("Cutting distance: ")
         mensagem+=str(distZerado)
         self.texto_distZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Total weight of parts: "
+        mensagem=translate("Total weight of parts: ")
         mensagem+=str(pesoZerado)
         self.texto_pesoZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Generated CNC files: "
+        mensagem=translate("Generated CNC files: ")
         mensagem+=str(prgZerado)
         self.texto_prgZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTextos
-        mensagem="Starting date: "
+        mensagem=translate("Starting date: ")
         mensagem+=str(diaZerado)
         self.texto_diaZerado=wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
         Y+=DistEntreTitulos
         # Note: To generate this data, the generated CNC files are taken into account and not the cut parts
         # To calculate the weight we consider that all the pieces were made of steel
-        mensagem="Note: To calculate the weight we consider\n that all the pieces were made of steel"
+        mensagem=translate("Note: To calculate the weight we consider\n that all the pieces were made of steel")
         wx.StaticText(self, wx.ID_ANY, (mensagem), pos=(X1,Y))
 
         #Botão sair
-        Botao_Close = wx.Button(self, id=-1, label='Close', pos=(XClose, YClose))
+        Botao_Close = wx.Button(self, id=-1, label=translate("Close"), pos=(XClose, YClose))
         self.Bind(wx.EVT_BUTTON, self.FecharEstat, Botao_Close)
         #Botão zerar
-        Botao_Reset = wx.Button(self, id=-1, label='Reset', pos=(XReset, YReset))
+        Botao_Reset = wx.Button(self, id=-1, label=translate("Reset"), pos=(XReset, YReset))
         self.Bind(wx.EVT_BUTTON, self.Reset, Botao_Reset)
 
     def Reset(self, event):
         Auxiliares.zerarEstat()
         distTotal, pesoTotal, prgTotal, diaTotal, distZerado, pesoZerado, prgZerado, diaZerado = Auxiliares.lerEstat(True)
-        mensagem="Cutting distance: "
+        mensagem=translate("Cutting distance: ")
         mensagem+=str(distTotal)
         self.texto_distTotal.SetLabel(mensagem)
-        mensagem="Total weight of parts: "
+        mensagem=translate("Total weight of parts: ")
         mensagem+=str(pesoTotal)
         self.texto_pesoTotal.SetLabel(mensagem)
-        mensagem="Generated CNC files: "
+        mensagem=translate("Generated CNC files: ")
         mensagem+=str(prgTotal)
         self.texto_prgTotal.SetLabel(mensagem)
-        mensagem="Starting date: "
+        mensagem=translate("Starting date: ")
         mensagem+=str(diaTotal)
         self.texto_diaTotal.SetLabel(mensagem)
-        mensagem="Cutting distance: "
+        mensagem=translate("Cutting distance: ")
         mensagem+=str(distZerado)
         self.texto_distZerado.SetLabel(mensagem)
-        mensagem="Total weight of parts: "
+        mensagem=translate("Total weight of parts: ")
         mensagem+=str(pesoZerado)
         self.texto_pesoZerado.SetLabel(mensagem)
-        mensagem="Generated CNC files: "
+        mensagem=translate("Generated CNC files: ")
         mensagem+=str(prgZerado)
         self.texto_prgZerado.SetLabel(mensagem)
-        mensagem="Starting date: "
+        mensagem=translate("Starting date: ")
         mensagem+=str(diaZerado)
         self.texto_diaZerado.SetLabel(mensagem)
         #Mostrar aviso de sucesso
-        dlg = wx.MessageDialog(parent=None, message="Data reset successfully!", caption="Data reset", style=wx.OK|wx.ICON_INFORMATION)
+        dlg = wx.MessageDialog(parent=None, message=translate("Data reset successfully!"), caption=translate("Data reset"), style=wx.OK|wx.ICON_INFORMATION)
         dlg.ShowModal()
         dlg.Destroy()
 
     def OnMove(self, event):
         distTotal, pesoTotal, prgTotal, diaTotal, distZerado, pesoZerado, prgZerado, diaZerado = Auxiliares.lerEstat(True)
-        mensagem="Cutting distance: "
+        mensagem=translate("Cutting distance: ")
         mensagem+=str(distTotal)
         self.texto_distTotal.SetLabel(mensagem)
-        mensagem="Total weight of parts: "
+        mensagem=translate("Total weight of parts: ")
         mensagem+=str(pesoTotal)
         self.texto_pesoTotal.SetLabel(mensagem)
-        mensagem="Generated CNC files: "
+        mensagem=translate("Generated CNC files: ")
         mensagem+=str(prgTotal)
         self.texto_prgTotal.SetLabel(mensagem)
-        mensagem="Starting date: "
+        mensagem=translate("Starting date: ")
         mensagem+=str(diaTotal)
         self.texto_diaTotal.SetLabel(mensagem)
-        mensagem="Cutting distance: "
+        mensagem=translate("Cutting distance: ")
         mensagem+=str(distZerado)
         self.texto_distZerado.SetLabel(mensagem)
-        mensagem="Total weight of parts: "
+        mensagem=translate("Total weight of parts: ")
         mensagem+=str(pesoZerado)
         self.texto_pesoZerado.SetLabel(mensagem)
-        mensagem="Generated CNC files: "
+        mensagem=translate("Generated CNC files: ")
         mensagem+=str(prgZerado)
         self.texto_prgZerado.SetLabel(mensagem)
-        mensagem="Starting date: "
+        mensagem=translate("Starting date: ")
         mensagem+=str(diaZerado)
         self.texto_diaZerado.SetLabel(mensagem)     
 
@@ -926,7 +927,7 @@ class Hist(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - history")
+        self.SetTitle("GISOPLOX - "+translate("History"))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
@@ -938,19 +939,19 @@ class Hist(wx.Frame):
         menu = wx.Menu()
 
         #Menu options/Atualizar
-        m_atualizar = menu.Append(wx.ID_ANY, "&Update")
+        m_atualizar = menu.Append(wx.ID_ANY, "&"+translate("Update"))
         self.Bind(wx.EVT_MENU, self.Atualizar, m_atualizar)
 
         #Menu options/sair
         menu.AppendSeparator()
-        m_sair = menu.Append(wx.ID_EXIT, "C&lose\tAlt-W", "Closes the software")
+        m_sair = menu.Append(wx.ID_EXIT, "&"+translate("Close")+"\tAlt-W", translate("Close the software"))
         self.Bind(wx.EVT_MENU, self.FecharHist, m_sair)
-        menuBar.Append(menu, "&Options")
+        menuBar.Append(menu, "&"+translate("Options"))
 
         #Menu Atualizar
         menu = wx.Menu()
-        m_atualizar=menuBar.Append(menu, "&Update")
-        m_atualizar = menu.Append(wx.ID_ANY, "&Update")
+        m_atualizar=menuBar.Append(menu, "&"+translate("Update"))
+        m_atualizar = menu.Append(wx.ID_ANY, "&"+translate("Update"))
         self.Bind(wx.EVT_MENU, self.Atualizar, m_atualizar)
         
         self.SetMenuBar(menuBar)
@@ -979,13 +980,13 @@ class Hist(wx.Frame):
         #Nao permitir ediçao
         self.myGrid.EnableEditing(False)
 
-        self.myGrid.SetColLabelValue(0, "CNC file name")
-        self.myGrid.SetColLabelValue(1, "Unit Weight")
-        self.myGrid.SetColLabelValue(2, "Total weight")
-        self.myGrid.SetColLabelValue(3, "Distance")
-        self.myGrid.SetColLabelValue(4, "Date")
-        self.myGrid.SetColLabelValue(5, "Time")
-        self.myGrid.SetColLabelValue(6, "Version")
+        self.myGrid.SetColLabelValue(0, translate("CNC file name"))
+        self.myGrid.SetColLabelValue(1, translate("Unit Weight"))
+        self.myGrid.SetColLabelValue(2, translate("Total weight"))
+        self.myGrid.SetColLabelValue(3, translate("Distance"))
+        self.myGrid.SetColLabelValue(4, translate("Date"))
+        self.myGrid.SetColLabelValue(5, translate("Time"))
+        self.myGrid.SetColLabelValue(6, translate("Version"))
 
         #Escrevendo os programas
         a=0
@@ -1122,7 +1123,7 @@ class Configurar(wx.Frame):
         # Detalhes do frame
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle("GISOPLOX - Settings")
+        self.SetTitle("GISOPLOX - "+translate("Settings"))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TXFrame, TYFrame))
@@ -1200,7 +1201,7 @@ class Configurar(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.AlterarSalvarPad, Botao_Alterar)
 
         #Botões Cancelar e Aplicar        
-        Botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XCancelar, YCancelar))
+        Botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XCancelar, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharConfig, Botao_Cancelar)
         
         Botao_Aplicar = wx.Button(self, id=-1, label='Apply', pos=(XAplicar, YCancelar))
@@ -1452,7 +1453,7 @@ class Kerf(wx.Frame):
         
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(("GISOPLOX - Cutting settings - Oxyfuel"))
+        self.SetTitle(("GISOPLOX - "+translate("Cutting settings")+" - "+translate("Oxyfuel")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TX, TY))
@@ -1561,7 +1562,7 @@ class Kerf(wx.Frame):
 
         Y=Y+50
         #Botão Cancelar
-        Botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, Y))
+        Botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, Y))
         self.Bind(wx.EVT_BUTTON, self.FecharKerf, Botao_Cancelar)
 
         #Botao Aplicar
@@ -1973,7 +1974,7 @@ class KerfPlasma(wx.Frame):
         
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(("GISOPLOX - Cutting settings - Plasma"))
+        self.SetTitle(("GISOPLOX - "+translate("Cutting settings")+" - "+translate("Plasma")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         self.SetSize((TX, TY))
@@ -2082,7 +2083,7 @@ class KerfPlasma(wx.Frame):
 
         Y=Y+50
         #Botão Cancelar
-        Botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, Y))
+        Botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, Y))
         self.Bind(wx.EVT_BUTTON, self.FecharkerfPlasma, Botao_Cancelar)
 
         #Botao Aplicar
@@ -2422,7 +2423,7 @@ class OrectangeFrame(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Rectangle"))
+        self.SetTitle(_("GISOPLOX - "+translate("Rectangle")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -2436,39 +2437,39 @@ class OrectangeFrame(wx.Frame):
         self.campo_de_texto_TamanhoY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X2,Y2), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharRectange, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -3042,7 +3043,7 @@ class OcircleFrame(wx.Frame):
 
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Donut"))
+        self.SetTitle(_("GISOPLOX - "+translate("Donut")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -3062,39 +3063,39 @@ class OcircleFrame(wx.Frame):
         self.campo_de_texto_DiamInt=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y4), size=(TX2,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X5,Y5))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X5,Y5))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X6,Y5), size=(XCX1,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X7, 70))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X8, Y5))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X8, Y5))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X9,Y6))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X9,Y6))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X10,Y6), size=(XCX1,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X11,Y6))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X11,Y6))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X12,Y7))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X12,Y7))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X13,Y7), size=(XCX2,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X14,Y7))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X15,181))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X15,181))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X16,Y8), size=(XCX3,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X17,Y8))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X18,Y8), size=(XCX3,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharCircle, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -3760,7 +3761,7 @@ class CircleSimple(wx.Frame):
 
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Simple circle"))
+        self.SetTitle(_("GISOPLOX - "+translate("Circle")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -3776,39 +3777,39 @@ class CircleSimple(wx.Frame):
         self.campo_de_texto_DiamExt=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y4), size=(TX2,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X5,Y5))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X5,Y5))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X6,Y5), size=(XCX1,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X7, 70))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X8, Y5))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X8, Y5))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X9,Y6))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X9,Y6))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X10,Y6), size=(XCX1,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X11,Y6))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X11,Y6))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X12,Y7))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X12,Y7))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X13,Y7), size=(XCX2,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X14,Y7))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X15,181))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X15,181))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X16,Y8), size=(XCX3,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X17,Y8))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X18,Y8), size=(XCX3,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharCircleSimple, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -4372,7 +4373,7 @@ class FrameTriangulo(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Right triangle"))
+        self.SetTitle(_("GISOPLOX - "+translate("Right triangle")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -4388,39 +4389,39 @@ class FrameTriangulo(wx.Frame):
         self.campo_de_texto_TamanhoY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X2,Y2), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharTriangulo, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -4972,7 +4973,7 @@ class FrameTrianguloPontasCortadas(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Triangle with ends cut"))
+        self.SetTitle(_("GISOPLOX - "+translate("Triangle with ends cut")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -4990,39 +4991,39 @@ class FrameTrianguloPontasCortadas(wx.Frame):
         self.campo_de_texto_TamanhoY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X2,Y2), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharTrianguloPontasCortadas, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #self.Bind(wx.EVT_MOTION,  self.OnMove)        
@@ -5680,7 +5681,7 @@ class FrameRetanguloFuro(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Rectangle with center hole"))
+        self.SetTitle(_("GISOPLOX - "+translate("Rectangle with center hole")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -5698,39 +5699,39 @@ class FrameRetanguloFuro(wx.Frame):
         texto.SetFont(fonteDiam)
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharRetanguloFuro, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
     def OnPaint(self, event):
@@ -6306,7 +6307,7 @@ class FrameRetanguloChanfrado(wx.Frame):
             
         kwds["style"] = wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetTitle(_("GISOPLOX - Retangle with chanfer corners"))
+        self.SetTitle(_("GISOPLOX - "+translate("Rectangle with chamfer corners")))
         self.SetIcon(wx.Icon('Gisoplox.ico', wx.BITMAP_TYPE_ICO))
         self.Centre()
         if sistemaOperacional=="Windows":
@@ -6339,39 +6340,39 @@ class FrameRetanguloChanfrado(wx.Frame):
         self.campo_de_texto_ChanfroXI=wx.TextCtrl(self, wx.ID_ANY, "", pos=(XchanfroXI,YchanfroXI), size=(T1X,YCX))
 
         #Restante da interface     
-        self.label_2 = wx.StaticText(self, wx.ID_ANY, _("Thickness:"), pos=(X3,Y3))
+        self.label_2 = wx.StaticText(self, wx.ID_ANY, _(translate("Thickness:")), pos=(X3,Y3))
         self.campo_de_texto_Espessura=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X4,Y3), size=(T1X,YCX))
         self.radio_esp_mm = wx.RadioButton(self, label='mm', pos=(X5, Y3))
-        self.radio_esp_pol = wx.RadioButton(self, label='inch', pos=(X6, Y3))
+        self.radio_esp_pol = wx.RadioButton(self, label=translate("inch"), pos=(X6, Y3))
         self.radio_esp_pol.SetValue(True)
         
-        self.label_3 = wx.StaticText(self, wx.ID_ANY, _("Quantity:"), pos=(X7,Y4))
+        self.label_3 = wx.StaticText(self, wx.ID_ANY, _(translate("Quantity:")), pos=(X7,Y4))
         self.campo_de_texto_Quantidade=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X8,Y4), size=(T1X,YCX))
-        self.label_4 = wx.StaticText(self, wx.ID_ANY, _("parts"), pos=(X9,Y4))
+        self.label_4 = wx.StaticText(self, wx.ID_ANY, _(translate("parts")), pos=(X9,Y4))
 
-        self.label_1 = wx.StaticText(self, wx.ID_ANY, _("Cut entry distance:"), pos=(X3,Y5))
+        self.label_1 = wx.StaticText(self, wx.ID_ANY, _(translate("Cut entry distance:")), pos=(X3,Y5))
         self.campo_de_texto_Entrada=wx.TextCtrl(self, wx.ID_ANY, "5", pos=(X10,Y5), size=(T2X,YCX))
         self.label_1 = wx.StaticText(self, wx.ID_ANY, _("mm"), pos=(X11,Y5))
         
-        self.label_5 = wx.StaticText(self, wx.ID_ANY, _("Sheet metal size:"), pos=(X3,Y6))
+        self.label_5 = wx.StaticText(self, wx.ID_ANY, _(translate("Sheet metal size:")), pos=(X3,Y6))
         self.campo_de_texto_ChapaX=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X12,Y6), size=(T3X,YCX))
         self.label_6 = wx.StaticText(self, wx.ID_ANY, _("X"), pos=(X13,Y6))
         self.campo_de_texto_ChapaY=wx.TextCtrl(self, wx.ID_ANY, "", pos=(X14,Y6), size=(T3X,YCX))
 
         #Escolher entre oxicorte e plasma
-        wx.StaticText(self, wx.ID_ANY, _("Process:"), pos=(XTextoProcesso,YRadioOxicorte))
-        processo = ['Oxyfuel', 'Plasma']
+        wx.StaticText(self, wx.ID_ANY, _(translate("Process:")), pos=(XTextoProcesso,YRadioOxicorte))
+        processo = [translate("Oxyfuel"), translate("Plasma")]
         #processo = ['Oxicorte']
         self.lista_Processo=wx.ComboBox(self, -1, pos=(XRadioOxicorte, YRadioOxicorte), size=(150, -1), choices=processo, style=wx.CB_READONLY)
 
         #Botão salvar padrão
-        self.botao_SalvarPad = wx.Button(self, id=-1, label='         Standard Save         ', pos=(XSalvarPad, YSalvarPad))
+        self.botao_SalvarPad = wx.Button(self, id=-1, label=translate("         Standard Save         "), pos=(XSalvarPad, YSalvarPad))
         self.Bind(wx.EVT_BUTTON, self.SalvarPad, self.botao_SalvarPad)
         #Botão cancelar
-        self.botao_Cancelar = wx.Button(self, id=-1, label='Close', pos=(XBC, YCancelar))
+        self.botao_Cancelar = wx.Button(self, id=-1, label=translate("Close"), pos=(XBC, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.FecharRetanguloChanfrado, self.botao_Cancelar)
         #Botão salvar
-        self.botao_Gerar = wx.Button(self, id=-1, label='Save', pos=(XBA, YCancelar))
+        self.botao_Gerar = wx.Button(self, id=-1, label=translate("Save"), pos=(XBA, YCancelar))
         self.Bind(wx.EVT_BUTTON, self.GerarCodigo, self.botao_Gerar)
 
         #achar coordenada

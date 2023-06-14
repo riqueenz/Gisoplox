@@ -1,6 +1,6 @@
 import os
 import shutil
-from settings import local_data_files
+import local_data_files
 
 
 def find_snap_folders():
