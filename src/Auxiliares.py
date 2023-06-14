@@ -6,7 +6,7 @@ import time
 
 
 def versao():
-    return "0.21.0129"
+    return "0.23.0614"
 
 
 def Parametros():
