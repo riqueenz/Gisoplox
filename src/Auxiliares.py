@@ -2,6 +2,7 @@
 import local_data_files
 import os
 from datetime import date
+from translate import translate
 import time
 
 
@@ -493,10 +494,10 @@ def converterDist(dist):
         a = str(int(dist)) + " mm"
         return a
     if 1000 <= dist < 2000:
-        a = str(int(dist / 1000)) + " meter"
+        a = str(int(dist / 1000)) + " " + translate("meter")
         return a
     if 2000 < dist < 1000000:
-        a = str(int(dist / 1000)) + " meters"
+        a = str(int(dist / 1000)) + " " + translate("meters")
         return a
     if dist >= 1000000:
         a = str(int(dist / 1000000)) + " km"
@@ -809,9 +810,9 @@ def pesoRetanguloChanfrado(esp, tx, ty, chanfroXs, chanfroYs, chanfroXi, chanfro
 def pesoString(pesoEmGramas):
     peso = int(pesoEmGramas)
     if peso == 1:
-        pesoString = "1 grama"
+        pesoString = "1 "+translate("gram")
     elif 1 < peso < 1000:
-        pesoString = str(int(peso) + 1) + " gramas"
+        pesoString = str(int(peso) + 1) + " " + translate("grams")
     elif peso >= 1000:
         pesoString = str(int((peso / 1000) + 1)) + " kg"
     return pesoString

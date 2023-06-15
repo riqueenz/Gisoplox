@@ -187,5 +187,14 @@ def translate(text):
             text = "O programa está nesta pasta"
         if text == "Saved code":
             text = "Código G salvo"
+            
+        if text == "gram":
+            text = "grama"
+        if text == "grams":
+            text = "gramas"
+        if text == "meters":
+            text = "metros"
+        if text == "meter":
+            text = "metro"
 
     return text
