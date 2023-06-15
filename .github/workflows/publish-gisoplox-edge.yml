@@ -20,4 +20,4 @@ jobs:
     - name: publish snap
       env:
         SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_TOKEN }}
-      run: snapcraft upload --release=edge freecad*.snap
+      run: snapcraft upload --release=edge gisoplox*.snap
