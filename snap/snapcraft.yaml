@@ -30,4 +30,4 @@ parts:
     python-version: python3
     source: ./src
     python-packages:
-        - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.1.1-cp36-cp36m-linux_x86_64.whl
+        - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl
