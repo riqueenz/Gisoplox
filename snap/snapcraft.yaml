@@ -13,13 +13,13 @@ architectures:
 
 apps:
   cli:
-    command: python3 $SNAP/usr/lib/python3.8/Gisoplox-terminal.py
+    command: python3 $SNAP/usr/lib/python3.10/Gisoplox-terminal.py
     plugs:
       - home
       - gsettings
       - removable-media
   gisoplox:
-    command: python3 $SNAP/usr/lib/python3.8/Gisoplox.py
+    command: python3 $SNAP/usr/lib/python3.10/Gisoplox.py
     extensions:
       - gnome
     plugs:
@@ -35,11 +35,10 @@ parts:
     plugin: dump
     source: ./src
     organize:
-      '*': usr/lib/python3.8/
+      '*': usr/lib/python3.10/
 
   gisoplox:
     plugin: python
-    python-version: python3
     source: ./src
     python-packages:
         - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.0-cp310-cp310-linux_x86_64.whl
