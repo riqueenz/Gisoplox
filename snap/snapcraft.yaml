@@ -40,5 +40,7 @@ parts:
   gisoplox:
     plugin: python
     source: ./src
+    stage-packages:
+        - libsdl2-2.0-0
     python-packages:
         - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.0-cp310-cp310-linux_x86_64.whl
