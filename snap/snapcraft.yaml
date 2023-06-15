@@ -29,22 +29,7 @@ parts:
     plugin: python
     python-version: python3
     source: ./src
-    stage-packages:
-        - libssl-dev
-        - libjpeg-dev
-        - libtiff-dev
-        - libsdl1.2-dev
-        - libnotify-dev
-        - freeglut3
-        - ibus-gtk3
-        - libwebkitgtk-3.0-0
-        - zlib1g
-        - libsm6
-        - libpulse0
-        - libslang2
-        - libsdl1.2debian
     python-packages:
         - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.4-cp36-cp36m-linux_x86_64.whl
-        - wxasync
     requirements:
         - /root/project/requirements.txt
