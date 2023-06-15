@@ -163,5 +163,29 @@ def translate(text):
             text = "Largura de corte (mm)"
         if text == "Speed (mm/min)":
             text = "Velocidade (mm/min)"
+            
+        if text == "CNC file name":
+            text = "Nome do programa"
+        if text == "Unit Weight":
+            text = "Peso Unitario"
+        if text == "Total weight":
+            text = "Peso Total"
+        if text == "Distance":
+            text = "Distância"
+        if text == "Date":
+            text = "Data"
+        if text == "Time":
+            text = "Hora"
+            
+        if text == "Your code has been successfully generated!":
+            text = "Código gerado com sucesso!"
+        if text == "Cutting distance":
+            text = "Distância de corte"
+        if text == "Note: Weight for steel parts":
+            text = "Nota: Peso considerando aço"
+        if text == "The G-code is in this folder":
+            text = "O programa está nesta pasta"
+        if text == "Saved code":
+            text = "Código G salvo"
 
     return text

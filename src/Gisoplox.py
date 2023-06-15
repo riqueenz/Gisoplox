@@ -2631,9 +2631,9 @@ class OrectangeFrame(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -2643,9 +2643,9 @@ class OrectangeFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
@@ -2813,9 +2813,9 @@ class OrectangeFrame(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -2825,9 +2825,9 @@ class OrectangeFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             print(Kerf)
             pecasGeradas, programa, distCorte=Plasma.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
@@ -3307,9 +3307,9 @@ class OcircleFrame(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -3319,9 +3319,9 @@ class OcircleFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
@@ -3535,9 +3535,9 @@ class OcircleFrame(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -3547,9 +3547,9 @@ class OcircleFrame(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.Circulo(diam1, diam2, entrada, chapaX, chapaY, pecas, Kerf)
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
@@ -3978,9 +3978,9 @@ class CircleSimple(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -3994,9 +3994,9 @@ class CircleSimple(wx.Frame):
             espi+=" mm "
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
@@ -4171,9 +4171,9 @@ class CircleSimple(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -4187,9 +4187,9 @@ class CircleSimple(wx.Frame):
             espi+=" mm "
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.CirculoSimples(diam, entrada, chapaX, chapaY, pecas, Kerf)
         pecasFaltantes=int(pecas)-int(pecasGeradas)
 
@@ -4582,9 +4582,9 @@ class FrameTriangulo(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -4594,9 +4594,9 @@ class FrameTriangulo(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
@@ -4766,9 +4766,9 @@ class FrameTriangulo(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -4778,9 +4778,9 @@ class FrameTriangulo(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.TrianguloRetangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
@@ -5251,9 +5251,9 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -5263,9 +5263,9 @@ class FrameTrianguloPontasCortadas(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
 
@@ -5469,9 +5469,9 @@ class FrameTrianguloPontasCortadas(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -5481,9 +5481,9 @@ class FrameTrianguloPontasCortadas(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.TrianguloPontasCortadas(txd, tyd, chanfroX, chanfroY, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
 
@@ -5927,9 +5927,9 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -5939,9 +5939,9 @@ class FrameRetanguloFuro(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
@@ -6109,9 +6109,9 @@ class FrameRetanguloFuro(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -6121,9 +6121,9 @@ class FrameRetanguloFuro(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.RetanguloFuro(txd, tyd, furo, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
@@ -6606,9 +6606,9 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -6618,9 +6618,9 @@ class FrameRetanguloChanfrado(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             pecasGeradas, programa, distCorte=Plasma.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
         pecasFaltantes=int(pecas)-int(pecasGeradas)
@@ -6788,9 +6788,9 @@ class FrameRetanguloChanfrado(wx.Frame):
 
         #Pegar os parâmetros
         icorte, fcorte, extencao, mesaX, mesaY, numerar, colocarVelocidadeAvanco, colocarVelocidadeAvancoRapido, velocidadeAvancoRapido, pastaPadWin, pastaPadLinux = Auxiliares.Parametros()
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             Kerf, avanco = Auxiliares.Kerf(espessura)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             Kerf, avanco = Auxiliares.KerfPlasma(espessura)
 
         #Para não colocar a os avanços definir velocidades como ZERO
@@ -6800,9 +6800,9 @@ class FrameRetanguloChanfrado(wx.Frame):
             velocidadeAvancoRapido=0
 
         #Chamando a funcao que gera o codigo
-        if processo=="Oxyfuel":
+        if processo==translate("Oxyfuel"):
             pecasGeradas, programa, distCorte=Oxicorte.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
-        if processo=="Plasma":
+        if processo==translate("Plasma"):
             print(Kerf)
             pecasGeradas, programa, distCorte=Plasma.Retangulo(txd, tyd, entrada, chapaX, chapaY, pecas, Kerf)
             #pass
