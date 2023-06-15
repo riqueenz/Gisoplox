@@ -11,10 +11,10 @@ base: core18
 
 apps:
     cli:
-        command: python3 $SNAP/usr/lib/python3.6/Gisoplox-terminal.py
+        command: python3 $SNAP/usr/lib/python3.8/Gisoplox-terminal.py
         plugs: [home, gsettings]
     gisoplox:
-        command: python3 $SNAP/usr/lib/python3.6/Gisoplox.py
+        command: python3 $SNAP/usr/lib/python3.8/Gisoplox.py
         extensions: [gnome-3-28]
         plugs: [home, gsettings]
 
@@ -23,7 +23,7 @@ parts:
     plugin: dump
     source: ./src
     organize:
-      '*': usr/lib/python3.6/
+      '*': usr/lib/python3.8/
 
   gisoplox:
     plugin: python
