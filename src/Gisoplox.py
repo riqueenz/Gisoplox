@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import snap
-#snap.change_python_cwd()
+snap.change_python_cwd()
 import dialogs
 import os
 import math
