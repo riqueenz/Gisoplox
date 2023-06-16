@@ -42,3 +42,4 @@ parts:
     override-build: |
       echo "Teste"
       pwd
+      ls
