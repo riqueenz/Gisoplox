@@ -7,41 +7,27 @@ description: |
 
 grade: stable
 confinement: strict
-base: core22
-architectures:
-  - build-on: amd64
+base: core18
 
 apps:
-  cli:
-    command: python3 $SNAP/usr/lib/python3.10/Gisoplox-terminal.py
-    plugs:
-      - home
-      - gsettings
-      - removable-media
-  gisoplox:
-    command: python3 $SNAP/usr/lib/python3.10/Gisoplox.py
-    extensions:
-      - gnome
-    plugs:
-      - desktop
-      - desktop-legacy
-      - x11
-      - home
-      - gsettings
-      - removable-media
+    cli:
+        command: python3 $SNAP/usr/lib/python3.8/Gisoplox-terminal.py
+        plugs: [home, gsettings]
+    gisoplox:
+        command: python3 $SNAP/usr/lib/python3.8/Gisoplox.py
+        extensions: [gnome-3-28]
+        plugs: [home, gsettings]
 
 parts:
   source-copy:
     plugin: dump
     source: ./src
     organize:
-      '*': usr/lib/python3.10/
+      '*': usr/lib/python3.8/
 
   gisoplox:
     plugin: python
+    python-version: python3
     source: ./src
-    stage-packages:
-        - libm
-        - libc
     python-packages:
-        - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.0-cp310-cp310-linux_x86_64.whl
+        - https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.1.1-cp38-cp38-linux_x86_64.whl
