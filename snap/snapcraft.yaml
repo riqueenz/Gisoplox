@@ -12,30 +12,24 @@ base: core18
 apps:
     cli:
         command: python3 $SNAP/usr/lib/python3.8/Gisoplox-terminal.py
-        plugs: [home, gsettings]
+        plugs:
+            - home
+            - gsettings
     gisoplox:
         command: python3 $SNAP/usr/lib/python3.8/Gisoplox.py
         extensions: [gnome-3-28]
-        plugs: [home, gsettings]
+        plugs:
+            - desktop
+            - desktop-legacy
+            - x11
+            - home
+            - gsettings
+            - removable-media
 
 parts:
   source-copy:
     plugin: dump
     source: ./src
-    stage-packages:
-        - libssl-dev
-        - libjpeg-dev
-        - libtiff-dev
-        - libsdl1.2-dev
-        - libnotify-dev
-        - freeglut3
-        - ibus-gtk3
-        - libwebkitgtk-3.0-0
-        - zlib1g
-        - libsm6
-        - libpulse0
-        - libslang2
-        - libsdl1.2debian
     organize:
       '*': usr/lib/python3.8/
 
