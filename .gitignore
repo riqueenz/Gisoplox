@@ -1,0 +1,8 @@
+
+src/.gisoplox/history.gisoplox
+src/.gisoplox/history_sheet.csv
+src/.gisoplox/metrics.gisoplox
+src/.gisoplox/oxyfuel_cutting_width.gisoplox
+src/.gisoplox/plasma_cutting_width.gisoplox
+src/.gisoplox/settings.ini
+*.pyc
